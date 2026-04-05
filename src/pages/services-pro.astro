@@ -17,7 +17,9 @@ const base = import.meta.env.BASE_URL;
 			<h1>Services Pro</h1>
 			<p class="lede">
 				Prestations pour <strong>PME, indépendants tech et particuliers exigeants</strong>.
-				Expertise concrète issue d'années de production en homelab + expérience en scan 3D & nuages de points.
+				<strong>25 ans de pilotage d'opérations terrain</strong> (Swisscom, Free, Numericable),
+				Power User SAP, gestion P&amp;L, conduite du changement. Ex-entrepreneur, je comprends
+				la contrainte PME parce que je l'ai vécue.
 			</p>
 			<p class="cta-alt">
 				<span>→</span> <strong>Architecte ou bureau d'études&nbsp;?</strong>
@@ -59,6 +61,10 @@ const base = import.meta.env.BASE_URL;
 
 			<section class="svc-section">
 				<h2>Infrastructure & DevOps</h2>
+				<p class="proof">
+					<strong>100 000 prises fibre déployées</strong>, 21 000 interventions terrain gérées,
+					15 ans de management de prestataires FTTH / FTTX / HFC.
+				</p>
 				<p class="section-desc">Pour PME, indépendants tech, infogérants qui veulent sortir du cloud ou reprendre le contrôle.</p>
 
 				<div class="services">
@@ -203,6 +209,17 @@ const base = import.meta.env.BASE_URL;
 		border-radius: 6px;
 	}
 	.btn-inline:hover { background: var(--accent-dark); border-bottom: 1px solid var(--accent-dark); }
+	.proof {
+		font-size: 0.9em;
+		color: var(--text-muted);
+		font-style: italic;
+		padding: 0.6em 1em;
+		background: var(--bg-code);
+		border-left: 2px solid var(--accent);
+		border-radius: 4px;
+		margin: 0 0 1.5em;
+	}
+	.proof strong { color: var(--accent); font-style: normal; }
 	.svc-section { margin-bottom: 3em; }
 	.section-desc { color: var(--text-muted); font-style: italic; margin: -0.5em 0 1.5em; }
 	.services {

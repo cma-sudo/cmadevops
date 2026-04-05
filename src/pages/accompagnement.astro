@@ -36,6 +36,10 @@ const base = import.meta.env.BASE_URL;
 			<section class="svc-section">
 				<h2>Formation & apprentissage</h2>
 				<p class="section-desc">Pour apprendre à utiliser ordinateur, smartphone ou tablette, à votre rythme.</p>
+				<p class="proof">
+					<strong>21 000 interventions à domicile dirigées en tant qu'entrepreneur télécom.</strong>
+					25 ans de management d'équipes terrain. Je sais parler simplement et prendre le temps.
+				</p>
 
 				<div class="services">
 					<article class="svc">
@@ -157,6 +161,10 @@ const base = import.meta.env.BASE_URL;
 			<section class="svc-section">
 				<h2>Démarches administratives &amp; vie courante</h2>
 				<p class="section-desc">Retraite, impôts, frontalier France-Suisse. Je monte les dossiers avec vous.</p>
+				<p class="proof">
+					🇨🇭 <strong>Je suis suisse. 12 ans salarié Swisscom à Delémont.</strong>
+					Je connais LAMal, LPP, impôt à la source et AVS <em>de l'intérieur</em>. Allemand professionnel.
+				</p>
 
 				<div class="services">
 					<article class="svc">
@@ -182,14 +190,15 @@ const base = import.meta.env.BASE_URL;
 						</p>
 					</article>
 
-					<article class="svc">
+					<article class="svc svc-highlight">
 						<header>
-							<h3>Accompagnement frontalier France-Suisse</h3>
+							<h3>🇨🇭 Accompagnement frontalier France-Suisse</h3>
 							<span class="price">80 € / h</span>
 						</header>
 						<p>
 							LAMal vs CMU, 2ᵉ pilier, statut quasi-résident, déclaration des revenus
-							suisses (formulaires 2047 et 3916). Un terrain que je connais bien en Alsace.
+							suisses (formulaires 2047 et 3916). <strong>Je suis suisse, j'ai travaillé 12 ans à Delémont —
+							je connais le système de l'intérieur.</strong>
 						</p>
 					</article>
 
@@ -215,6 +224,10 @@ const base = import.meta.env.BASE_URL;
 			<section class="svc-section">
 				<h2>Optimisation des dépenses du foyer</h2>
 				<p class="section-desc">Un regard neuf sur vos factures et abonnements peut faire économiser plusieurs centaines d'euros par an.</p>
+				<p class="proof">
+					<strong>15 ans de pilotage de P&amp;L et de budgets opérationnels.</strong>
+					Je sais lire une facture et traquer les fuites. CAPEX / OPEX, c'est mon quotidien.
+				</p>
 
 				<div class="services">
 					<article class="svc">
@@ -350,6 +363,18 @@ const base = import.meta.env.BASE_URL;
 		line-height: 1.6;
 	}
 	.disclaimer strong { color: var(--warning); font-style: normal; }
+	.proof {
+		font-size: 0.9em;
+		color: var(--text-muted);
+		font-style: italic;
+		padding: 0.6em 1em;
+		background: var(--bg-code);
+		border-left: 2px solid var(--accent);
+		border-radius: 4px;
+		margin: -0.3em 0 1.5em;
+	}
+	.proof strong { color: var(--accent); font-style: normal; }
+	.proof em { font-style: italic; color: var(--text); }
 	.svc header {
 		display: flex;
 		align-items: flex-start;

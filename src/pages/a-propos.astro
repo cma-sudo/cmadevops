@@ -9,102 +9,121 @@ const base = import.meta.env.BASE_URL;
 <!doctype html>
 <html lang="fr">
 	<head>
-		<BaseHead title={`À propos · ${SITE_TITLE}`} description={`À propos de ${AUTHOR}`} />
+		<BaseHead title={`À propos · ${SITE_TITLE}`} description="Christophe Mattera, 51 ans, Rixheim. 25 ans de pilotage opérationnel télécom, Swisscom, Free, Numericable. Nationalité suisse." />
 	</head>
 	<body>
 		<Header />
 		<main>
 			<h1>À propos</h1>
 
-			<p class="lede">
-				Je suis {AUTHOR} — trois casquettes, un seul fil rouge :
-				<strong>rendre la technologie utile et accessible</strong>.
+			<p class="hook">
+				Mes tout premiers jobs, en 1997, c'était déjà d'accompagner des gens. J'étais conseiller à
+				l'emploi à l'ANPE de Mulhouse. Vingt-huit ans plus tard, je recommence — mais avec toute
+				l'expérience technique en plus.
 			</p>
 
-			<h2>Métier principal : Scan 3D & nuages de points</h2>
+			<p class="story">
+				J'ai commencé chez <strong>Numericable en 1999</strong> comme technicien à Mulhouse. Quinze ans plus tard,
+				j'y dirigeais l'agence — 30 collaborateurs, 35 prestataires, le réseau fibre de l'agglo.
+				J'ai ensuite piloté <strong>100 000 prises FTTH</strong> pour Free Infrastructure à Strasbourg,
+				créé ma propre boîte télécom (<strong>21 000 interventions terrain</strong>), puis dirigé pendant
+				12 ans l'unité <strong>Swisscom de Delémont</strong> — 20 personnes, P&amp;L, sous-traitance, QSE.
+				Aujourd'hui, à 51 ans, je mets tout ça au service des gens d'ici — architectes, PME,
+				restaurateurs, particuliers, frontaliers.
+			</p>
+
+			<section class="signature-stats">
+				<div class="sig-stat">
+					<div class="sig-num">21 000</div>
+					<div class="sig-label">interventions terrain</div>
+				</div>
+				<div class="sig-stat">
+					<div class="sig-num">100 000</div>
+					<div class="sig-label">prises FTTH déployées</div>
+				</div>
+				<div class="sig-stat">
+					<div class="sig-num">25 ans</div>
+					<div class="sig-label">de management opérationnel</div>
+				</div>
+				<div class="sig-stat">
+					<div class="sig-num">4 M€</div>
+					<div class="sig-label">de budgets pilotés</div>
+				</div>
+			</section>
+
+			<h2>Un fil rouge : terrain, pilotage, bienveillance</h2>
 			<p>
-				Spécialisé dans <strong>l'acquisition et le traitement de nuages de points 3D</strong>.
-				Relevés d'existants, modélisation, livrables CAO/BIM pour architectes et maîtres d'ouvrage.
-				Basé à Rixheim, Alsace, en <strong>partenariat avec <a href="https://pk-archi.com/" target="_blank" rel="noopener">PK Architecture</a></strong>
-				(agence d'architecture en Alsace).
+				J'ai passé 25 ans à faire la même chose sous des formes différentes : comprendre un métier sur
+				le terrain, structurer des équipes, piloter des prestataires, rendre des comptes, expliquer
+				aux clients ce qui se passe. Technique ou humain, c'est toujours la même logique —
+				<strong>rendre lisible ce qui est compliqué, faire ce qu'on a promis</strong>.
 			</p>
 
-			<h2>Expertise technique : DevOps / Homelab</h2>
+			<h2>🇨🇭 Suisse par nationalité</h2>
 			<p>
-				J'opère et fais évoluer une infrastructure maison auto-hébergée : Home Assistant,
-				framework IA Python (ARIA), stack Prometheus/Grafana complète. Tout on-prem :
-				pas de LLM cloud, pas d'automatisation cloud, aucune dépendance au-delà du DNS
-				et des backups offsite. Ces compétences, je les mets au service des PME via
-				<a href={base + "/services-pro/"}>Services Pro</a>.
+				12 ans salarié à <strong>Cablex / Swisscom</strong> à Delémont. Je parle le système des deux
+				côtés de la frontière : <strong>LAMal, LPP, impôt à la source, AVS, quasi-résident</strong>.
+				Allemand professionnel. Connaissance des standards QSE suisses, exigeants.
+				C'est un atout concret quand vous êtes frontalier — ou quand votre PME travaille avec la Suisse.
 			</p>
 
-			<h2>Vocation : Accompagnement humain</h2>
+			<h2>Pourquoi ce site aujourd'hui</h2>
 			<p>
-				J'accompagne à domicile des personnes qui ont besoin d'aide avec le numérique —
-				en particulier les seniors. Formation informatique, dépannage, démarches
-				administratives en ligne, optimisation des dépenses du foyer. Patience, pédagogie,
-				français clair et sans jargon. Voir la page <a href={base + "/accompagnement/"}>Accompagnement numérique</a>.
+				Après 25 ans à piloter des équipes et des projets pour de grands groupes, j'ai envie de
+				transmettre cette expérience autrement — en accompagnement direct, local, utile. Les
+				<strong>architectes</strong> (scan 3D, coordination ERP), les <strong>PME</strong> (infra, conseil),
+				les <strong>restaurateurs</strong> (DUER, sécurité, ouverture d'établissement), les
+				<strong>particuliers</strong> et <strong>frontaliers</strong> (numérique, démarches, optimisation) :
+				j'ai envie de mettre cette boîte à outils au service des gens de terrain.
 			</p>
 
-			<h2>Pourquoi ce site</h2>
-			<p>
-				Parce qu'à chaque fois que je résous un problème de homelab, je me dis « je devrais noter ça ».
-				Ce site est ce carnet — un mélange de projets documentés, de logs de sessions,
-				et d'avis argumentés sur les outils et compromis.
-			</p>
-
-			<h2>Ce sur quoi je bosse au quotidien</h2>
-			<ul>
-				<li><span class="tag">python</span> Framework ARIA, smart engine, logique de propositions/décisions</li>
-				<li><span class="tag">home-assistant</span> 11 caméras, Zigbee2MQTT, Alarmo, Matter</li>
-				<li><span class="tag">docker</span> 15+ conteneurs sur 2 hôtes</li>
-				<li><span class="tag">prometheus</span> 10 cibles scrappées, 8 dashboards Grafana</li>
-				<li><span class="tag">unifi</span> UDM Pro SE + 4 APs + 3 switches, unpoller pour les métriques</li>
-				<li><span class="tag">ollama</span> Qwen2.5:3B en inférence locale, keep-alive infini</li>
-			</ul>
-
-			<h2>Parcours</h2>
-
+			<h2>Parcours synthétique</h2>
 			<div class="timeline">
-				<div class="tl-block">
-					<h3>Scan 3D & nuages de points</h3>
-					<ul class="tl-list">
-						<li><strong>Formation :</strong> <span class="todo">[Formation à préciser]</span></li>
-						<li><strong>Expérience :</strong> <span class="todo">[X années dans le métier]</span></li>
-						<li><strong>Matériel maîtrisé :</strong> <span class="todo">[Scanner 3D à préciser]</span></li>
-						<li><strong>Logiciels :</strong> AutoCAD, Revit, CloudCompare, <span class="todo">[+ autres]</span></li>
-						<li><strong>Partenariat principal :</strong> <a href="https://pk-archi.com/" target="_blank" rel="noopener">PK Architecture</a> (agence d'architecture en Alsace)</li>
-						<li><strong>Types de projets :</strong> <span class="todo">[patrimoine / rénovation / industriel / topographie foncière]</span></li>
-					</ul>
+				<div class="tl-entry">
+					<div class="tl-date">2025 →</div>
+					<div class="tl-text"><strong>Consultant indépendant</strong> · Mandat bénévole PK Architecture (ScanToBIM, dossiers ERP)</div>
 				</div>
-
-				<div class="tl-block">
-					<h3>DevOps &amp; homelab</h3>
-					<ul class="tl-list">
-						<li><strong>Expérience self-hosting :</strong> <span class="todo">[X années]</span> — évolution d'un simple NAS vers un stack de 15+ conteneurs</li>
-						<li><strong>Stack production maison :</strong> Home Assistant, ARIA v10.1 (Python), Prometheus/Grafana, UniFi Pro, PostgreSQL, Ollama/Qwen2.5, Zigbee2MQTT, Docker Compose</li>
-						<li><strong>Projets open-source :</strong> ARIA (framework d'agents IA), dashboards Grafana custom, <span class="todo">[+ repos GitHub à lier]</span></li>
-						<li><strong>Compétences :</strong> Python, Docker, réseau (VLAN, firewall UniFi), observabilité, automation, LLM local</li>
-						<li><strong>Preuve concrète :</strong> voir <a href={base + "/homelab/"}>/homelab</a> et <a href={base + "/projets/"}>/projets</a></li>
-					</ul>
+				<div class="tl-entry">
+					<div class="tl-date">2013–2025</div>
+					<div class="tl-text"><strong>Teamleader Cablex / Swisscom</strong> · Delémont · 20 collaborateurs · P&amp;L · SAP</div>
 				</div>
-
-				<div class="tl-block">
-					<h3>Accompagnement humain</h3>
-					<ul class="tl-list">
-						<li><strong>Pourquoi cette activité :</strong> <span class="todo">[expérience familiale / vocation pédagogique / constat terrain à préciser]</span></li>
-						<li><strong>Personnes déjà accompagnées :</strong> <span class="todo">[~X personnes, informellement et en prestation]</span></li>
-						<li><strong>Spécialités :</strong> seniors, démarches retraite, frontaliers France-Suisse, optimisation des dépenses du foyer</li>
-						<li><strong>Approche :</strong> français clair, pas de jargon, rythme de la personne, pédagogie avant performance</li>
-					</ul>
+				<div class="tl-entry">
+					<div class="tl-date">2011–2013</div>
+					<div class="tl-text"><strong>Entrepreneur TSI Telecom</strong> · Mulhouse · 15 techniciens · 21 000 interventions</div>
+				</div>
+				<div class="tl-entry">
+					<div class="tl-date">2009–2011</div>
+					<div class="tl-text"><strong>Chef de projet Free Infrastructure</strong> · Strasbourg · 4 M€ · 100 000 prises FTTH</div>
+				</div>
+				<div class="tl-entry">
+					<div class="tl-date">1999–2009</div>
+					<div class="tl-text"><strong>Responsable technique Numericable</strong> · Mulhouse · 30 internes + 35 prestataires</div>
+				</div>
+				<div class="tl-entry">
+					<div class="tl-date">1997–1999</div>
+					<div class="tl-text"><strong>Conseiller à l'emploi ANPE</strong> · Mulhouse · Débuts en accompagnement humain</div>
 				</div>
 			</div>
 
+			<h2>Outils &amp; langues</h2>
+			<ul class="tools">
+				<li><strong>SAP</strong> Power User / Expert (production, facturation, planning, reporting)</li>
+				<li><strong>Scan 3D / ScanToBIM</strong> · nuages de points · BIM · AutoCAD / Revit / CloudCompare</li>
+				<li><strong>Excel avancé</strong> (TCD, modèles financiers CAPEX/OPEX) · Access · Microsoft 365</li>
+				<li><strong>Homelab</strong> : Home Assistant, Python (ARIA), Prometheus/Grafana, Docker, UniFi</li>
+				<li><strong>Langues</strong> : Français natif · Allemand professionnel · Anglais technique</li>
+			</ul>
+
 			<h2>Contact</h2>
 			<p>
-				Ouvert à échanger sur le homelab, DevOps, scan 3D, ou des sujets connexes qui surprennent.
-				Me joindre via <a href="mailto:cmadevops.3n1sr@simplelogin.com">cmadevops.3n1sr@simplelogin.com</a> ou les pages
-				<a href={base + "/services-pro/"}>Services Pro</a> / <a href={base + "/accompagnement/"}>Particuliers</a> pour un projet.
+				Ouvert à échanger sur vos projets ou difficultés — architecture, DevOps, conformité ERP,
+				accompagnement particuliers, frontaliers. Me joindre via
+				<a href="mailto:cmadevops.3n1sr@simplelogin.com">cmadevops.3n1sr@simplelogin.com</a>
+				ou les pages dédiées :
+				<a href={base + "/services-pro/"}>Services Pro</a> /
+				<a href={base + "/architecture/"}>Architectes</a> /
+				<a href={base + "/conformite-hcr/"}>Sécurité ERP</a> /
+				<a href={base + "/accompagnement/"}>Particuliers</a>.
 			</p>
 		</main>
 		<Footer />
@@ -112,28 +131,85 @@ const base = import.meta.env.BASE_URL;
 </html>
 
 <style>
-	.lede { font-size: 1.15em; color: var(--text-muted); margin-bottom: 2em; }
-	ul li { margin-bottom: 0.6em; }
-	.timeline { display: grid; gap: 1.2em; margin: 1em 0 2em; }
-	.tl-block {
-		padding: 1.3em 1.5em;
+	.hook {
+		font-size: 1.2em;
+		font-style: italic;
+		color: var(--text);
+		padding: 1.2em 1.5em;
 		background: var(--bg-elevated);
-		border: 1px solid var(--border);
 		border-left: 3px solid var(--accent);
 		border-radius: 6px;
+		margin: 1.5em 0 2em;
+		line-height: 1.7;
 	}
-	.tl-block h3 { margin: 0 0 0.7em; color: var(--accent); font-size: 1.15em; }
-	.tl-block h3::before { content: ''; }
-	.tl-list { list-style: none; padding: 0; margin: 0; }
-	.tl-list li { padding: 0.3em 0; font-size: 0.95em; color: var(--text-muted); }
-	.tl-list strong { color: var(--text); }
-	.todo {
+	.story {
+		font-size: 1.08em;
+		line-height: 1.75;
+		margin-bottom: 2em;
+	}
+	.story strong { color: var(--accent); }
+	.signature-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+		gap: 1em;
+		margin: 2em 0 3em;
+	}
+	.sig-stat {
+		text-align: center;
+		padding: 1.3em 0.8em;
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-radius: 8px;
+	}
+	.sig-num {
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 1.8em;
+		font-weight: 700;
+		color: var(--accent);
+		line-height: 1.2;
+	}
+	.sig-label {
+		font-size: 0.8em;
+		color: var(--text-muted);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		margin-top: 0.4em;
+	}
+	.timeline { display: grid; gap: 0.5em; margin: 1em 0 1.5em; }
+	.tl-entry {
+		display: grid;
+		grid-template-columns: 120px 1fr;
+		gap: 1em;
+		padding: 0.7em 1em;
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-radius: 6px;
+		font-size: 0.95em;
+	}
+	.tl-date {
 		font-family: 'JetBrains Mono', ui-monospace, monospace;
 		font-size: 0.85em;
-		background: rgba(210, 153, 34, 0.12);
-		color: var(--warning);
-		padding: 0.1em 0.5em;
-		border-radius: 3px;
-		border: 1px dashed var(--warning);
+		color: var(--accent);
+		font-weight: 600;
+	}
+	.tl-text { color: var(--text-muted); line-height: 1.5; }
+	.tl-text strong { color: var(--text); }
+	.tools { list-style: none; padding: 0; }
+	.tools li {
+		padding: 0.6em 0 0.6em 1.5em;
+		position: relative;
+		color: var(--text-muted);
+		line-height: 1.6;
+	}
+	.tools li::before {
+		content: '▸';
+		position: absolute;
+		left: 0;
+		color: var(--accent);
+	}
+	.tools strong { color: var(--text); }
+	@media (max-width: 600px) {
+		.tl-entry { grid-template-columns: 1fr; gap: 0.2em; }
 	}
 </style>

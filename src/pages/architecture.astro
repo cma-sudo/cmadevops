@@ -25,6 +25,10 @@ const base = import.meta.env.BASE_URL;
 			<section class="svc-section">
 				<h2>Relevés LiDAR &amp; études solaires 3D</h2>
 				<p class="section-desc">Acquisition, traitement, livrables BIM — et le petit plus qui fait la différence.</p>
+				<p class="proof">
+					<strong>Workflow ScanToBIM éprouvé avec PK Architecture depuis 2013.</strong>
+					Connaissance des contraintes chantier, des PV techniques, des dossiers ERP.
+				</p>
 
 				<div class="services">
 					<article class="svc">
@@ -285,4 +289,15 @@ const base = import.meta.env.BASE_URL;
 		font-weight: 600;
 	}
 	.btn:hover { background: var(--accent-dark); border-bottom: 1px solid var(--accent-dark); }
+	.proof {
+		font-size: 0.9em;
+		color: var(--text-muted);
+		font-style: italic;
+		padding: 0.6em 1em;
+		background: var(--bg-code);
+		border-left: 2px solid var(--accent);
+		border-radius: 4px;
+		margin: 0 0 1.5em;
+	}
+	.proof strong { color: var(--accent); font-style: normal; }
 </style>
