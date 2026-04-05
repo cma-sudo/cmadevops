@@ -1,0 +1,110 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<BaseHead title={`Homelab · ${SITE_TITLE}`} description="Architecture de mon infra maison auto-hébergée" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Homelab</h1>
+			<p class="lede">
+				Une infra auto-hébergée qui tourne sur un Mac Mini + un NUC dans un placard,
+				avec un UDM Pro SE qui gère tout le réseau.
+			</p>
+
+			<h2>Hôtes</h2>
+			<table>
+				<thead><tr><th>Hôte</th><th>Matériel</th><th>Rôle</th></tr></thead>
+				<tbody>
+					<tr><td>home-server-cma</td><td>Mac Mini (Intel, 8 Go)</td><td>Home Assistant, ARIA, Postgres, Mosquitto, 15+ conteneurs</td></tr>
+					<tr><td>cma2</td><td>Intel NUC</td><td>Ollama (Qwen2.5), Technitium DNS, Uptime Kuma</td></tr>
+					<tr><td>UDM Pro SE</td><td>UniFi</td><td>Routage, firewall, VLANs, WiFi 6/6E</td></tr>
+				</tbody>
+			</table>
+
+			<h2>Services</h2>
+			<div class="grid">
+				<div class="service">
+					<h3>Home Assistant</h3>
+					<p>Cœur domotique. 11 caméras, Zigbee2MQTT, Alarmo, Matter, Thread.</p>
+					<span class="tag">domotique</span>
+				</div>
+				<div class="service">
+					<h3>ARIA v10.1</h3>
+					<p>Framework d'agents Python maison. 12 agents, moteur de règles 31 patterns FAST, réponses LLM via Ollama.</p>
+					<span class="tag">ia</span>
+					<span class="tag">python</span>
+				</div>
+				<div class="service">
+					<h3>Monitoring</h3>
+					<p>Prometheus + Grafana, 10 cibles scrappées (hôtes, cAdvisor, PG, Redis, MQTT, UniFi, DNS).</p>
+					<span class="tag">observabilité</span>
+				</div>
+				<div class="service">
+					<h3>Sentinel Sécurité</h3>
+					<p>Détection humain/animal par caméras, push critique iPhone, TTS Alexa, snapshots Telegram.</p>
+					<span class="tag">sécurité</span>
+				</div>
+				<div class="service">
+					<h3>TRMNL e-ink</h3>
+					<p>Dashboard 800×480 affichant score maison, calendrier, météo, anniversaires.</p>
+					<span class="tag">hardware</span>
+				</div>
+				<div class="service">
+					<h3>Ollama</h3>
+					<p>Qwen2.5:3B en local, keep-alive infini, warm-up auto pour des réponses sub-2s.</p>
+					<span class="tag">llm</span>
+				</div>
+			</div>
+
+			<h2>Architecture</h2>
+			<p>
+				Les interactions passent par Telegram (groupe + DM), les push iPhone critiques,
+				9 Echo Dots pour les annonces TTS, un écran e-ink TRMNL, et Discord pour les incidents infra.
+				Tout converge vers le Mac Mini home-server-cma.
+			</p>
+			<p>
+				Le schéma complet avec les flux de données se trouve dans le
+				<code>ARCHITECTURE.md</code> du repo (graphe mermaid, 100+ nœuds et arêtes).
+			</p>
+
+			<h2>Résumé de la stack</h2>
+			<div class="terminal">
+				<span class="out"><span class="prompt">$</span> <span class="cmd">docker ps --format '&#123;&#123;.Names&#125;&#125;' | wc -l</span></span>
+				<span class="out">15</span>
+				<span class="out"><span class="prompt">$</span> <span class="cmd">ls ~/claude-agent/aria/agents/</span></span>
+				<span class="out">anomaly.py  comfort.py  digest.py  energy.py  health.py</span>
+				<span class="out">omlet.py    poulailler.py  predictive.py  security.py  trmnl.py</span>
+				<span class="out"><span class="prompt">$</span> <span class="cmd">curl -s prometheus:9091/api/v1/targets | jq '.data.activeTargets | length'</span></span>
+				<span class="out">10</span>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.lede { font-size: 1.1em; color: var(--text-muted); margin-bottom: 2em; }
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 1em;
+		margin: 1em 0 2em;
+	}
+	.service {
+		padding: 1.2em 1.3em;
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-radius: 8px;
+	}
+	.service h3 { margin-top: 0; font-size: 1.1em; color: var(--accent); }
+	.service h3::before { content: ''; }
+	.service p { font-size: 0.95em; color: var(--text-muted); margin-bottom: 0.8em; }
+</style>

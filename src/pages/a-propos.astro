@@ -1,0 +1,137 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, AUTHOR } from '../consts';
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<BaseHead title={`À propos · ${SITE_TITLE}`} description={`À propos de ${AUTHOR}`} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>À propos</h1>
+
+			<p class="lede">
+				Je suis {AUTHOR} — trois casquettes, un seul fil rouge :
+				<strong>rendre la technologie utile et accessible</strong>.
+			</p>
+
+			<h2>Métier principal : Géomètre LiDAR</h2>
+			<p>
+				Spécialisé dans <strong>l'acquisition et le traitement LiDAR</strong>.
+				Nuages de points, modélisation terrain, relevés architecturaux pour
+				architectes et maîtres d'ouvrage. Basé à Rixheim, Alsace.
+			</p>
+
+			<h2>Expertise technique : DevOps / Homelab</h2>
+			<p>
+				J'opère et fais évoluer une infrastructure maison auto-hébergée : Home Assistant,
+				framework IA Python (ARIA), stack Prometheus/Grafana complète. Tout on-prem :
+				pas de LLM cloud, pas d'automatisation cloud, aucune dépendance au-delà du DNS
+				et des backups offsite. Ces compétences, je les mets au service des PME via
+				<a href="/services-pro">Services Pro</a>.
+			</p>
+
+			<h2>Vocation : Accompagnement humain</h2>
+			<p>
+				J'accompagne à domicile des personnes qui ont besoin d'aide avec le numérique —
+				en particulier les seniors. Formation informatique, dépannage, démarches
+				administratives en ligne, optimisation des dépenses du foyer. Patience, pédagogie,
+				français clair et sans jargon. Voir la page <a href="/accompagnement">Accompagnement numérique</a>.
+			</p>
+
+			<h2>Pourquoi ce site</h2>
+			<p>
+				Parce qu'à chaque fois que je résous un problème de homelab, je me dis « je devrais noter ça ».
+				Ce site est ce carnet — un mélange de projets documentés, de logs de sessions,
+				et d'avis argumentés sur les outils et compromis.
+			</p>
+
+			<h2>Ce sur quoi je bosse au quotidien</h2>
+			<ul>
+				<li><span class="tag">python</span> Framework ARIA, smart engine, logique de propositions/décisions</li>
+				<li><span class="tag">home-assistant</span> 11 caméras, Zigbee2MQTT, Alarmo, Matter</li>
+				<li><span class="tag">docker</span> 15+ conteneurs sur 2 hôtes</li>
+				<li><span class="tag">prometheus</span> 10 cibles scrappées, 8 dashboards Grafana</li>
+				<li><span class="tag">unifi</span> UDM Pro SE + 4 APs + 3 switches, unpoller pour les métriques</li>
+				<li><span class="tag">ollama</span> Qwen2.5:3B en inférence locale, keep-alive infini</li>
+			</ul>
+
+			<h2>Parcours</h2>
+
+			<div class="timeline">
+				<div class="tl-block">
+					<h3>Géomètre LiDAR</h3>
+					<ul class="tl-list">
+						<li><strong>Formation :</strong> <span class="todo">[BTS Géomètre-Topographe / Licence Pro / École à préciser]</span></li>
+						<li><strong>Expérience :</strong> <span class="todo">[X années dans le métier]</span></li>
+						<li><strong>Matériel maîtrisé :</strong> <span class="todo">[Scanners Leica / Faro / drones / RTK à préciser]</span></li>
+						<li><strong>Logiciels :</strong> AutoCAD, Revit, CloudCompare, <span class="todo">[+ autres]</span></li>
+						<li><strong>Collaborations notables :</strong> Pierre Koch architecte, <span class="todo">[+ autres bureaux]</span></li>
+						<li><strong>Types de projets :</strong> <span class="todo">[patrimoine / rénovation / industriel / topographie foncière]</span></li>
+					</ul>
+				</div>
+
+				<div class="tl-block">
+					<h3>DevOps &amp; homelab</h3>
+					<ul class="tl-list">
+						<li><strong>Expérience self-hosting :</strong> <span class="todo">[X années]</span> — évolution d'un simple NAS vers un stack de 15+ conteneurs</li>
+						<li><strong>Stack production maison :</strong> Home Assistant, ARIA v10.1 (Python), Prometheus/Grafana, UniFi Pro, PostgreSQL, Ollama/Qwen2.5, Zigbee2MQTT, Docker Compose</li>
+						<li><strong>Projets open-source :</strong> ARIA (framework d'agents IA), dashboards Grafana custom, <span class="todo">[+ repos GitHub à lier]</span></li>
+						<li><strong>Compétences :</strong> Python, Docker, réseau (VLAN, firewall UniFi), observabilité, automation, LLM local</li>
+						<li><strong>Preuve concrète :</strong> voir <a href="/homelab">/homelab</a> et <a href="/projets">/projets</a></li>
+					</ul>
+				</div>
+
+				<div class="tl-block">
+					<h3>Accompagnement humain</h3>
+					<ul class="tl-list">
+						<li><strong>Pourquoi cette activité :</strong> <span class="todo">[expérience familiale / vocation pédagogique / constat terrain à préciser]</span></li>
+						<li><strong>Personnes déjà accompagnées :</strong> <span class="todo">[~X personnes, informellement et en prestation]</span></li>
+						<li><strong>Spécialités :</strong> seniors, démarches retraite, frontaliers France-Suisse, optimisation des dépenses du foyer</li>
+						<li><strong>Approche :</strong> français clair, pas de jargon, rythme de la personne, pédagogie avant performance</li>
+					</ul>
+				</div>
+			</div>
+
+			<h2>Contact</h2>
+			<p>
+				Ouvert à échanger sur le homelab, DevOps, LiDAR, ou des sujets connexes qui surprennent.
+				Me joindre via <a href="mailto:contact@cmadevops.de">contact@cmadevops.de</a> ou les pages
+				<a href="/services-pro">Services Pro</a> / <a href="/accompagnement">Accompagnement</a> pour un projet.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.lede { font-size: 1.15em; color: var(--text-muted); margin-bottom: 2em; }
+	ul li { margin-bottom: 0.6em; }
+	.timeline { display: grid; gap: 1.2em; margin: 1em 0 2em; }
+	.tl-block {
+		padding: 1.3em 1.5em;
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-left: 3px solid var(--accent);
+		border-radius: 6px;
+	}
+	.tl-block h3 { margin: 0 0 0.7em; color: var(--accent); font-size: 1.15em; }
+	.tl-block h3::before { content: ''; }
+	.tl-list { list-style: none; padding: 0; margin: 0; }
+	.tl-list li { padding: 0.3em 0; font-size: 0.95em; color: var(--text-muted); }
+	.tl-list strong { color: var(--text); }
+	.todo {
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.85em;
+		background: rgba(210, 153, 34, 0.12);
+		color: var(--warning);
+		padding: 0.1em 0.5em;
+		border-radius: 3px;
+		border: 1px dashed var(--warning);
+	}
+</style>

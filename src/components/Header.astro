@@ -1,0 +1,102 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+	<nav>
+		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<div class="internal-links">
+			<HeaderLink href="/">Accueil</HeaderLink>
+			<HeaderLink href="/services-pro">Services Pro</HeaderLink>
+			<HeaderLink href="/accompagnement">Accompagnement</HeaderLink>
+			<HeaderLink href="/homelab">Homelab</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/a-propos">À propos</HeaderLink>
+		</div>
+		<div class="social-links">
+			<a href="https://github.com/" target="_blank" rel="noopener">
+				<span class="sr-only">GitHub</span>
+				<svg viewBox="0 0 16 16" aria-hidden="true" width="28" height="28"
+					><path
+						fill="currentColor"
+						d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+					></path></svg
+				>
+			</a>
+			<a href="/rss.xml">
+				<span class="sr-only">RSS</span>
+				<svg viewBox="0 0 16 16" aria-hidden="true" width="28" height="28"
+					><path fill="currentColor" d="M2 2.5A2.5 2.5 0 0 1 4.5 0h.5A.5.5 0 0 1 5.5.5v1a.5.5 0 0 1-.5.5h-.5A.5.5 0 0 0 4 2.5v.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-.5zm0 4a2.5 2.5 0 0 1 2.5-2.5h.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.5A.5.5 0 0 0 4 6.5v.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-.5zM3 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+					<path fill="currentColor" d="M2 1a1 1 0 0 1 1-1h.5a12.5 12.5 0 0 1 12.5 12.5V13a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-.5A9.5 9.5 0 0 0 3.5 3H3a1 1 0 0 1-1-1V1zm0 5a1 1 0 0 1 1-1h.5A7.5 7.5 0 0 1 11 12.5v.5a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-.5A4.5 4.5 0 0 0 3.5 8H3a1 1 0 0 1-1-1V6z"></path></svg
+				>
+			</a>
+		</div>
+	</nav>
+</header>
+<style>
+	header {
+		margin: 0;
+		padding: 0 1em;
+		background: var(--bg-elevated, #141822);
+		border-bottom: 1px solid var(--border, #232836);
+	}
+	h2 {
+		margin: 0;
+		font-size: 1.05em;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		letter-spacing: -0.02em;
+	}
+	h2 a::before {
+		content: '> ';
+		color: var(--accent);
+	}
+	h2 a,
+	h2 a.active {
+		text-decoration: none;
+		color: var(--text);
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	nav a {
+		padding: 1em 0.75em;
+		color: var(--text-muted);
+		border-bottom: 2px solid transparent;
+		text-decoration: none;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.9em;
+		transition: color 0.15s, border-color 0.15s;
+	}
+	nav a:hover {
+		color: var(--text);
+	}
+	nav a.active {
+		text-decoration: none;
+		color: var(--accent);
+		border-bottom-color: var(--accent);
+	}
+	.social-links,
+	.social-links a {
+		display: flex;
+		align-items: center;
+	}
+	.social-links a {
+		color: var(--text-muted);
+		padding: 0.5em;
+	}
+	.social-links a:hover {
+		color: var(--accent);
+	}
+	@media (max-width: 720px) {
+		.social-links {
+			display: none;
+		}
+		nav a {
+			padding: 0.75em 0.4em;
+			font-size: 0.8em;
+		}
+	}
+</style>

@@ -1,0 +1,104 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+
+const projects = [
+	{
+		name: 'ARIA',
+		tagline: 'Framework d\'agents IA modulaire pour la domotique',
+		description:
+			'Framework Python maison qui orchestre 12 agents spécialisés (sécurité, énergie, confort, santé, détection d\'anomalie, digest, etc.) par-dessus Home Assistant. Utilise MQTT pour le transport, PostgreSQL+pgvector pour la mémoire sémantique, Redis pour les cooldowns, et Ollama (Qwen2.5:3B) pour les réponses LLM. 31 patterns regex FAST traitent 80% des requêtes sans solliciter le LLM.',
+		stack: ['python', 'mqtt', 'postgres', 'redis', 'ollama', 'docker'],
+		status: 'actif',
+	},
+	{
+		name: 'Stack Monitoring',
+		tagline: 'Prometheus + Grafana sur toute l\'infra maison',
+		description:
+			'10 cibles scrappées couvrant 2 hôtes, conteneurs Docker (cAdvisor), PostgreSQL, Redis, Mosquitto, Technitium DNS (via json_exporter), UniFi (unpoller) — 8 dashboards Grafana, vue NOC Home, speedtest UDM via API avec cron horaire.',
+		stack: ['prometheus', 'grafana', 'unpoller', 'node_exporter', 'docker-compose'],
+		status: 'actif',
+	},
+	{
+		name: 'Sentinel Sécurité',
+		tagline: 'Détection d\'intrusion par caméras avec routage intelligent',
+		description:
+			'7 caméras extérieures alimentent des capteurs de détection personne/animal. Nuit + maison occupée → push critique iPhone + TTS Alexa + snapshot Telegram avec boutons inline. Anti-prédateur : 3 détections en 10 min sur même zone déclenche une alerte. Handler universel d\'échec Alarmo avec workflow bypass.',
+		stack: ['home-assistant', 'unifi-protect', 'python', 'telegram'],
+		status: 'actif',
+	},
+	{
+		name: 'TRMNL Dashboard',
+		tagline: 'Écran e-ink maison poussé par ARIA',
+		description:
+			'Panneau e-ink 800×480 affichant score maison, calendrier, météo, pollens, anniversaires. Push API direct toutes les 15 min depuis ARIA (pas besoin de conteneur HACS). Markup hardcodé (TRMNL rejette les inline styles).',
+		stack: ['trmnl', 'python', 'telegram-api'],
+		status: 'actif',
+	},
+];
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<BaseHead title={`Projets · ${SITE_TITLE}`} description="Projets homelab et outillage" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Projets</h1>
+			<p class="lede">Des trucs que je construis et fais tourner à la maison — pas des démos, de la vraie production chez moi.</p>
+
+			<div class="projects">
+				{projects.map((p) => (
+					<article class="project">
+						<header>
+							<h2>{p.name}</h2>
+							<span class={`status ${p.status}`}>{p.status}</span>
+						</header>
+						<p class="tagline">{p.tagline}</p>
+						<p>{p.description}</p>
+						<div class="stack">
+							{p.stack.map((s) => <span class="tag">{s}</span>)}
+						</div>
+					</article>
+				))}
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.lede { font-size: 1.1em; color: var(--text-muted); margin-bottom: 2em; }
+	.projects { display: grid; gap: 1.5em; }
+	.project {
+		padding: 1.5em 1.6em;
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-radius: 8px;
+	}
+	.project header {
+		display: flex; align-items: center; justify-content: space-between;
+		gap: 1em; margin-bottom: 0.3em;
+	}
+	.project h2 { margin: 0; font-size: 1.4em; color: var(--accent); }
+	.project h2::before { content: ''; }
+	.tagline { color: var(--text-muted); font-style: italic; margin: 0 0 1em; }
+	.status {
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.7em;
+		padding: 0.2em 0.6em;
+		border-radius: 4px;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+	}
+	.status.actif {
+		background: rgba(63, 185, 80, 0.15);
+		color: var(--success);
+		border: 1px solid var(--success);
+	}
+	.stack { margin-top: 1em; }
+</style>

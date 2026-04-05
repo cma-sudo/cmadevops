@@ -1,0 +1,189 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, AUTHOR, AUTHOR_ROLE } from '../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 3);
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="hero">
+				<div class="terminal-header">
+					<span class="dot red"></span>
+					<span class="dot yellow"></span>
+					<span class="dot green"></span>
+					<span class="title">~/cmadevops</span>
+				</div>
+				<div class="hero-content">
+					<p class="greet"><span class="prompt">$</span> whoami</p>
+					<h1>{AUTHOR}</h1>
+					<p class="role">Géomètre LiDAR · Conseil DevOps · Accompagnement numérique</p>
+					<p class="intro">
+						Trois casquettes, un fil rouge : <strong>rendre la technologie utile et accessible</strong>.
+						J'aide les <strong>architectes</strong> à relever l'existant, les <strong>PME</strong>
+						à maîtriser leur infra, et les <strong>particuliers</strong> à reprendre confiance avec le numérique.
+					</p>
+					<div class="cta">
+						<a href="/services-pro" class="btn">Services Pro</a>
+						<a href="/accompagnement" class="btn btn-ghost">Accompagnement</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="stats">
+				<div class="stat">
+					<div class="stat-num">12</div>
+					<div class="stat-label">agents IA</div>
+				</div>
+				<div class="stat">
+					<div class="stat-num">15+</div>
+					<div class="stat-label">conteneurs</div>
+				</div>
+				<div class="stat">
+					<div class="stat-num">10</div>
+					<div class="stat-label">cibles Prom</div>
+				</div>
+				<div class="stat">
+					<div class="stat-num">8Gbps</div>
+					<div class="stat-label">Freebox Ultra</div>
+				</div>
+			</section>
+
+			<section>
+				<h2>Derniers articles</h2>
+				<div class="posts">
+					{posts.map((post) => (
+						<a href={`/blog/${post.id}/`} class="card">
+							<h3>{post.data.title}</h3>
+							<p class="date"><FormattedDate date={post.data.pubDate} /></p>
+							<p class="excerpt">{post.data.description}</p>
+						</a>
+					))}
+				</div>
+				<p class="more"><a href="/blog">tous les articles →</a></p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.hero {
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		overflow: hidden;
+		margin-bottom: 3em;
+		box-shadow: var(--box-shadow);
+	}
+	.terminal-header {
+		background: var(--bg-code);
+		padding: 0.6em 1em;
+		border-bottom: 1px solid var(--border);
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.8em;
+		color: var(--text-muted);
+	}
+	.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+	.dot.red { background: #ff5f57; }
+	.dot.yellow { background: #febc2e; }
+	.dot.green { background: #28c840; }
+	.title { margin-left: 0.8em; }
+
+	.hero-content { padding: 2em 2em 2.5em; }
+	.greet {
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		color: var(--text-muted);
+		margin-bottom: 0.5em;
+		font-size: 0.9em;
+	}
+	.prompt { color: var(--success); }
+	.hero h1 {
+		font-size: 2.8em;
+		margin: 0.1em 0 0.1em;
+		background: linear-gradient(120deg, var(--text) 0%, var(--accent) 100%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.hero h1::before { content: ''; }
+	.role {
+		color: var(--text-muted);
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.95em;
+		margin-bottom: 1.2em;
+	}
+	.intro { margin-bottom: 1.5em; }
+	.cta { display: flex; gap: 0.8em; flex-wrap: wrap; }
+	.btn {
+		display: inline-block;
+		padding: 0.6em 1.2em;
+		border: 1px solid var(--accent);
+		border-radius: 6px;
+		background: var(--accent);
+		color: var(--bg);
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.9em;
+		font-weight: 600;
+	}
+	.btn:hover { background: var(--accent-dark); border-bottom: 1px solid var(--accent-dark); }
+	.btn-ghost { background: transparent; color: var(--accent); }
+	.btn-ghost:hover { background: var(--accent-glow); }
+
+	.stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+		gap: 1em;
+		margin-bottom: 3em;
+	}
+	.stat {
+		text-align: center;
+		padding: 1.2em 0.5em;
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-radius: 8px;
+	}
+	.stat-num {
+		font-size: 2em;
+		font-weight: 700;
+		color: var(--accent);
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+	}
+	.stat-label {
+		font-size: 0.8em;
+		color: var(--text-muted);
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+	}
+
+	.posts { display: grid; gap: 1em; margin-bottom: 1.5em; }
+	.card .date {
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.8em;
+		color: var(--text-dim);
+		margin: 0.3em 0;
+	}
+	.card .excerpt { color: var(--text-muted); font-size: 0.95em; margin: 0; }
+	.more a { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.9em; }
+
+	@media (max-width: 720px) {
+		.hero-content { padding: 1.5em 1.2em; }
+		.hero h1 { font-size: 2em; }
+	}
+</style>

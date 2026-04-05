@@ -1,0 +1,59 @@
+---
+import { AUTHOR, LOCATION } from '../consts';
+const today = new Date();
+---
+
+<footer>
+	<div class="footer-inner">
+		<div class="footer-meta">
+			<span class="prompt">$</span> echo "&copy; {today.getFullYear()} {AUTHOR}"
+			<span class="sep">·</span>
+			<span class="loc">{LOCATION}</span>
+		</div>
+		<div class="footer-stack">
+			built with <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>
+			<span class="sep">·</span>
+			deployed on Cloudflare Pages
+			<span class="sep">·</span>
+			<a href="/rss.xml">RSS</a>
+		</div>
+	</div>
+</footer>
+<style>
+	footer {
+		padding: 2em 1em 3em;
+		background: var(--bg-elevated);
+		color: var(--text-muted);
+		border-top: 1px solid var(--border);
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.8em;
+	}
+	.footer-inner {
+		max-width: 760px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.footer-meta {
+		margin-bottom: 0.5em;
+	}
+	.prompt {
+		color: var(--success);
+	}
+	.sep {
+		margin: 0 0.6em;
+		color: var(--text-dim);
+	}
+	.loc {
+		color: var(--text-muted);
+	}
+	.footer-stack {
+		opacity: 0.7;
+		font-size: 0.9em;
+	}
+	.footer-stack a {
+		color: var(--text-muted);
+	}
+	.footer-stack a:hover {
+		color: var(--accent);
+	}
+</style>
