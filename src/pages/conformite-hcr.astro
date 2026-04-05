@@ -1,0 +1,285 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<BaseHead title={`DUER & Conformité HCR · ${SITE_TITLE}`} description="Rédaction et mise à jour du DUER pour bars, restaurants, snacks, brasseries en Alsace. Sundgau, Mulhouse, Saint-Louis, Blotzheim. Intervention à domicile." />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="intro-block">
+				<h1>DUER &amp; Conformité HCR</h1>
+				<p class="lede">
+					Le <strong>Document Unique d'Évaluation des Risques</strong> est obligatoire pour tout bar, restaurant ou snack
+					dès le premier salarié. Je le rédige sur le terrain, dans votre langage, avec un document utilisable.
+				</p>
+				<div class="refs">
+					<span class="ref-label">Déjà fait confiance :</span>
+					<strong>AG Bar (Altkirch)</strong> · <strong>Le Track (Blotzheim)</strong>
+				</div>
+			</section>
+
+			<section class="svc-section">
+				<h2>Prestations DUER &amp; conformité</h2>
+				<p class="section-desc">Forfaits clairs, pas de surprise. Sundgau, Mulhouse, Saint-Louis et environs.</p>
+
+				<div class="services">
+					<article class="svc svc-highlight">
+						<header>
+							<h3>⭐ Rédaction DUER</h3>
+							<span class="price">900 € (forfait)</span>
+						</header>
+						<p>
+							Visite terrain (1 à 2h), identification des unités de travail, évaluation des risques,
+							plan d'action priorisé. <strong>Document complet livré sous 48h</strong>, affichage obligatoire
+							fourni, registre numérique prêt à l'emploi.
+						</p>
+						<p class="target">
+							<strong>Pour :</strong> bar, café, restaurant, snack, brasserie, PMU, food-truck avec salarié(s).
+						</p>
+					</article>
+
+					<article class="svc">
+						<header>
+							<h3>Mise à jour annuelle DUER</h3>
+							<span class="price">250 €</span>
+						</header>
+						<p>
+							Revue annuelle obligatoire : actualisation des risques, nouvelles mesures prises,
+							suivi du plan d'action. Passage sur site + document mis à jour.
+						</p>
+					</article>
+
+					<article class="svc">
+						<header>
+							<h3>DUER + accompagnement 1 an</h3>
+							<span class="price">1 200 €</span>
+						</header>
+						<p>
+							Rédaction initiale + <strong>2 visites de suivi</strong> (à 6 et 12 mois) + hotline
+							réglementaire (questions par mail/SMS illimitées). Pour dormir tranquille.
+						</p>
+					</article>
+
+					<article class="svc">
+						<header>
+							<h3>Audit conformité HCR</h3>
+							<span class="price">450 €</span>
+						</header>
+						<p>
+							Checklist complète : sécurité incendie (extincteurs, BAES), affichages obligatoires,
+							HACCP cuisine, registre unique du personnel, conventions collectives.
+							Rapport écrit avec priorités.
+						</p>
+					</article>
+
+					<article class="svc">
+						<header>
+							<h3>Kit affichages obligatoires</h3>
+							<span class="price">120 €</span>
+						</header>
+						<p>
+							Pack complet prêt à l'affichage : convention collective HCR, horaires,
+							repos hebdomadaire, droit d'alerte, premiers secours, interdiction de fumer,
+							contacts urgence. Livré imprimé A3 plastifié.
+						</p>
+					</article>
+				</div>
+			</section>
+
+			<section class="legal-section">
+				<h2>Pourquoi c'est obligatoire</h2>
+				<div class="legal-grid">
+					<div class="legal-item">
+						<h3>Code du travail</h3>
+						<p>Articles <strong>L.4121-1 à L.4121-5</strong> : obligation de l'employeur d'évaluer les risques professionnels et de les consigner dans un document unique.</p>
+					</div>
+					<div class="legal-item">
+						<h3>Amende jusqu'à 1 500 €</h3>
+						<p>Par unité de travail en cas d'absence du DUER, lors d'un contrôle de l'inspection du travail.</p>
+					</div>
+					<div class="legal-item">
+						<h3>Responsabilité pénale</h3>
+						<p>En cas d'accident du travail, le dirigeant peut être poursuivi pour <strong>faute inexcusable</strong> si le DUER est absent ou obsolète.</p>
+					</div>
+					<div class="legal-item">
+						<h3>Mise à jour annuelle</h3>
+						<p>Obligatoire. Plus révision à chaque changement (nouveau poste, nouveau matériel, aménagement local).</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="approach-section">
+				<h2>Mon approche terrain</h2>
+				<ul class="approach">
+					<li><strong>Je viens chez vous</strong> — à Altkirch, Mulhouse, Saint-Louis, Blotzheim, Sundgau, tout le Haut-Rhin</li>
+					<li><strong>Je parle votre langage</strong> — pas de jargon QHSE, pas de PDF générique à 2 500 €</li>
+					<li><strong>Document utilisable</strong> — que votre équipe peut lire, comprendre et mettre à jour</li>
+					<li><strong>Pas de cabinet parisien</strong> — un interlocuteur unique, réactif, qui connaît le métier</li>
+					<li><strong>Rendez-vous hors horaires de service</strong> — matin avant ouverture ou après-midi calme</li>
+				</ul>
+			</section>
+
+			<section class="contact">
+				<h2>Premier contact</h2>
+				<p>
+					Appelez ou envoyez un message. Je vous rappelle pour caler un rendez-vous sur place,
+					sans engagement. Devis gratuit.
+				</p>
+				<div class="cta">
+					<a href="mailto:cmadevops.3n1sr@simplelogin.com?subject=DUER HCR" class="btn">cmadevops.3n1sr@simplelogin.com</a>
+				</div>
+			</section>
+
+			<p class="disclaimer">
+				<strong>Mention légale :</strong> Prestation d'accompagnement à la rédaction du DUER. La responsabilité
+				finale du document et de sa mise à jour reste celle du chef d'établissement (article L.4121-1 du Code du travail).
+				Je n'endosse pas le rôle de préventeur salarié ni d'organisme agréé.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.intro-block {
+		padding: 2em 2em 2.5em;
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		margin-bottom: 3em;
+	}
+	h1 { margin: 0 0 0.5em; }
+	.lede {
+		font-size: 1.15em;
+		color: var(--text);
+		margin-bottom: 1.5em;
+		line-height: 1.7;
+	}
+	.lede strong { color: var(--accent); }
+	.refs {
+		font-size: 0.9em;
+		color: var(--text-muted);
+		padding: 0.7em 1em;
+		background: var(--bg);
+		border-left: 3px solid var(--success);
+		border-radius: 4px;
+	}
+	.refs strong { color: var(--text); }
+	.ref-label { color: var(--text-dim); text-transform: uppercase; font-size: 0.82em; letter-spacing: 0.08em; margin-right: 0.6em; }
+	.svc-section { margin-bottom: 3em; }
+	.section-desc { color: var(--text-muted); font-style: italic; margin: -0.5em 0 1.5em; }
+	.services {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1em;
+	}
+	.svc {
+		padding: 1.3em 1.4em;
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-radius: 8px;
+		transition: border-color 0.15s, transform 0.15s;
+	}
+	.svc:hover { border-color: var(--accent); transform: translateY(-2px); }
+	.svc-highlight {
+		border-color: var(--accent);
+		background: linear-gradient(135deg, var(--bg-elevated) 0%, rgba(88, 166, 255, 0.08) 100%);
+	}
+	.svc header {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 1em;
+		margin-bottom: 0.5em;
+	}
+	.svc h3 { margin: 0; font-size: 1.05em; color: var(--accent); }
+	.svc h3::before { content: ''; }
+	.price {
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.7em;
+		color: var(--success);
+		white-space: nowrap;
+		background: rgba(63, 185, 80, 0.1);
+		border: 1px solid rgba(63, 185, 80, 0.3);
+		padding: 0.2em 0.5em;
+		border-radius: 4px;
+	}
+	.svc p { color: var(--text-muted); font-size: 0.95em; margin: 0 0 0.5em; line-height: 1.6; }
+	.svc p.target { font-size: 0.85em; color: var(--text-dim); margin-top: 0.6em; }
+	.svc p.target strong { color: var(--text-muted); }
+	.legal-section { margin-bottom: 3em; }
+	.legal-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.legal-item {
+		padding: 1.1em 1.2em;
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-left: 3px solid var(--warning);
+		border-radius: 6px;
+	}
+	.legal-item h3 { margin: 0 0 0.4em; font-size: 1em; color: var(--warning); }
+	.legal-item h3::before { content: ''; }
+	.legal-item p { margin: 0; font-size: 0.9em; color: var(--text-muted); line-height: 1.55; }
+	.legal-item strong { color: var(--text); }
+	.approach-section { margin-bottom: 3em; }
+	.approach { list-style: none; padding: 0; margin: 1em 0; }
+	.approach li {
+		padding: 0.7em 0 0.7em 1.8em;
+		position: relative;
+		color: var(--text-muted);
+		line-height: 1.6;
+	}
+	.approach li::before {
+		content: '✓';
+		position: absolute;
+		left: 0;
+		color: var(--success);
+		font-weight: 700;
+	}
+	.approach strong { color: var(--text); }
+	.contact {
+		margin-top: 2em;
+		padding: 1.8em 2em;
+		background: var(--bg-elevated);
+		border: 1px solid var(--accent);
+		border-radius: 10px;
+	}
+	.contact h2 { margin-top: 0; }
+	.contact p { color: var(--text-muted); margin-bottom: 1em; }
+	.cta { margin-top: 1em; }
+	.btn {
+		display: inline-block;
+		padding: 0.8em 1.6em;
+		border: 1px solid var(--accent);
+		border-radius: 6px;
+		background: var(--accent);
+		color: var(--bg);
+		font-size: 1em;
+		font-weight: 600;
+	}
+	.btn:hover { background: var(--accent-dark); border-bottom: 1px solid var(--accent-dark); }
+	.disclaimer {
+		font-size: 0.82em;
+		color: var(--text-dim);
+		font-style: italic;
+		margin: 2em 0 0;
+		padding: 0.9em 1.1em;
+		background: var(--bg);
+		border-left: 3px solid var(--warning);
+		border-radius: 4px;
+		line-height: 1.6;
+	}
+	.disclaimer strong { color: var(--warning); font-style: normal; }
+</style>
