@@ -30,11 +30,15 @@ const posts = (await getCollection('blog'))
 				<div class="hero-content">
 					<p class="greet"><span class="prompt">$</span> whoami</p>
 					<h1>{AUTHOR}</h1>
-					<p class="role">Géomètre LiDAR · Conseil DevOps · Accompagnement numérique</p>
+					<p class="role">Scan 3D · Conseil DevOps · Accompagnement numérique</p>
 					<p class="intro">
 						Trois casquettes, un fil rouge : <strong>rendre la technologie utile et accessible</strong>.
-						J'aide les <strong>architectes</strong> à relever l'existant, les <strong>PME</strong>
-						à maîtriser leur infra, et les <strong>particuliers</strong> à reprendre confiance avec le numérique.
+						J'aide les <strong>architectes</strong> à relever l'existant en nuages de points 3D,
+						les <strong>PME</strong> à maîtriser leur infra, et les <strong>particuliers</strong>
+						à reprendre confiance avec le numérique.
+					</p>
+					<p class="partner">
+						Partenaire de <a href="https://pk-archi.com/" target="_blank" rel="noopener">PK Architecture</a>.
 					</p>
 					<div class="cta">
 						<a href={base + "/services-pro/"} class="btn">Services Pro</a>
@@ -129,7 +133,18 @@ const posts = (await getCollection('blog'))
 		font-size: 0.95em;
 		margin-bottom: 1.2em;
 	}
-	.intro { margin-bottom: 1.5em; }
+	.intro { margin-bottom: 1em; }
+	.partner {
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.85em;
+		color: var(--text-muted);
+		margin-bottom: 1.5em;
+		padding: 0.6em 0.9em;
+		background: var(--bg-code);
+		border-left: 2px solid var(--accent);
+		border-radius: 4px;
+	}
+	.partner a { color: var(--accent); font-weight: 600; }
 	.cta { display: flex; gap: 0.8em; flex-wrap: wrap; }
 	.btn {
 		display: inline-block;
