@@ -6,6 +6,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://cmadevops.de',
+	site: 'https://cma-sudo.github.io',
+	base: '/cmadevops',
 	integrations: [mdx(), sitemap()],
 });
