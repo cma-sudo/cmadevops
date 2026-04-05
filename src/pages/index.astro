@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION, AUTHOR, AUTHOR_ROLE } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
+const base = import.meta.env.BASE_URL;
 
 const posts = (await getCollection('blog'))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -36,8 +37,8 @@ const posts = (await getCollection('blog'))
 						à maîtriser leur infra, et les <strong>particuliers</strong> à reprendre confiance avec le numérique.
 					</p>
 					<div class="cta">
-						<a href="/services-pro" class="btn">Services Pro</a>
-						<a href="/accompagnement" class="btn btn-ghost">Accompagnement</a>
+						<a href={base + "services-pro/"} class="btn">Services Pro</a>
+						<a href={base + "accompagnement/"} class="btn btn-ghost">Accompagnement</a>
 					</div>
 				</div>
 			</section>
@@ -65,14 +66,14 @@ const posts = (await getCollection('blog'))
 				<h2>Derniers articles</h2>
 				<div class="posts">
 					{posts.map((post) => (
-						<a href={`/blog/${post.id}/`} class="card">
+						<a href={`${base}blog/${post.id}/`} class="card">
 							<h3>{post.data.title}</h3>
 							<p class="date"><FormattedDate date={post.data.pubDate} /></p>
 							<p class="excerpt">{post.data.description}</p>
 						</a>
 					))}
 				</div>
-				<p class="more"><a href="/blog">tous les articles →</a></p>
+				<p class="more"><a href={base + "blog/"}>tous les articles →</a></p>
 			</section>
 		</main>
 		<Footer />

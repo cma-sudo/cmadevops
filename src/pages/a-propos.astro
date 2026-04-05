@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, AUTHOR } from '../consts';
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -33,7 +34,7 @@ import { SITE_TITLE, AUTHOR } from '../consts';
 				framework IA Python (ARIA), stack Prometheus/Grafana complète. Tout on-prem :
 				pas de LLM cloud, pas d'automatisation cloud, aucune dépendance au-delà du DNS
 				et des backups offsite. Ces compétences, je les mets au service des PME via
-				<a href="/services-pro">Services Pro</a>.
+				<a href={base + "services-pro/"}>Services Pro</a>.
 			</p>
 
 			<h2>Vocation : Accompagnement humain</h2>
@@ -41,7 +42,7 @@ import { SITE_TITLE, AUTHOR } from '../consts';
 				J'accompagne à domicile des personnes qui ont besoin d'aide avec le numérique —
 				en particulier les seniors. Formation informatique, dépannage, démarches
 				administratives en ligne, optimisation des dépenses du foyer. Patience, pédagogie,
-				français clair et sans jargon. Voir la page <a href="/accompagnement">Accompagnement numérique</a>.
+				français clair et sans jargon. Voir la page <a href={base + "accompagnement/"}>Accompagnement numérique</a>.
 			</p>
 
 			<h2>Pourquoi ce site</h2>
@@ -83,7 +84,7 @@ import { SITE_TITLE, AUTHOR } from '../consts';
 						<li><strong>Stack production maison :</strong> Home Assistant, ARIA v10.1 (Python), Prometheus/Grafana, UniFi Pro, PostgreSQL, Ollama/Qwen2.5, Zigbee2MQTT, Docker Compose</li>
 						<li><strong>Projets open-source :</strong> ARIA (framework d'agents IA), dashboards Grafana custom, <span class="todo">[+ repos GitHub à lier]</span></li>
 						<li><strong>Compétences :</strong> Python, Docker, réseau (VLAN, firewall UniFi), observabilité, automation, LLM local</li>
-						<li><strong>Preuve concrète :</strong> voir <a href="/homelab">/homelab</a> et <a href="/projets">/projets</a></li>
+						<li><strong>Preuve concrète :</strong> voir <a href={base + "homelab/"}>/homelab</a> et <a href={base + "projets/"}>/projets</a></li>
 					</ul>
 				</div>
 
@@ -102,7 +103,7 @@ import { SITE_TITLE, AUTHOR } from '../consts';
 			<p>
 				Ouvert à échanger sur le homelab, DevOps, LiDAR, ou des sujets connexes qui surprennent.
 				Me joindre via <a href="mailto:contact@cmadevops.de">contact@cmadevops.de</a> ou les pages
-				<a href="/services-pro">Services Pro</a> / <a href="/accompagnement">Accompagnement</a> pour un projet.
+				<a href={base + "services-pro/"}>Services Pro</a> / <a href={base + "accompagnement/"}>Accompagnement</a> pour un projet.
 			</p>
 		</main>
 		<Footer />
