@@ -50,20 +50,20 @@ const posts = (await getCollection('blog'))
 
 			<section class="stats">
 				<div class="stat">
-					<div class="stat-num">12</div>
-					<div class="stat-label">agents IA</div>
+					<div class="stat-num">3</div>
+					<div class="stat-label">casquettes complémentaires</div>
 				</div>
 				<div class="stat">
-					<div class="stat-num">15+</div>
-					<div class="stat-label">conteneurs</div>
+					<div class="stat-num">Alsace</div>
+					<div class="stat-label">Rixheim &amp; environs</div>
 				</div>
 				<div class="stat">
-					<div class="stat-num">10</div>
-					<div class="stat-label">cibles Prom</div>
+					<div class="stat-num"><a href="https://pk-archi.com/" target="_blank" rel="noopener">PK Archi</a></div>
+					<div class="stat-label">partenaire</div>
 				</div>
 				<div class="stat">
-					<div class="stat-num">8Gbps</div>
-					<div class="stat-label">Freebox Ultra</div>
+					<div class="stat-num">Homelab</div>
+					<div class="stat-label">auto-hébergé</div>
 				</div>
 			</section>
 
@@ -176,11 +176,14 @@ const posts = (await getCollection('blog'))
 		border-radius: 8px;
 	}
 	.stat-num {
-		font-size: 2em;
+		font-size: 1.5em;
 		font-weight: 700;
 		color: var(--accent);
 		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		line-height: 1.3;
 	}
+	.stat-num a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+	.stat-num a:hover { border-bottom-color: var(--accent); }
 	.stat-label {
 		font-size: 0.8em;
 		color: var(--text-muted);

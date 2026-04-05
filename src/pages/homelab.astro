@@ -19,6 +19,25 @@ import { SITE_TITLE } from '../consts';
 				avec un UDM Pro SE qui gère tout le réseau.
 			</p>
 
+			<section class="stats">
+				<div class="stat">
+					<div class="stat-num">12</div>
+					<div class="stat-label">agents IA</div>
+				</div>
+				<div class="stat">
+					<div class="stat-num">15+</div>
+					<div class="stat-label">conteneurs</div>
+				</div>
+				<div class="stat">
+					<div class="stat-num">10</div>
+					<div class="stat-label">cibles Prom</div>
+				</div>
+				<div class="stat">
+					<div class="stat-num">8 Gbps</div>
+					<div class="stat-label">Freebox Ultra</div>
+				</div>
+			</section>
+
 			<h2>Hôtes</h2>
 			<table>
 				<thead><tr><th>Hôte</th><th>Matériel</th><th>Rôle</th></tr></thead>
@@ -92,6 +111,32 @@ import { SITE_TITLE } from '../consts';
 
 <style>
 	.lede { font-size: 1.1em; color: var(--text-muted); margin-bottom: 2em; }
+	.stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+		gap: 1em;
+		margin-bottom: 2.5em;
+	}
+	.stat {
+		text-align: center;
+		padding: 1.2em 0.5em;
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-radius: 8px;
+	}
+	.stat-num {
+		font-size: 2em;
+		font-weight: 700;
+		color: var(--accent);
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+	}
+	.stat-label {
+		font-size: 0.8em;
+		color: var(--text-muted);
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+	}
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
