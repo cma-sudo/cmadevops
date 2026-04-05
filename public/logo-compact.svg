@@ -1,27 +1,43 @@
-<svg width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
-  <!-- CMA -->
-  <text x="15" y="44"
-        font-family="Arial, Helvetica, sans-serif"
-        font-size="42"
-        font-weight="700"
-        fill="#58a6ff"
-        letter-spacing="-1">
-    CMA
-  </text>
+<svg width="260" height="60" viewBox="0 0 260 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cmaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a7bd5"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- C with angular cut + dot pattern -->
+  <g>
+    <!-- Main C shape -->
+    <path d="M 8 10 L 38 10 L 38 18 L 18 18 L 18 42 L 38 42 L 38 50 L 8 50 Z"
+          fill="url(#cmaGrad)"/>
+    <!-- Dot pattern inside C (scan effect) -->
+    <g fill="url(#cmaGrad)" opacity="0.85">
+      <circle cx="22" cy="28" r="1.4"/>
+      <circle cx="26" cy="28" r="1.4"/>
+      <circle cx="30" cy="28" r="1.4"/>
+      <circle cx="22" cy="32" r="1.4"/>
+      <circle cx="26" cy="32" r="1.4"/>
+      <circle cx="30" cy="32" r="1.4"/>
+      <circle cx="22" cy="36" r="1.4"/>
+      <circle cx="26" cy="36" r="1.4"/>
+      <circle cx="22" cy="40" r="1.4"/>
+    </g>
+  </g>
+
+  <!-- M -->
+  <path d="M 44 10 L 52 10 L 62 30 L 72 10 L 80 10 L 80 50 L 72 50 L 72 26 L 64 42 L 60 42 L 52 26 L 52 50 L 44 50 Z"
+        fill="url(#cmaGrad)"/>
+
+  <!-- A -->
+  <path d="M 86 50 L 94 50 L 96 42 L 108 42 L 110 50 L 118 50 L 106 10 L 98 10 Z M 97 35 L 102 20 L 107 35 Z"
+        fill="url(#cmaGrad)" fill-rule="evenodd"/>
 
   <!-- CONSEIL -->
-  <text x="115" y="40"
+  <text x="128" y="38"
         font-family="Arial, Helvetica, sans-serif"
-        font-size="18"
-        letter-spacing="4"
-        fill="#e6edf3">
-    CONSEIL
-  </text>
-
-  <!-- Dots -->
-  <g fill="#58a6ff">
-    <circle cx="7" cy="38" r="2"/>
-    <circle cx="4" cy="42" r="1.6"/>
-    <circle cx="2" cy="46" r="1.2"/>
-  </g>
+        font-size="15"
+        font-weight="600"
+        letter-spacing="3"
+        fill="#e6edf3">CONSEIL</text>
 </svg>
