@@ -20,8 +20,12 @@ const base = import.meta.env.BASE_URL;
 				Expertise concrète issue d'années de production en homelab + expérience en scan 3D & nuages de points.
 			</p>
 			<p class="cta-alt">
-				<span>→</span> Vous cherchez de l'aide informatique personnelle, de la formation senior ou du dépannage à domicile&nbsp;?
-				<a href={base + "/accompagnement/"}>Voir la page Accompagnement numérique</a>
+				<span>→</span> <strong>Architecte ou bureau d'études&nbsp;?</strong>
+				<a href={base + "/architecture/"}>Page dédiée Architectes</a>
+			</p>
+			<p class="cta-alt">
+				<span>→</span> Particulier cherchant formation, dépannage ou démarches&nbsp;?
+				<a href={base + "/accompagnement/"}>Accompagnement numérique</a>
 			</p>
 
 			<section class="svc-section">
@@ -145,43 +149,13 @@ const base = import.meta.env.BASE_URL;
 			</section>
 
 			<section class="svc-section">
-				<h2>Scan 3D & nuages de points</h2>
-				<p class="section-desc">En partenariat avec <a href="https://pk-archi.com/" target="_blank" rel="noopener">PK Architecture</a>. Acquisition, traitement, livrables.</p>
-
-				<div class="services">
-					<article class="svc">
-						<header>
-							<h3>Acquisition 3D terrestre</h3>
-							<span class="price">sur devis</span>
-						</header>
-						<p>Relevés 3D haute densité : bâtiments existants, intérieurs/extérieurs, ouvrages. Nuages de points denses et précis pour projets de rénovation et conception.</p>
-						<div class="stack">
-							<span class="tag">scan-3d</span><span class="tag">point-cloud</span><span class="tag">relevé</span>
-						</div>
-					</article>
-
-					<article class="svc">
-						<header>
-							<h3>Traitement nuages de points</h3>
-							<span class="price">sur devis</span>
-						</header>
-						<p>Nettoyage, segmentation, recalage, extraction d'éléments. Livrables CAO (DWG, IFC), plans 2D, coupes, élévations, maquettes BIM.</p>
-						<div class="stack">
-							<span class="tag">autocad</span><span class="tag">revit</span><span class="tag">cloudcompare</span>
-						</div>
-					</article>
-
-					<article class="svc">
-						<header>
-							<h3>Partenariat PK Architecture</h3>
-							<span class="price">sur devis</span>
-						</header>
-						<p>Collaboration régulière avec <a href="https://pk-archi.com/" target="_blank" rel="noopener">PK Architecture</a> : livraison de bases CAO propres pour projets de rénovation, extensions, réhabilitations patrimoniales en Alsace.</p>
-						<div class="stack">
-							<span class="tag">relevé</span><span class="tag">architecture</span><span class="tag">patrimoine</span>
-						</div>
-					</article>
-				</div>
+				<h2>Scan 3D, études solaires &amp; architecture</h2>
+				<p class="section-desc">
+					Relevés LiDAR, études d'ensoleillement par scan 3D, audit logiciel d'agences, veille techno et formation IA pour architectes.
+				</p>
+				<p class="redirect-card">
+					<a href={base + "/architecture/"} class="btn-inline">→ Page dédiée Architectes &amp; bureaux d'études</a>
+				</p>
 			</section>
 
 			<section class="contact">
@@ -217,6 +191,18 @@ const base = import.meta.env.BASE_URL;
 	}
 	.cta-alt a { font-weight: 600; }
 	.cta-alt span { color: var(--accent); margin-right: 0.4em; }
+	.redirect-card { margin: 0.5em 0 0; }
+	.btn-inline {
+		display: inline-block;
+		padding: 0.7em 1.2em;
+		background: var(--accent);
+		color: var(--bg);
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.9em;
+		font-weight: 600;
+		border-radius: 6px;
+	}
+	.btn-inline:hover { background: var(--accent-dark); border-bottom: 1px solid var(--accent-dark); }
 	.svc-section { margin-bottom: 3em; }
 	.section-desc { color: var(--text-muted); font-style: italic; margin: -0.5em 0 1.5em; }
 	.services {
