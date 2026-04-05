@@ -9,26 +9,29 @@ const base = import.meta.env.BASE_URL;
 <!doctype html>
 <html lang="fr">
 	<head>
-		<BaseHead title={`DUER & Conformité HCR · ${SITE_TITLE}`} description="Rédaction et mise à jour du DUER pour bars, restaurants, snacks, brasseries en Alsace. Sundgau, Mulhouse, Saint-Louis, Blotzheim. Intervention à domicile." />
+		<BaseHead title={`Sécurité, conformité & ouverture ERP · ${SITE_TITLE}`} description="DUER, audit conformité, coordination ERP, constitution dossier commission de sécurité pour bars, restaurants et établissements recevant du public en Alsace." />
 	</head>
 	<body>
 		<Header />
 		<main>
 			<section class="intro-block">
-				<h1>DUER &amp; Conformité HCR</h1>
+				<h1>Sécurité, conformité &amp; ouverture d'établissements</h1>
 				<p class="lede">
-					Le <strong>Document Unique d'Évaluation des Risques</strong> est obligatoire pour tout bar, restaurant ou snack
-					dès le premier salarié. Je le rédige sur le terrain, dans votre langage, avec un document utilisable.
+					Du <strong>DUER</strong> quotidien à la <strong>coordination ERP</strong> pour validation commission de sécurité :
+					un interlocuteur unique, terrain, qui comprend les PV, les produits, les entreprises et le bureau de contrôle.
 				</p>
 				<div class="refs">
-					<span class="ref-label">Déjà fait confiance :</span>
+					<span class="ref-label">Références :</span>
 					<strong>AG Bar (Altkirch)</strong> · <strong>Le Track (Blotzheim)</strong>
 				</div>
 			</section>
 
+			<!-- ═══════════════════════════════════════════ -->
+			<!-- TIER 1: DUER & conformité courante -->
+			<!-- ═══════════════════════════════════════════ -->
 			<section class="svc-section">
-				<h2>Prestations DUER &amp; conformité</h2>
-				<p class="section-desc">Forfaits clairs, pas de surprise. Sundgau, Mulhouse, Saint-Louis et environs.</p>
+				<h2>1. DUER &amp; conformité courante</h2>
+				<p class="section-desc">Obligation légale annuelle pour tout établissement avec salarié(s). Forfaits clairs.</p>
 
 				<div class="services">
 					<article class="svc svc-highlight">
@@ -63,20 +66,8 @@ const base = import.meta.env.BASE_URL;
 							<span class="price">1 200 €</span>
 						</header>
 						<p>
-							Rédaction initiale + <strong>2 visites de suivi</strong> (à 6 et 12 mois) + hotline
-							réglementaire (questions par mail/SMS illimitées). Pour dormir tranquille.
-						</p>
-					</article>
-
-					<article class="svc">
-						<header>
-							<h3>Audit conformité HCR</h3>
-							<span class="price">450 €</span>
-						</header>
-						<p>
-							Checklist complète : sécurité incendie (extincteurs, BAES), affichages obligatoires,
-							HACCP cuisine, registre unique du personnel, conventions collectives.
-							Rapport écrit avec priorités.
+							Rédaction initiale + <strong>2 visites de suivi</strong> + hotline réglementaire
+							(questions par mail/SMS illimitées). Pour dormir tranquille.
 						</p>
 					</article>
 
@@ -86,62 +77,220 @@ const base = import.meta.env.BASE_URL;
 							<span class="price">120 €</span>
 						</header>
 						<p>
-							Pack complet prêt à l'affichage : convention collective HCR, horaires,
-							repos hebdomadaire, droit d'alerte, premiers secours, interdiction de fumer,
-							contacts urgence. Livré imprimé A3 plastifié.
+							Pack complet : convention collective HCR, horaires, repos, droit d'alerte,
+							premiers secours, interdiction de fumer, contacts urgence. Livré imprimé A3 plastifié.
 						</p>
 					</article>
 				</div>
 			</section>
 
-			<section class="legal-section">
-				<h2>Pourquoi c'est obligatoire</h2>
-				<div class="legal-grid">
-					<div class="legal-item">
-						<h3>Code du travail</h3>
-						<p>Articles <strong>L.4121-1 à L.4121-5</strong> : obligation de l'employeur d'évaluer les risques professionnels et de les consigner dans un document unique.</p>
+			<!-- ═══════════════════════════════════════════ -->
+			<!-- TIER 2: Audit conformité -->
+			<!-- ═══════════════════════════════════════════ -->
+			<section class="svc-section">
+				<h2>2. Audit conformité HCR</h2>
+				<p class="section-desc">État des lieux complet avant un contrôle ou une commission.</p>
+
+				<div class="services">
+					<article class="svc">
+						<header>
+							<h3>Audit conformité HCR complet</h3>
+							<span class="price">450 €</span>
+						</header>
+						<p>
+							Checklist complète : sécurité incendie (extincteurs, BAES), affichages obligatoires,
+							HACCP cuisine, registre unique du personnel, conventions collectives, RGPD basique.
+							<strong>Rapport écrit</strong> avec priorités et chiffrage indicatif des actions.
+						</p>
+					</article>
+				</div>
+			</section>
+
+			<!-- ═══════════════════════════════════════════ -->
+			<!-- TIER 3: Coordination ERP (nouveau, prémium) -->
+			<!-- ═══════════════════════════════════════════ -->
+			<section class="svc-section svc-premium">
+				<h2>3. Coordination ERP &amp; ouverture d'établissement</h2>
+				<p class="section-desc">
+					AMO sécurité incendie pour projets neufs, rénovations ou reprises d'établissement.
+					Objectif : validation commission de sécurité et autorisation d'ouverture.
+				</p>
+
+				<div class="services">
+					<article class="svc svc-highlight">
+						<header>
+							<h3>⭐ Constitution dossier commission de sécurité</h3>
+							<span class="price">3 500 – 7 500 €</span>
+						</header>
+						<p>
+							Dossier complet défendable : analyse PV coupe-feu, certificats, FDS produits,
+							documents fournisseurs, attestations, RVRAT, fiche avis travaux. Selon taille et
+							catégorie ERP.
+						</p>
+					</article>
+
+					<article class="svc">
+						<header>
+							<h3>AMO sécurité incendie (projet)</h3>
+							<span class="price">TJM 650 €</span>
+						</header>
+						<p>
+							Assistance à maîtrise d'ouvrage sur un projet neuf ou de rénovation :
+							analyse technique, validation choix constructifs, interface bureau de contrôle.
+						</p>
+					</article>
+
+					<article class="svc">
+						<header>
+							<h3>Coordination levées de réserves</h3>
+							<span class="price">1 500 – 3 000 €</span>
+						</header>
+						<p>
+							Pilotage des actions correctives demandées par le bureau de contrôle :
+							coordination entreprises, suivi, validation, représentation devant BC.
+						</p>
+					</article>
+
+					<article class="svc">
+						<header>
+							<h3>Analyse PV &amp; conformité produits</h3>
+							<span class="price">450 € (demi-journée)</span>
+						</header>
+						<p>
+							Lecture critique des PV techniques, certificats coupe-feu, DoP, FDS.
+							Détection des pièges et incohérences avant dépôt en commission.
+						</p>
+					</article>
+
+					<article class="svc">
+						<header>
+							<h3>Accompagnement ouverture complet</h3>
+							<span class="price">forfait 4 500 €</span>
+						</header>
+						<p>
+							De la reprise de dossier à l'arrêté d'ouverture : audit initial, coordination
+							travaux conformité, interface BC, constitution dossier, présence commission.
+						</p>
+					</article>
+				</div>
+			</section>
+
+			<!-- ═══════════════════════════════════════════ -->
+			<!-- ETUDE DE CAS AG BAR -->
+			<!-- ═══════════════════════════════════════════ -->
+			<section class="case-study">
+				<h2>Étude de cas — AG Bar (Altkirch)</h2>
+				<p class="case-intro">
+					Aménagement Bar / Restaurant. Coordination complète jusqu'à la validation commission de sécurité.
+				</p>
+
+				<div class="case-grid">
+					<div class="case-block">
+						<h3>📋 Documents traités</h3>
+						<ul>
+							<li>Certificats coupe-feu JWA T30, PV Schertzinger (alarme incendie)</li>
+							<li>PV HUG Fluides (désenfumage / extraction)</li>
+							<li>PV cloisons Knauf EI60 et EI120</li>
+							<li>DOP faux plafonds, documents NF SSI</li>
+							<li>FDS Protecflam / Heat Top Coat</li>
+							<li>Attestation accessibilité ERP, rapport RVRAT, fiche avis travaux</li>
+						</ul>
 					</div>
-					<div class="legal-item">
-						<h3>Amende jusqu'à 1 500 €</h3>
-						<p>Par unité de travail en cas d'absence du DUER, lors d'un contrôle de l'inspection du travail.</p>
+
+					<div class="case-block">
+						<h3>🔧 Mises en conformité réalisées</h3>
+						<ul>
+							<li>Suppression mur végétalisé (élément combustible)</li>
+							<li>Traitement coupe-feu des traversées</li>
+							<li>Rebouchage réservations et linteaux</li>
+							<li>Mise en conformité installations techniques</li>
+							<li>Vérification SSI et désenfumage</li>
+						</ul>
 					</div>
-					<div class="legal-item">
-						<h3>Responsabilité pénale</h3>
-						<p>En cas d'accident du travail, le dirigeant peut être poursuivi pour <strong>faute inexcusable</strong> si le DUER est absent ou obsolète.</p>
-					</div>
-					<div class="legal-item">
-						<h3>Mise à jour annuelle</h3>
-						<p>Obligatoire. Plus révision à chaque changement (nouveau poste, nouveau matériel, aménagement local).</p>
+
+					<div class="case-block">
+						<h3>🎯 Résultat</h3>
+						<ul>
+							<li>Dossier complet, cohérent et défendable</li>
+							<li>Validation commission de sécurité</li>
+							<li>Autorisation d'ouverture de l'établissement</li>
+						</ul>
 					</div>
 				</div>
 			</section>
 
+			<!-- ═══════════════════════════════════════════ -->
+			<!-- COMPETENCES -->
+			<!-- ═══════════════════════════════════════════ -->
+			<section class="skills-section">
+				<h2>Compétences &amp; rôle</h2>
+				<div class="skills-grid">
+					<div class="skill"><strong>Coordination générale</strong> des travaux de conformité</div>
+					<div class="skill"><strong>Suivi conformité</strong> sécurité incendie</div>
+					<div class="skill"><strong>Interface</strong> bureau de contrôle / entreprises / propriétaire</div>
+					<div class="skill"><strong>Gestion</strong> des levées de réserves</div>
+					<div class="skill"><strong>Constitution</strong> dossier commission de sécurité</div>
+					<div class="skill"><strong>Pilotage</strong> des mises en conformité ERP</div>
+					<div class="skill"><strong>Analyse</strong> technique des PV et documents réglementaires</div>
+					<div class="skill"><strong>Réactivité terrain</strong> et adaptation contraintes chantier</div>
+				</div>
+			</section>
+
+			<!-- ═══════════════════════════════════════════ -->
+			<!-- CADRE LEGAL -->
+			<!-- ═══════════════════════════════════════════ -->
+			<section class="legal-section">
+				<h2>Cadre légal</h2>
+				<div class="legal-grid">
+					<div class="legal-item">
+						<h3>DUER — Code du travail</h3>
+						<p>Articles <strong>L.4121-1 à L.4121-5</strong>. Amende jusqu'à 1 500 €/unité de travail. Responsabilité pénale du dirigeant en cas d'accident.</p>
+					</div>
+					<div class="legal-item">
+						<h3>ERP — Code construction habitation</h3>
+						<p>Articles <strong>R.143-1 et suivants</strong>. Tout établissement recevant du public doit être visité par la commission de sécurité avant ouverture.</p>
+					</div>
+					<div class="legal-item">
+						<h3>Accessibilité ERP</h3>
+						<p>Obligations adaptation PMR depuis la loi de 2005. Attestation obligatoire au dossier.</p>
+					</div>
+					<div class="legal-item">
+						<h3>Mise à jour annuelle</h3>
+						<p>DUER annuel obligatoire + révision à chaque changement (nouveau poste, matériel, aménagement).</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- ═══════════════════════════════════════════ -->
+			<!-- APPROCHE -->
+			<!-- ═══════════════════════════════════════════ -->
 			<section class="approach-section">
 				<h2>Mon approche terrain</h2>
 				<ul class="approach">
-					<li><strong>Je viens chez vous</strong> — à Altkirch, Mulhouse, Saint-Louis, Blotzheim, Sundgau, tout le Haut-Rhin</li>
-					<li><strong>Je parle votre langage</strong> — pas de jargon QHSE, pas de PDF générique à 2 500 €</li>
-					<li><strong>Document utilisable</strong> — que votre équipe peut lire, comprendre et mettre à jour</li>
-					<li><strong>Pas de cabinet parisien</strong> — un interlocuteur unique, réactif, qui connaît le métier</li>
-					<li><strong>Rendez-vous hors horaires de service</strong> — matin avant ouverture ou après-midi calme</li>
+					<li><strong>Interlocuteur unique</strong> — un seul contact qui fait le lien entre tous les acteurs</li>
+					<li><strong>Connaissance produits</strong> — je lis les PV, les DoP, les FDS, je détecte les incohérences</li>
+					<li><strong>Réactivité chantier</strong> — je m'adapte aux contraintes et délais</li>
+					<li><strong>Document défendable</strong> — dossiers structurés, lisibles, complets</li>
+					<li><strong>Alsace proximité</strong> — Haut-Rhin, Sundgau, Mulhouse, Saint-Louis, Altkirch</li>
 				</ul>
 			</section>
 
 			<section class="contact">
 				<h2>Premier contact</h2>
 				<p>
-					Appelez ou envoyez un message. Je vous rappelle pour caler un rendez-vous sur place,
-					sans engagement. Devis gratuit.
+					Appelez ou écrivez-moi avec quelques éléments sur votre projet ou établissement.
+					Je vous rappelle pour un échange initial sans engagement.
 				</p>
 				<div class="cta">
-					<a href="mailto:cmadevops.3n1sr@simplelogin.com?subject=DUER HCR" class="btn">cmadevops.3n1sr@simplelogin.com</a>
+					<a href="mailto:cmadevops.3n1sr@simplelogin.com?subject=Sécurité/Conformité ERP" class="btn">cmadevops.3n1sr@simplelogin.com</a>
 				</div>
 			</section>
 
 			<p class="disclaimer">
-				<strong>Mention légale :</strong> Prestation d'accompagnement à la rédaction du DUER. La responsabilité
-				finale du document et de sa mise à jour reste celle du chef d'établissement (article L.4121-1 du Code du travail).
-				Je n'endosse pas le rôle de préventeur salarié ni d'organisme agréé.
+				<strong>Mention légale :</strong> Prestation d'assistance, d'analyse, de coordination et de constitution de dossiers.
+				La responsabilité finale du document DUER, des mesures de sécurité et du fonctionnement de l'établissement reste
+				celle du chef d'établissement / exploitant (articles L.4121-1 du Code du travail et R.143-1 du CCH).
+				Je n'endosse pas le rôle de préventeur salarié, d'organisme agréé ni de bureau de contrôle.
 			</p>
 		</main>
 		<Footer />
@@ -175,7 +324,14 @@ const base = import.meta.env.BASE_URL;
 	.refs strong { color: var(--text); }
 	.ref-label { color: var(--text-dim); text-transform: uppercase; font-size: 0.82em; letter-spacing: 0.08em; margin-right: 0.6em; }
 	.svc-section { margin-bottom: 3em; }
-	.section-desc { color: var(--text-muted); font-style: italic; margin: -0.5em 0 1.5em; }
+	.svc-section.svc-premium {
+		padding: 1.5em 1.6em;
+		background: linear-gradient(135deg, var(--bg) 0%, rgba(88, 166, 255, 0.04) 100%);
+		border: 1px solid var(--accent);
+		border-radius: 12px;
+	}
+	.svc-section.svc-premium h2 { color: var(--accent); margin-top: 0; }
+	.section-desc { color: var(--text-muted); font-style: italic; margin: -0.3em 0 1.5em; line-height: 1.6; }
 	.services {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -215,6 +371,46 @@ const base = import.meta.env.BASE_URL;
 	.svc p { color: var(--text-muted); font-size: 0.95em; margin: 0 0 0.5em; line-height: 1.6; }
 	.svc p.target { font-size: 0.85em; color: var(--text-dim); margin-top: 0.6em; }
 	.svc p.target strong { color: var(--text-muted); }
+	.case-study {
+		margin-bottom: 3em;
+		padding: 1.8em 2em;
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+	}
+	.case-study h2 { margin-top: 0; }
+	.case-intro { color: var(--text-muted); font-style: italic; margin-bottom: 1.2em; }
+	.case-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 1.2em;
+	}
+	.case-block {
+		padding: 1em 1.2em;
+		background: var(--bg);
+		border: 1px solid var(--border);
+		border-radius: 6px;
+	}
+	.case-block h3 { margin: 0 0 0.6em; font-size: 0.95em; color: var(--text); }
+	.case-block h3::before { content: ''; }
+	.case-block ul { margin: 0; padding-left: 1.1em; font-size: 0.88em; color: var(--text-muted); line-height: 1.55; }
+	.case-block li { margin-bottom: 0.3em; }
+	.skills-section { margin-bottom: 3em; }
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 0.7em;
+		margin-top: 1em;
+	}
+	.skill {
+		padding: 0.7em 1em;
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-radius: 6px;
+		font-size: 0.9em;
+		color: var(--text-muted);
+	}
+	.skill strong { color: var(--text); }
 	.legal-section { margin-bottom: 3em; }
 	.legal-grid {
 		display: grid;
