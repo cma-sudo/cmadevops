@@ -7,3 +7,12 @@ export const SITE_URL = 'https://cmadevops.de';
 export const AUTHOR = 'Christophe Mattera';
 export const AUTHOR_ROLE = 'Scan 3D · Conseil DevOps · Accompagnement numérique';
 export const LOCATION = 'Rixheim, Alsace';
+
+// Tawk.to widget (chat live) — utilisé sur les pages clients confidentielles.
+// À remplir après inscription sur https://tawk.to
+//   1. Créer un compte (30s)
+//   2. Créer une property "CMA Conseil — Partenariat PK"
+//   3. Onglet "Administration → Channels → Chat Widget" : copier l'URL du widget
+//   4. Extraire les 2 IDs du snippet : https://embed.tawk.to/<PROPERTY_ID>/<WIDGET_ID>
+export const TAWK_PROPERTY_ID = '';
+export const TAWK_WIDGET_ID = '';

@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ChatWidget from '../components/ChatWidget.astro';
 import { SITE_TITLE } from '../consts';
 
 const base = import.meta.env.BASE_URL;
@@ -627,10 +628,17 @@ const base = import.meta.env.BASE_URL;
                 <div class="cta">
                     <a class="btn" href="mailto:contact@cmadevops.de?subject=Proposition%20kSuite%20Pierre%20Koch">En parler → contact@cmadevops.de</a>
                 </div>
+
+                <p class="chat-hint">
+                    <span class="chat-dot"></span>
+                    Une question maintenant ? <strong>Cliquez sur la bulle en bas à droite</strong> pour me parler directement.
+                    Je te réponds depuis mon mobile, sans passer par ta boîte mail.
+                </p>
             </section>
 
         </main>
         <Footer />
+        <ChatWidget visitorName="Pierre Koch" tags={["partenariat-pk", "proposition-ksuite"]} />
     </body>
 </html>
 
@@ -1136,6 +1144,35 @@ const base = import.meta.env.BASE_URL;
         font-weight: 600;
     }
     .btn:hover { background: var(--accent-dark); border-bottom: 1px solid var(--accent-dark); }
+
+    .chat-hint {
+        margin: 1.2em 0 0;
+        padding: 0.9em 1.2em;
+        background: var(--bg-code);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        color: var(--text-muted);
+        font-size: 0.92em;
+        line-height: 1.55;
+        display: flex;
+        align-items: center;
+        gap: 0.7em;
+    }
+    .chat-hint strong { color: var(--text); }
+    .chat-dot {
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--success);
+        box-shadow: 0 0 0 3px rgba(63, 185, 80, 0.2);
+        flex-shrink: 0;
+        animation: chat-pulse 2s ease-in-out infinite;
+    }
+    @keyframes chat-pulse {
+        0%, 100% { box-shadow: 0 0 0 3px rgba(63, 185, 80, 0.2); }
+        50%      { box-shadow: 0 0 0 6px rgba(63, 185, 80, 0.1); }
+    }
 
     .proof {
         font-size: 0.95em;

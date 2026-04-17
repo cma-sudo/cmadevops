@@ -1,0 +1,49 @@
+---
+import { TAWK_PROPERTY_ID, TAWK_WIDGET_ID } from '../consts';
+
+export interface Props {
+	/** Pré-remplit le nom du visiteur (optionnel) */
+	visitorName?: string;
+	/** Pré-remplit l'email du visiteur (optionnel) */
+	visitorEmail?: string;
+	/** Tag(s) pour catégoriser la conversation côté Tawk */
+	tags?: string[];
+}
+
+const { visitorName, visitorEmail, tags } = Astro.props;
+const enabled = Boolean(TAWK_PROPERTY_ID && TAWK_WIDGET_ID);
+---
+
+{enabled && (
+	<script is:inline define:vars={{ TAWK_PROPERTY_ID, TAWK_WIDGET_ID, visitorName, visitorEmail, tags }}>
+		var Tawk_API = Tawk_API || {};
+		var Tawk_LoadStart = new Date();
+
+		if (visitorName || visitorEmail) {
+			Tawk_API.visitor = {
+				name: visitorName || '',
+				email: visitorEmail || '',
+			};
+		}
+
+		if (Array.isArray(tags) && tags.length) {
+			Tawk_API.onLoad = function () {
+				try { Tawk_API.addTags(tags); } catch (e) { /* noop */ }
+			};
+		}
+
+		(function () {
+			var s1 = document.createElement('script');
+			var s0 = document.getElementsByTagName('script')[0];
+			s1.async = true;
+			s1.src = 'https://embed.tawk.to/' + TAWK_PROPERTY_ID + '/' + TAWK_WIDGET_ID;
+			s1.charset = 'UTF-8';
+			s1.setAttribute('crossorigin', '*');
+			s0.parentNode.insertBefore(s1, s0);
+		})();
+	</script>
+)}
+
+{!enabled && (
+	<!-- Chat widget désactivé — TAWK_PROPERTY_ID / TAWK_WIDGET_ID non configurés dans consts.ts -->
+)}
