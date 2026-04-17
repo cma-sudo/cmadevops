@@ -1,0 +1,909 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="fr">
+    <head>
+        <BaseHead
+            title={`Sécurisation & partage des données — Proposition Pierre Koch · ${SITE_TITLE}`}
+            description="Proposition de migration Dropbox → Infomaniak kSuite Entreprise pour Pierre Koch Architecte. Sécurisation des données d'agence, hébergement souverain suisse, écosystème collaboratif."
+        />
+        <meta name="robots" content="noindex,nofollow,noarchive" />
+    </head>
+    <body>
+        <Header />
+        <main>
+
+            <!-- INTRO -->
+            <section class="intro-block">
+                <p class="doc-meta">
+                    <span class="doc-tag">Proposition confidentielle</span>
+                    <span class="doc-date">Avril 2026</span>
+                </p>
+                <h1>Sécuriser, stocker &amp; partager<br><span class="accent-italic">vos données d'agence</span>.</h1>
+                <p class="lede">
+                    Proposition préparée pour <strong>Pierre Koch Architecte</strong> — migration de Dropbox vers
+                    <strong>Infomaniak kSuite Entreprise</strong>. Un stockage souverain, un écosystème
+                    collaboratif, une économie nette sur trois ans.
+                </p>
+                <div class="hero-meta">
+                    <div class="meta-col">
+                        <span class="label">Client</span>
+                        <span class="value">Pierre Koch Architecte</span>
+                    </div>
+                    <div class="meta-col">
+                        <span class="label">Objet</span>
+                        <span class="value">Migration Dropbox → kSuite</span>
+                    </div>
+                    <div class="meta-col">
+                        <span class="label">Économie 3 ans</span>
+                        <span class="value highlight">— 345 € TTC</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 01 CONSTAT -->
+            <section class="svc-section">
+                <h2>Le constat</h2>
+                <p class="section-desc">Stockage saturé, outils fragmentés, image pro à consolider.</p>
+                <p class="proof">
+                    Vos 3 To Dropbox sont pleins. Votre messagerie <strong>@pkarchi</strong> est hébergée séparément.
+                    Vos liens de partage client restent génériques. Une montée en gamme est inévitable — autant
+                    en profiter pour gagner en cohérence, en sécurité et en image de marque.
+                </p>
+
+                <div class="compare-grid">
+
+                    <article class="compare-card current">
+                        <header>
+                            <span class="compare-tag">Aujourd'hui</span>
+                            <h3>État actuel</h3>
+                        </header>
+                        <div class="big-stat">
+                            <span class="big-num">3</span>
+                            <span class="big-unit">To saturés</span>
+                        </div>
+                        <p class="compare-sub">Dropbox + mail pro externe</p>
+                        <ul class="compare-list">
+                            <li><span>Stockage Dropbox</span><code class="neg">3 To plein</code></li>
+                            <li><span>Mail @pkarchi + domaine</span><code class="neg">120 €/an</code></li>
+                            <li><span>Historique fichiers</span><code class="neg">30 jours</code></li>
+                            <li><span>Hébergement</span><code class="neg">États-Unis</code></li>
+                            <li><span>Visio, chat, IA, branding</span><code class="neg">—</code></li>
+                            <li><span>Coût annuel cumulé</span><code class="neg strong">290 €</code></li>
+                        </ul>
+                    </article>
+
+                    <article class="compare-card target">
+                        <header>
+                            <span class="compare-tag target-tag">Recommandation</span>
+                            <h3>État cible</h3>
+                        </header>
+                        <div class="big-stat">
+                            <span class="big-num">6</span>
+                            <span class="big-unit">To confortables</span>
+                        </div>
+                        <p class="compare-sub">kSuite Entreprise — tout-en-un</p>
+                        <ul class="compare-list">
+                            <li><span>Stockage kDrive</span><code class="pos">6 To</code></li>
+                            <li><span>10 adresses @pkarchi</span><code class="pos">incluses</code></li>
+                            <li><span>Historique fichiers</span><code class="pos">1 an</code></li>
+                            <li><span>Hébergement</span><code class="pos">Suisse · RGPD+nLPD</code></li>
+                            <li><span>Visio, chat, IA, Custom Brand</span><code class="pos">inclus</code></li>
+                            <li><span>Coût annuel cumulé</span><code class="pos strong">204 €</code></li>
+                        </ul>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- 02 CHIFFRAGE -->
+            <section class="svc-section">
+                <h2>Le chiffrage</h2>
+                <p class="section-desc">Projection sur trois ans — tous montants en euros TTC.</p>
+
+                <div class="price-block">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Année</th>
+                                <th>Détail</th>
+                                <th class="num-col">Actuel</th>
+                                <th class="num-col">kSuite Ent.</th>
+                                <th class="num-col">Économie</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>An 1</strong></td>
+                                <td>Promo lancement —50%</td>
+                                <td class="num-col">290 €</td>
+                                <td class="num-col">117 €</td>
+                                <td class="num-col saving">— 173 €</td>
+                            </tr>
+                            <tr>
+                                <td><strong>An 2</strong></td>
+                                <td>Tarif régulier (engagement 3 ans)</td>
+                                <td class="num-col">290 €</td>
+                                <td class="num-col">204 €</td>
+                                <td class="num-col saving">— 86 €</td>
+                            </tr>
+                            <tr>
+                                <td><strong>An 3</strong></td>
+                                <td>Tarif régulier (engagement 3 ans)</td>
+                                <td class="num-col">290 €</td>
+                                <td class="num-col">204 €</td>
+                                <td class="num-col saving">— 86 €</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td></td>
+                                <td><strong>Cumul trois ans</strong></td>
+                                <td class="num-col"><strong>870 €</strong></td>
+                                <td class="num-col"><strong>525 €</strong></td>
+                                <td class="num-col saving"><strong>— 345 €</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <blockquote class="pullquote">
+                    Pour le <em>même budget</em> qu'aujourd'hui, vous doublez votre stockage et vous ajoutez
+                    un écosystème complet : mail pro, visio, chat, IA, branding, historique d'un an.
+                </blockquote>
+            </section>
+
+            <!-- 03 GAINS -->
+            <section class="svc-section">
+                <h2>Ce que vous gagnez</h2>
+                <p class="section-desc">Neuf gains tangibles, au-delà du simple stockage.</p>
+
+                <div class="services">
+
+                    <article class="svc">
+                        <header>
+                            <h3>6 To extensibles</h3>
+                            <span class="price">stockage</span>
+                        </header>
+                        <p>Le double d'aujourd'hui. Nuages de points LiDAR actifs directement dans le cloud. Extensible jusqu'à 106 To par paliers ou par ajout d'utilisateur.</p>
+                        <div class="stack"><span class="tag">kdrive</span><span class="tag">6-to</span></div>
+                    </article>
+
+                    <article class="svc">
+                        <header>
+                            <h3>10 adresses @pkarchi</h3>
+                            <span class="price">mail</span>
+                        </header>
+                        <p>Conservation de votre identité actuelle. Stockage mail illimité, pièces jointes jusqu'à 3 Go, chiffrement des messages.</p>
+                        <div class="stack"><span class="tag">mail-pro</span><span class="tag">domaine</span></div>
+                    </article>
+
+                    <article class="svc">
+                        <header>
+                            <h3>Historique sur un an</h3>
+                            <span class="price">protection</span>
+                        </header>
+                        <p>200 versions conservées pendant 365 jours. Vraie protection anti-ransomware : retour arrière possible sur toute l'année écoulée.</p>
+                        <div class="stack"><span class="tag">ransomware</span><span class="tag">versioning</span></div>
+                    </article>
+
+                    <article class="svc">
+                        <header>
+                            <h3>Boîtes de dépôt illimitées</h3>
+                            <span class="price">partage</span>
+                        </header>
+                        <p>Vos clients déposent leurs documents sur un lien dédié, sans créer de compte. Fonction premium Dropbox, native et illimitée ici.</p>
+                        <div class="stack"><span class="tag">clients</span><span class="tag">upload</span></div>
+                    </article>
+
+                    <article class="svc svc-highlight">
+                        <header>
+                            <h3>⭐ Custom Brand inclus</h3>
+                            <span class="price">image</span>
+                        </header>
+                        <p>URL personnalisée <code>partage.pkarchi.fr</code>, interface de connexion à vos couleurs, liens de partage brandés avec votre logo. L'image d'agence renforcée sans lien générique.</p>
+                        <div class="stack"><span class="tag">branding</span><span class="tag">url-perso</span></div>
+                    </article>
+
+                    <article class="svc">
+                        <header>
+                            <h3>SwissTransfer 50 Go</h3>
+                            <span class="price">transfert</span>
+                        </header>
+                        <p>Envoi de nuages de points ou maquettes Revit volumineux aux BET et entreprises, sans saturer les boîtes mail. Intégré nativement.</p>
+                        <div class="stack"><span class="tag">swisstransfer</span><span class="tag">50-go</span></div>
+                    </article>
+
+                    <article class="svc">
+                        <header>
+                            <h3>Visio &amp; messagerie équipe</h3>
+                            <span class="price">collaboration</span>
+                        </header>
+                        <p>kMeet pour les réunions client illimitées. kChat pour la messagerie jusqu'à 200 invités externes (BET, MOE, entreprises chantier).</p>
+                        <div class="stack"><span class="tag">kmeet</span><span class="tag">kchat</span></div>
+                    </article>
+
+                    <article class="svc">
+                        <header>
+                            <h3>IA Euria capacités max</h3>
+                            <span class="price">ia</span>
+                        </header>
+                        <p>Rédaction mails et devis, résumés de réunion, analyse des fichiers kDrive, transcription illimitée. L'IA éthique souveraine intégrée.</p>
+                        <div class="stack"><span class="tag">euria</span><span class="tag">ia-ethique</span></div>
+                    </article>
+
+                    <article class="svc">
+                        <header>
+                            <h3>RGPD · nLPD · 100% suisse</h3>
+                            <span class="price">souveraineté</span>
+                        </header>
+                        <p>Données hébergées en Suisse dans les datacenters Infomaniak. Conformité juridique renforcée — argument décisif pour les marchés publics en Alsace.</p>
+                        <div class="stack"><span class="tag">rgpd</span><span class="tag">nlpd</span><span class="tag">suisse</span></div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- 04 TRANSPARENCE -->
+            <section class="svc-section">
+                <h2>Transparence</h2>
+                <p class="section-desc">Ce qui est largement gagné, ce qui demande un ajustement.</p>
+
+                <div class="balance-grid">
+
+                    <div class="balance-col pros">
+                        <h3 class="balance-title">+ Les vrais gains</h3>
+                        <ul class="balance-list">
+                            <li>
+                                <strong>Même confort bureau ↔ maison</strong>
+                                App kDrive Desktop identique à Dropbox, LiteSync inclus (fichiers visibles sans occuper le disque).
+                            </li>
+                            <li>
+                                <strong>Protection juridique forte</strong>
+                                RGPD + nLPD suisse, argument différenciant sur les appels d'offres de collectivités en Alsace.
+                            </li>
+                            <li>
+                                <strong>Stack simplifié</strong>
+                                Un seul prestataire pour stockage, mail, visio, chat, IA. Une facture unique, un support unique.
+                            </li>
+                            <li>
+                                <strong>Marge d'évolution</strong>
+                                Extension jusqu'à 106 To, ajout d'utilisateurs à tout moment, migration simple depuis Dropbox via outil natif.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="balance-col cons">
+                        <h3 class="balance-title">— Points d'attention</h3>
+                        <ul class="balance-list">
+                            <li>
+                                <strong>Sync bloc-par-bloc absente</strong>
+                                Sur un Revit de 300 Mo, l'upload prend 1–2 minutes contre quelques secondes sur Dropbox. Impact limité en usage asynchrone.
+                            </li>
+                            <li>
+                                <strong>Marque moins universelle</strong>
+                                Certains clients moins familiers qu'avec Dropbox. Compensé par le Custom Brand qui remplace l'URL Infomaniak par pkarchi.fr.
+                            </li>
+                            <li>
+                                <strong>Pas de chiffrement bout-en-bout</strong>
+                                Infomaniak peut techniquement accéder aux données (comme Dropbox). VeraCrypt possible sur les dossiers sensibles si besoin.
+                            </li>
+                            <li>
+                                <strong>Migration 3 To à préparer</strong>
+                                Transfert via l'outil Import Cloud Infomaniak (3 à 7 jours en arrière-plan). Sans interruption d'activité.
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 05 MIGRATION -->
+            <section class="svc-section">
+                <h2>Le plan de bascule</h2>
+                <p class="section-desc">Six semaines, sans interruption. Dropbox actif pendant toute la durée.</p>
+
+                <ol class="timeline">
+
+                    <li class="step">
+                        <span class="step-num">1</span>
+                        <div class="step-body">
+                            <h3>Essai gratuit 30 jours</h3>
+                            <span class="step-duration">Semaine 1</span>
+                            <p>Souscription en essai sans engagement. Migration de deux projets test. Validation du workflow bureau ↔ maison, des partages client, du mail @pkarchi.</p>
+                        </div>
+                    </li>
+
+                    <li class="step">
+                        <span class="step-num">2</span>
+                        <div class="step-body">
+                            <h3>Validation &amp; souscription</h3>
+                            <span class="step-duration">Semaine 2</span>
+                            <p>Si essai concluant : souscription ferme en engagement 3 ans (remise —20% sur le tarif régulier). Sinon, retour en arrière sans aucun frais.</p>
+                        </div>
+                    </li>
+
+                    <li class="step">
+                        <span class="step-num">3</span>
+                        <div class="step-body">
+                            <h3>Import massif Dropbox</h3>
+                            <span class="step-duration">Semaines 3 à 5</span>
+                            <p>Lancement de l'outil Import Cloud Infomaniak (serveur à serveur, 3–7 jours en arrière-plan). Configuration MX de la messagerie, bascule en 24–48h. Vous continuez à travailler sur Dropbox pendant toute la durée.</p>
+                        </div>
+                    </li>
+
+                    <li class="step">
+                        <span class="step-num">4</span>
+                        <div class="step-body">
+                            <h3>Bascule finale</h3>
+                            <span class="step-duration">Semaine 6</span>
+                            <p>Vérification d'intégrité des 3 To migrés. Basculement des partages actifs, mise en place du Custom Brand, branding des liens. Résiliation Dropbox à l'échéance.</p>
+                        </div>
+                    </li>
+
+                    <li class="step">
+                        <span class="step-num">5</span>
+                        <div class="step-body">
+                            <h3>Accompagnement post-bascule</h3>
+                            <span class="step-duration">Mois 2 &amp; 3</span>
+                            <p>Points de suivi bimensuels. Prise en main des outils collaboratifs (kMeet, kChat, Euria). Recommandations de sauvegarde complémentaire : règle du 3-2-1 avec NAS local et disque dur chiffré.</p>
+                        </div>
+                    </li>
+
+                </ol>
+            </section>
+
+            <!-- CTA -->
+            <section class="contact">
+                <h2>Prochaine étape</h2>
+                <p>
+                    <strong>Lancer l'essai 30 jours dès la semaine prochaine.</strong> Sans engagement, sans carte
+                    prélevée. Quinze minutes de configuration initiale, un point de validation à trois semaines
+                    pour décider en toute lucidité.
+                </p>
+
+                <div class="cta-stats">
+                    <div class="cta-stat">
+                        <span class="cta-num">6 <span class="cta-unit">To</span></span>
+                        <span class="cta-label">stockage — le double</span>
+                    </div>
+                    <div class="cta-stat">
+                        <span class="cta-num">— 345 <span class="cta-unit">€</span></span>
+                        <span class="cta-label">économie sur 3 ans</span>
+                    </div>
+                    <div class="cta-stat">
+                        <span class="cta-num">100 <span class="cta-unit">%</span></span>
+                        <span class="cta-label">souveraineté suisse</span>
+                    </div>
+                </div>
+
+                <div class="cta">
+                    <a class="btn" href="mailto:contact@cmadevops.de?subject=Proposition%20kSuite%20Pierre%20Koch">En parler → contact@cmadevops.de</a>
+                </div>
+            </section>
+
+        </main>
+        <Footer />
+    </body>
+</html>
+
+<style>
+    /* === INTRO === */
+    .intro-block {
+        padding: 2em 2em 2.5em;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        margin-bottom: 3em;
+        position: relative;
+        overflow: hidden;
+    }
+    .intro-block::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle at center, rgba(88, 166, 255, 0.08) 0%, transparent 70%);
+        pointer-events: none;
+    }
+    .doc-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 1.5em;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.75em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    .doc-tag {
+        background: rgba(88, 166, 255, 0.1);
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        padding: 0.3em 0.7em;
+        border-radius: 4px;
+    }
+    .doc-date { color: var(--text-dim); }
+    h1 { margin: 0 0 0.6em; line-height: 1.15; }
+    .accent-italic {
+        color: var(--accent);
+        font-style: italic;
+        font-weight: 500;
+    }
+    .lede {
+        font-size: 1.15em;
+        color: var(--text);
+        margin-bottom: 2em;
+        line-height: 1.7;
+    }
+    .lede strong { color: var(--accent); }
+    .hero-meta {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5em;
+        padding-top: 1.5em;
+        border-top: 1px solid var(--border);
+    }
+    .meta-col .label {
+        display: block;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.7em;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+        margin-bottom: 0.4em;
+    }
+    .meta-col .value {
+        font-size: 1em;
+        color: var(--text);
+        font-weight: 600;
+    }
+    .meta-col .value.highlight { color: var(--success); }
+
+    /* === SECTIONS === */
+    .svc-section { margin-bottom: 3em; }
+    .section-desc { color: var(--text-muted); font-style: italic; margin: -0.5em 0 1.5em; }
+
+    /* === COMPARE CARDS === */
+    .compare-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2em;
+        margin-top: 1em;
+    }
+    @media (max-width: 720px) {
+        .compare-grid { grid-template-columns: 1fr; }
+    }
+    .compare-card {
+        padding: 1.5em 1.6em;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+    }
+    .compare-card.target {
+        border-color: var(--accent);
+        background: linear-gradient(135deg, var(--bg-elevated) 0%, rgba(88, 166, 255, 0.05) 100%);
+    }
+    .compare-card header { margin-bottom: 1em; }
+    .compare-card h3 {
+        margin: 0.3em 0 0;
+        font-size: 1.1em;
+        color: var(--text);
+    }
+    .compare-card h3::before { content: ''; }
+    .compare-tag {
+        display: inline-block;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.65em;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        padding: 0.2em 0.6em;
+        border-radius: 3px;
+        background: rgba(139, 148, 158, 0.15);
+        color: var(--text-muted);
+    }
+    .compare-tag.target-tag {
+        background: rgba(88, 166, 255, 0.15);
+        color: var(--accent);
+    }
+    .big-stat {
+        display: flex;
+        align-items: baseline;
+        gap: 0.3em;
+        margin: 0.5em 0 0.3em;
+    }
+    .big-num {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 3.2em;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--text);
+        letter-spacing: -0.03em;
+    }
+    .compare-card.target .big-num { color: var(--accent); }
+    .big-unit {
+        font-size: 0.95em;
+        color: var(--text-muted);
+        font-style: italic;
+    }
+    .compare-sub {
+        color: var(--text-dim);
+        font-size: 0.88em;
+        margin: 0 0 1em;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+    .compare-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-top: 1px solid var(--border);
+    }
+    .compare-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.65em 0;
+        border-bottom: 1px dashed var(--border);
+        font-size: 0.92em;
+        color: var(--text-muted);
+    }
+    .compare-list li:last-child { border-bottom: none; }
+    .compare-list code {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.85em;
+        padding: 0.15em 0.5em;
+        border-radius: 3px;
+        background: transparent;
+    }
+    .compare-list code.neg {
+        color: var(--text-dim);
+    }
+    .compare-list code.neg.strong {
+        color: var(--danger);
+        background: rgba(248, 81, 73, 0.1);
+    }
+    .compare-list code.pos {
+        color: var(--success);
+    }
+    .compare-list code.pos.strong {
+        background: rgba(63, 185, 80, 0.12);
+        border: 1px solid rgba(63, 185, 80, 0.3);
+    }
+
+    /* === PRICE TABLE === */
+    .price-block {
+        background: var(--bg-elevated);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 0.5em 1.5em;
+        margin: 1em 0;
+        overflow-x: auto;
+    }
+    .price-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+        font-size: 0.95em;
+    }
+    .price-table th,
+    .price-table td {
+        padding: 0.8em 0.6em;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+    }
+    .price-table th {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72em;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+        font-weight: 500;
+    }
+    .num-col {
+        text-align: right !important;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+    .saving {
+        color: var(--success) !important;
+        font-weight: 600;
+    }
+    .total-row {
+        background: rgba(88, 166, 255, 0.04);
+    }
+    .total-row td {
+        border-top: 2px solid var(--accent);
+        border-bottom: none;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        font-size: 1.05em;
+    }
+
+    /* === PULLQUOTE === */
+    .pullquote {
+        margin: 2em 0 0;
+        padding: 1.8em 2em;
+        background: var(--bg-code);
+        border-left: 3px solid var(--accent);
+        border-radius: 4px;
+        font-size: 1.1em;
+        line-height: 1.6;
+        color: var(--text);
+        font-style: italic;
+        position: relative;
+    }
+    .pullquote::before {
+        content: '"';
+        position: absolute;
+        top: -0.1em;
+        left: 0.2em;
+        font-size: 4em;
+        color: var(--accent);
+        opacity: 0.3;
+        line-height: 1;
+        font-family: Georgia, serif;
+        font-style: normal;
+    }
+    .pullquote em {
+        color: var(--accent);
+        font-weight: 500;
+    }
+
+    /* === SERVICES (reprise du style du site) === */
+    .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1em;
+    }
+    .svc {
+        padding: 1.3em 1.4em;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        transition: border-color 0.15s, transform 0.15s;
+    }
+    .svc:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .svc-highlight {
+        border-color: var(--accent);
+        background: linear-gradient(135deg, var(--bg-elevated) 0%, rgba(88, 166, 255, 0.08) 100%);
+    }
+    .svc header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1em;
+        margin-bottom: 0.5em;
+    }
+    .svc h3 {
+        margin: 0;
+        font-size: 1.05em;
+        color: var(--accent);
+    }
+    .svc h3::before { content: ''; }
+    .price {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.7em;
+        color: var(--text-dim);
+        white-space: nowrap;
+        background: var(--bg-code);
+        border: 1px solid var(--border);
+        padding: 0.2em 0.5em;
+        border-radius: 4px;
+        text-transform: lowercase;
+    }
+    .svc p { color: var(--text-muted); font-size: 0.95em; margin: 0 0 0.8em; line-height: 1.6; }
+    .svc p code {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.88em;
+        color: var(--accent);
+        background: var(--bg-code);
+        padding: 0.1em 0.4em;
+        border-radius: 3px;
+    }
+    .stack { margin-top: 0.5em; }
+    .tag {
+        display: inline-block;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.7em;
+        color: var(--text-dim);
+        background: var(--bg-code);
+        border: 1px solid var(--border);
+        padding: 0.15em 0.5em;
+        border-radius: 3px;
+        margin: 0.15em 0.2em 0 0;
+    }
+
+    /* === BALANCE (pros/cons) === */
+    .balance-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5em;
+        margin-top: 1em;
+    }
+    @media (max-width: 720px) {
+        .balance-grid { grid-template-columns: 1fr; }
+    }
+    .balance-col {
+        padding: 1.5em 1.6em;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+    }
+    .balance-col.pros { border-left: 3px solid var(--success); }
+    .balance-col.cons { border-left: 3px solid var(--warning); }
+    .balance-title {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.85em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin: 0 0 1em;
+    }
+    .balance-title::before { content: ''; }
+    .balance-col.pros .balance-title { color: var(--success); }
+    .balance-col.cons .balance-title { color: var(--warning); }
+    .balance-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .balance-list li {
+        padding: 0.9em 0;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-muted);
+        font-size: 0.93em;
+        line-height: 1.55;
+    }
+    .balance-list li:last-child { border-bottom: none; }
+    .balance-list strong {
+        display: block;
+        color: var(--text);
+        margin-bottom: 0.3em;
+        font-weight: 600;
+    }
+
+    /* === TIMELINE === */
+    .timeline {
+        list-style: none;
+        padding: 0;
+        margin: 1.5em 0 0;
+        position: relative;
+    }
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 14px;
+        top: 0.8em;
+        bottom: 0.8em;
+        width: 1px;
+        background: var(--border);
+    }
+    .step {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 1.2em;
+        padding: 0.8em 0;
+        align-items: start;
+    }
+    .step-num {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg);
+        border: 1px solid var(--accent);
+        border-radius: 50%;
+        color: var(--accent);
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.9em;
+        font-weight: 700;
+        position: relative;
+        z-index: 2;
+    }
+    .step-body {
+        padding: 0.3em 1.2em 1.2em;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+    }
+    .step-body h3 {
+        margin: 0.8em 0 0.2em;
+        font-size: 1.05em;
+        color: var(--text);
+    }
+    .step-body h3::before { content: ''; }
+    .step-duration {
+        display: inline-block;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.7em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+        margin-bottom: 0.6em;
+    }
+    .step-body p {
+        margin: 0;
+        color: var(--text-muted);
+        font-size: 0.93em;
+        line-height: 1.6;
+    }
+
+    /* === CTA / CONTACT === */
+    .contact {
+        margin-top: 3em;
+        padding: 2em 2em;
+        background: var(--bg-elevated);
+        border: 1px solid var(--accent);
+        border-radius: 10px;
+    }
+    .contact h2 { margin-top: 0; }
+    .contact p { color: var(--text-muted); margin-bottom: 1.5em; }
+    .contact p strong { color: var(--text); }
+    .cta-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+        margin: 1.5em 0 2em;
+        padding: 1.5em 0;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+    }
+    @media (max-width: 720px) {
+        .cta-stats { grid-template-columns: 1fr; gap: 1.5em; }
+    }
+    .cta-stat {
+        text-align: center;
+    }
+    .cta-num {
+        display: block;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 2.2em;
+        font-weight: 700;
+        color: var(--accent);
+        line-height: 1;
+        margin-bottom: 0.3em;
+        letter-spacing: -0.02em;
+    }
+    .cta-unit {
+        font-size: 0.5em;
+        color: var(--text-muted);
+    }
+    .cta-label {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.7em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+    }
+    .cta { margin-top: 1em; }
+    .btn {
+        display: inline-block;
+        padding: 0.7em 1.4em;
+        border: 1px solid var(--accent);
+        border-radius: 6px;
+        background: var(--accent);
+        color: var(--bg);
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.9em;
+        font-weight: 600;
+    }
+    .btn:hover { background: var(--accent-dark); border-bottom: 1px solid var(--accent-dark); }
+
+    .proof {
+        font-size: 0.95em;
+        color: var(--text-muted);
+        font-style: italic;
+        padding: 0.9em 1.2em;
+        background: var(--bg-code);
+        border-left: 2px solid var(--accent);
+        border-radius: 4px;
+        margin: 0 0 1.5em;
+    }
+    .proof strong { color: var(--text); font-style: normal; }
+</style>

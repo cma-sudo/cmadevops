@@ -8,5 +8,8 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
 	site: 'https://cma-sudo.github.io',
 	base: '/cmadevops',
-	integrations: [mdx(), sitemap()],
+	integrations: [
+		mdx(),
+		sitemap({ filter: (page) => !page.includes('/partenariat-pk') }),
+	],
 });
