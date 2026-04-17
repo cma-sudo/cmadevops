@@ -14,5 +14,5 @@ export const LOCATION = 'Rixheim, Alsace';
 //   2. Créer une property "CMA Conseil — Partenariat PK"
 //   3. Onglet "Administration → Channels → Chat Widget" : copier l'URL du widget
 //   4. Extraire les 2 IDs du snippet : https://embed.tawk.to/<PROPERTY_ID>/<WIDGET_ID>
-export const TAWK_PROPERTY_ID = '';
-export const TAWK_WIDGET_ID = '';
+export const TAWK_PROPERTY_ID = '69e21783dd5bb11c34fcb60a';
+export const TAWK_WIDGET_ID = '1jmdinmp6';
