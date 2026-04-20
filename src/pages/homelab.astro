@@ -3,153 +3,763 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE } from '../consts';
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
 <html lang="fr">
 	<head>
-		<BaseHead title={`Homelab · ${SITE_TITLE}`} description="Architecture de mon infra maison auto-hébergée" />
+		<BaseHead
+			title={`Homelab · ${SITE_TITLE}`}
+			description="Architecture d'une maison qui pense : 1 serveur, 29 containers, 10 agents IA 100% locaux, 220+ automatisations, monitoring Grafana, backup 3-2-1. Snapshot avril 2026."
+		/>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>Homelab</h1>
-			<p class="lede">
-				Une infra auto-hébergée qui tourne sur un Mac Mini + un NUC dans un placard,
-				avec un UDM Pro SE qui gère tout le réseau.
-			</p>
+			<section class="hero">
+				<div class="hero-badge">snapshot avril 2026 · évolue en continu</div>
+				<h1>Une maison qui pense,<br/>un labo qui apprend</h1>
+				<p class="lede">
+					Tout ce que j'installe chez un client, je le teste d'abord chez moi.
+					<strong>1 serveur, 29 containers, 10 agents IA 100% locaux</strong>, 220+ automatisations, monitoring
+					complet, backup 3-2-1. Un laboratoire vivant — et le terrain de preuves de mon expertise.
+				</p>
+			</section>
 
-			<section class="stats">
-				<div class="stat">
-					<div class="stat-num">12</div>
-					<div class="stat-label">agents IA</div>
+			<section class="stat-grid">
+				<div class="stat-card">
+					<div class="stat-num">29</div>
+					<div class="stat-label">containers Docker</div>
 				</div>
-				<div class="stat">
-					<div class="stat-num">15+</div>
-					<div class="stat-label">conteneurs</div>
-				</div>
-				<div class="stat">
+				<div class="stat-card">
 					<div class="stat-num">10</div>
-					<div class="stat-label">cibles Prom</div>
+					<div class="stat-label">agents IA autonomes</div>
 				</div>
-				<div class="stat">
-					<div class="stat-num">8 Gbps</div>
-					<div class="stat-label">Freebox Ultra</div>
+				<div class="stat-card">
+					<div class="stat-num">220+</div>
+					<div class="stat-label">automatisations HA</div>
+				</div>
+				<div class="stat-card">
+					<div class="stat-num">17</div>
+					<div class="stat-label">dashboards Grafana</div>
+				</div>
+				<div class="stat-card">
+					<div class="stat-num">100%</div>
+					<div class="stat-label">IA locale (0 cloud)</div>
+				</div>
+				<div class="stat-card">
+					<div class="stat-num">3-2-1</div>
+					<div class="stat-label">règle backup appliquée</div>
 				</div>
 			</section>
 
-			<h2>Hôtes</h2>
-			<table>
-				<thead><tr><th>Hôte</th><th>Matériel</th><th>Rôle</th></tr></thead>
-				<tbody>
-					<tr><td>home-server-cma</td><td>Mac Mini (Intel, 8 Go)</td><td>Home Assistant, ARIA, Postgres, Mosquitto, 15+ conteneurs</td></tr>
-					<tr><td>cma2</td><td>Intel NUC</td><td>Ollama (Qwen2.5), Technitium DNS, Uptime Kuma</td></tr>
-					<tr><td>UDM Pro SE</td><td>UniFi</td><td>Routage, firewall, VLANs, WiFi 6/6E</td></tr>
-				</tbody>
-			</table>
+			<section class="block">
+				<h2>Architecture en 4 couches</h2>
+				<p class="section-desc">
+					Tout converge vers un seul mini-PC (Minisforum AI Ryzen 9). L'IA tourne sur l'iGPU AMD via ROCm,
+					sans un octet de données qui sort de la maison.
+				</p>
 
-			<h2>Services</h2>
-			<div class="grid">
-				<div class="service">
-					<h3>Home Assistant</h3>
-					<p>Cœur domotique. 11 caméras, Zigbee2MQTT, Alarmo, Matter, Thread.</p>
-					<span class="tag">domotique</span>
-				</div>
-				<div class="service">
-					<h3>ARIA v10.1</h3>
-					<p>Framework d'agents Python maison. 12 agents, moteur de règles 31 patterns FAST, réponses LLM via Ollama.</p>
-					<span class="tag">ia</span>
-					<span class="tag">python</span>
-				</div>
-				<div class="service">
-					<h3>Monitoring</h3>
-					<p>Prometheus + Grafana, 10 cibles scrappées (hôtes, cAdvisor, PG, Redis, MQTT, UniFi, DNS).</p>
-					<span class="tag">observabilité</span>
-				</div>
-				<div class="service">
-					<h3>Sentinel Sécurité</h3>
-					<p>Détection humain/animal par caméras, push critique iPhone, TTS Alexa, snapshots Telegram.</p>
-					<span class="tag">sécurité</span>
-				</div>
-				<div class="service">
-					<h3>TRMNL e-ink</h3>
-					<p>Dashboard 800×480 affichant score maison, calendrier, météo, anniversaires.</p>
-					<span class="tag">hardware</span>
-				</div>
-				<div class="service">
-					<h3>Ollama</h3>
-					<p>Qwen2.5:3B en local, keep-alive infini, warm-up auto pour des réponses sub-2s.</p>
-					<span class="tag">llm</span>
-				</div>
-			</div>
+				<div class="archi-svg">
+					<svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture homelab 4 couches">
+						<defs>
+							<linearGradient id="gEdge" x1="0" y1="0" x2="1" y2="1">
+								<stop offset="0%" stop-color="#1a1f2e" />
+								<stop offset="100%" stop-color="#141822" />
+							</linearGradient>
+							<linearGradient id="gCore" x1="0" y1="0" x2="0" y2="1">
+								<stop offset="0%" stop-color="#1a2340" />
+								<stop offset="100%" stop-color="#0f1628" />
+							</linearGradient>
+							<linearGradient id="gAccent" x1="0" y1="0" x2="1" y2="0">
+								<stop offset="0%" stop-color="#58a6ff" />
+								<stop offset="100%" stop-color="#388bfd" />
+							</linearGradient>
+							<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+								<path d="M 0 0 L 10 5 L 0 10 z" fill="#58a6ff" opacity="0.7" />
+							</marker>
+						</defs>
 
-			<h2>Architecture</h2>
-			<p>
-				Les interactions passent par Telegram (groupe + DM), les push iPhone critiques,
-				9 Echo Dots pour les annonces TTS, un écran e-ink TRMNL, et Discord pour les incidents infra.
-				Tout converge vers le Mac Mini home-server-cma.
-			</p>
-			<p>
-				Le schéma complet avec les flux de données se trouve dans le
-				<code>ARCHITECTURE.md</code> du repo (graphe mermaid, 100+ nœuds et arêtes).
-			</p>
+						<!-- Layer 1: EDGE -->
+						<rect x="20" y="20" width="760" height="100" rx="12" fill="url(#gEdge)" stroke="#232836" stroke-width="1.5"/>
+						<text x="40" y="50" class="layer-title" fill="#58a6ff">EDGE · capteurs &amp; IoT</text>
+						<g class="chip-row">
+							<rect x="40" y="68" width="110" height="34" rx="6" fill="#1a1f2e" stroke="#2a3244"/>
+							<text x="95" y="89" text-anchor="middle" class="chip-text" fill="#e6edf3">6 caméras PoE</text>
+							<rect x="160" y="68" width="100" height="34" rx="6" fill="#1a1f2e" stroke="#2a3244"/>
+							<text x="210" y="89" text-anchor="middle" class="chip-text" fill="#e6edf3">Zigbee2MQTT</text>
+							<rect x="270" y="68" width="90" height="34" rx="6" fill="#1a1f2e" stroke="#2a3244"/>
+							<text x="315" y="89" text-anchor="middle" class="chip-text" fill="#e6edf3">Matter</text>
+							<rect x="370" y="68" width="90" height="34" rx="6" fill="#1a1f2e" stroke="#2a3244"/>
+							<text x="415" y="89" text-anchor="middle" class="chip-text" fill="#e6edf3">Thread</text>
+							<rect x="470" y="68" width="120" height="34" rx="6" fill="#1a1f2e" stroke="#2a3244"/>
+							<text x="530" y="89" text-anchor="middle" class="chip-text" fill="#e6edf3">Netatmo · Hue</text>
+							<rect x="600" y="68" width="160" height="34" rx="6" fill="#1a1f2e" stroke="#2a3244"/>
+							<text x="680" y="89" text-anchor="middle" class="chip-text" fill="#e6edf3">Omlet · Nuki · Wallbox</text>
+						</g>
 
-			<h2>Résumé de la stack</h2>
-			<div class="terminal">
-				<span class="out"><span class="prompt">$</span> <span class="cmd">docker ps --format '&#123;&#123;.Names&#125;&#125;' | wc -l</span></span>
-				<span class="out">15</span>
-				<span class="out"><span class="prompt">$</span> <span class="cmd">ls ~/claude-agent/aria/agents/</span></span>
-				<span class="out">anomaly.py  comfort.py  digest.py  energy.py  health.py</span>
-				<span class="out">omlet.py    poulailler.py  predictive.py  security.py  trmnl.py</span>
-				<span class="out"><span class="prompt">$</span> <span class="cmd">curl -s prometheus:9091/api/v1/targets | jq '.data.activeTargets | length'</span></span>
-				<span class="out">10</span>
-			</div>
+						<!-- Layer 2: CORE -->
+						<rect x="20" y="160" width="760" height="170" rx="12" fill="url(#gCore)" stroke="url(#gAccent)" stroke-width="2"/>
+						<text x="40" y="190" class="layer-title" fill="#58a6ff">CŒUR · cma3 (Minisforum AI · Ryzen 9 · 28 Gi)</text>
+						<g class="core-services">
+							<rect x="50" y="210" width="160" height="100" rx="8" fill="#1a2a4d" stroke="#388bfd"/>
+							<text x="130" y="235" text-anchor="middle" class="core-title" fill="#e6edf3">Home Assistant</text>
+							<text x="130" y="258" text-anchor="middle" class="core-sub" fill="#8b949e">220+ automatisations</text>
+							<text x="130" y="278" text-anchor="middle" class="core-sub" fill="#8b949e">5 000+ entités</text>
+							<text x="130" y="298" text-anchor="middle" class="core-sub" fill="#8b949e">Alarmo · Sentinel</text>
+
+							<rect x="220" y="210" width="160" height="100" rx="8" fill="#1a2a4d" stroke="#388bfd"/>
+							<text x="300" y="235" text-anchor="middle" class="core-title" fill="#e6edf3">ARIA · 10 agents</text>
+							<text x="300" y="258" text-anchor="middle" class="core-sub" fill="#8b949e">security · health</text>
+							<text x="300" y="278" text-anchor="middle" class="core-sub" fill="#8b949e">energy · digest</text>
+							<text x="300" y="298" text-anchor="middle" class="core-sub" fill="#8b949e">poulailler · meteo …</text>
+
+							<rect x="390" y="210" width="160" height="100" rx="8" fill="#1a2a4d" stroke="#388bfd"/>
+							<text x="470" y="235" text-anchor="middle" class="core-title" fill="#e6edf3">Ollama (local)</text>
+							<text x="470" y="258" text-anchor="middle" class="core-sub" fill="#8b949e">gemma3:12b vision</text>
+							<text x="470" y="278" text-anchor="middle" class="core-sub" fill="#8b949e">qwen3:8b tools</text>
+							<text x="470" y="298" text-anchor="middle" class="core-sub" fill="#8b949e">ROCm iGPU 890M</text>
+
+							<rect x="560" y="210" width="180" height="100" rx="8" fill="#1a2a4d" stroke="#388bfd"/>
+							<text x="650" y="235" text-anchor="middle" class="core-title" fill="#e6edf3">Postgres + pgvector</text>
+							<text x="650" y="258" text-anchor="middle" class="core-sub" fill="#8b949e">mémoire longue</text>
+							<text x="650" y="278" text-anchor="middle" class="core-sub" fill="#8b949e">RAG embeddings</text>
+							<text x="650" y="298" text-anchor="middle" class="core-sub" fill="#8b949e">historique alertes</text>
+						</g>
+
+						<!-- Connections edge → core -->
+						<line x1="150" y1="120" x2="150" y2="160" stroke="#58a6ff" stroke-width="1.5" opacity="0.6" marker-end="url(#arrow)"/>
+						<line x1="400" y1="120" x2="400" y2="160" stroke="#58a6ff" stroke-width="1.5" opacity="0.6" marker-end="url(#arrow)"/>
+						<line x1="650" y1="120" x2="650" y2="160" stroke="#58a6ff" stroke-width="1.5" opacity="0.6" marker-end="url(#arrow)"/>
+
+						<!-- Layer 3: OBSERVABILITY + OUTPUTS + BACKUP -->
+						<g class="out-row">
+							<rect x="20" y="370" width="240" height="170" rx="12" fill="url(#gEdge)" stroke="#232836" stroke-width="1.5"/>
+							<text x="140" y="398" text-anchor="middle" class="layer-title" fill="#58a6ff">OBSERVABILITÉ</text>
+							<text x="140" y="428" text-anchor="middle" class="out-item" fill="#e6edf3">Prometheus + Grafana</text>
+							<text x="140" y="453" text-anchor="middle" class="out-item" fill="#e6edf3">Uptime Kuma</text>
+							<text x="140" y="478" text-anchor="middle" class="out-item" fill="#e6edf3">17 dashboards</text>
+							<text x="140" y="508" text-anchor="middle" class="out-sub" fill="#8b949e">5 ans de rétention</text>
+
+							<rect x="280" y="370" width="240" height="170" rx="12" fill="url(#gEdge)" stroke="#232836" stroke-width="1.5"/>
+							<text x="400" y="398" text-anchor="middle" class="layer-title" fill="#58a6ff">SORTIES</text>
+							<text x="400" y="428" text-anchor="middle" class="out-item" fill="#e6edf3">Discord · Telegram</text>
+							<text x="400" y="453" text-anchor="middle" class="out-item" fill="#e6edf3">Push iPhone critique</text>
+							<text x="400" y="478" text-anchor="middle" class="out-item" fill="#e6edf3">TTS Alexa · TRMNL e-ink</text>
+							<text x="400" y="508" text-anchor="middle" class="out-sub" fill="#8b949e">routage par sévérité</text>
+
+							<rect x="540" y="370" width="240" height="170" rx="12" fill="url(#gEdge)" stroke="#232836" stroke-width="1.5"/>
+							<text x="660" y="398" text-anchor="middle" class="layer-title" fill="#58a6ff">BACKUP 3-2-1</text>
+							<text x="660" y="428" text-anchor="middle" class="out-item" fill="#e6edf3">Restic chiffré</text>
+							<text x="660" y="453" text-anchor="middle" class="out-item" fill="#e6edf3">NAS local · Mac</text>
+							<text x="660" y="478" text-anchor="middle" class="out-item" fill="#e6edf3">Hetzner Box (EU)</text>
+							<text x="660" y="508" text-anchor="middle" class="out-sub" fill="#8b949e">dead man's switch 26h</text>
+						</g>
+
+						<!-- core → out -->
+						<line x1="140" y1="330" x2="140" y2="370" stroke="#58a6ff" stroke-width="1.5" opacity="0.6" marker-end="url(#arrow)"/>
+						<line x1="400" y1="330" x2="400" y2="370" stroke="#58a6ff" stroke-width="1.5" opacity="0.6" marker-end="url(#arrow)"/>
+						<line x1="660" y1="330" x2="660" y2="370" stroke="#58a6ff" stroke-width="1.5" opacity="0.6" marker-end="url(#arrow)"/>
+					</svg>
+				</div>
+			</section>
+
+			<section class="block">
+				<h2>Les 4 piliers</h2>
+				<p class="section-desc">Ce qui différencie un homelab bricolé d'un système production.</p>
+
+				<div class="pillars">
+					<article class="pillar">
+						<div class="pillar-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M12 2L3 7v6c0 5 4 9 9 10 5-1 9-5 9-10V7l-9-5z"/>
+								<path d="M9 12l2 2 4-4"/>
+							</svg>
+						</div>
+						<h3>Sécurité proactive</h3>
+						<p>
+							<strong>Sentinel v2</strong> — zones PERIMETER/INTERIOR/POULTRY × Alarmo × fenêtre horaire.
+							Vision IA locale classe humain/animal/poule, 3 snapshots en séquence, push iPhone critique,
+							Alarmo strict 8 portes extérieures sans bypass automatique.
+						</p>
+						<div class="tags">
+							<span class="tag">vision IA</span>
+							<span class="tag">zones</span>
+							<span class="tag">learning auto</span>
+						</div>
+					</article>
+
+					<article class="pillar">
+						<div class="pillar-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+								<circle cx="12" cy="12" r="9"/>
+								<path d="M12 6v6l4 2"/>
+							</svg>
+						</div>
+						<h3>IA 100% locale</h3>
+						<p>
+							<strong>0 appel cloud.</strong> Gemma3:12b pour la vision et les conversations, Qwen3:8b pour
+							le tool calling Home Assistant, Nomic pour les embeddings RAG. Tout sur l'iGPU AMD via ROCm.
+							Anthropic, OpenAI, Gemini et Groq ont été purgés — plus de clés, plus de packages.
+						</p>
+						<div class="tags">
+							<span class="tag">Ollama</span>
+							<span class="tag">ROCm</span>
+							<span class="tag">pgvector</span>
+						</div>
+					</article>
+
+					<article class="pillar">
+						<div class="pillar-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M3 3v18h18"/>
+								<path d="M7 14l4-4 4 4 5-5"/>
+							</svg>
+						</div>
+						<h3>Monitoring 360°</h3>
+						<p>
+							<strong>17 dashboards Grafana</strong> provisionnés par fichier JSON — énergie, climat intérieur,
+							backups 3-2-1, qualité air, solaire, NPU/GPU, tondeuse, alertes prédictives.
+							Uptime Kuma en doublon pour ping/HTTP. Textfile collector pour les métriques métier.
+						</p>
+						<div class="tags">
+							<span class="tag">Prometheus</span>
+							<span class="tag">Grafana</span>
+							<span class="tag">Kuma</span>
+						</div>
+					</article>
+
+					<article class="pillar">
+						<div class="pillar-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+								<rect x="3" y="4" width="18" height="6" rx="1"/>
+								<rect x="3" y="14" width="18" height="6" rx="1"/>
+								<path d="M7 8h.01M7 18h.01"/>
+							</svg>
+						</div>
+						<h3>Backup 3-2-1 réel</h3>
+						<p>
+							<strong>3 copies, 2 supports, 1 hors-site.</strong> Restic chiffré vers NAS local, Mac familial,
+							Hetzner Storage Box en Europe. Cron 3h30 quotidien, dead man's switch 26h, dashboard dédié,
+							alerte Discord si un flux rate.
+						</p>
+						<div class="tags">
+							<span class="tag">Restic</span>
+							<span class="tag">Hetzner</span>
+							<span class="tag">chiffré</span>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section class="block">
+				<h2>ARIA · le cerveau en étoile</h2>
+				<p class="section-desc">
+					10 agents Python autonomes, un moteur de règles rapide (95 % des requêtes sous 1 s), routage
+					intelligent vers les LLMs locaux uniquement quand nécessaire.
+				</p>
+
+				<div class="aria-svg">
+					<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ARIA hub en étoile">
+						<defs>
+							<radialGradient id="gHub" cx="50%" cy="50%" r="50%">
+								<stop offset="0%" stop-color="#388bfd"/>
+								<stop offset="100%" stop-color="#1a2340"/>
+							</radialGradient>
+							<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+								<feGaussianBlur stdDeviation="4" result="b"/>
+								<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+							</filter>
+						</defs>
+
+						<!-- Hub center -->
+						<circle cx="400" cy="240" r="78" fill="url(#gHub)" stroke="#58a6ff" stroke-width="2" filter="url(#glow)"/>
+						<text x="400" y="232" text-anchor="middle" class="hub-text" fill="#e6edf3" font-size="22" font-weight="700">ARIA</text>
+						<text x="400" y="258" text-anchor="middle" class="hub-sub" fill="#8b949e" font-size="11">smart engine</text>
+
+						<!-- Agents around -->
+						<g class="agents">
+							<!-- 10 agents at angles -->
+							<!-- security -->
+							<circle cx="400" cy="60" r="40" fill="#1a2a4d" stroke="#f85149"/>
+							<text x="400" y="58" text-anchor="middle" class="agent-name" fill="#e6edf3">security</text>
+							<text x="400" y="75" text-anchor="middle" class="agent-role" fill="#8b949e">Sentinel · Alarmo</text>
+
+							<!-- health -->
+							<circle cx="578" cy="110" r="40" fill="#1a2a4d" stroke="#3fb950"/>
+							<text x="578" y="108" text-anchor="middle" class="agent-name" fill="#e6edf3">health</text>
+							<text x="578" y="125" text-anchor="middle" class="agent-role" fill="#8b949e">CO2 · VOC · pollens</text>
+
+							<!-- energy -->
+							<circle cx="680" cy="240" r="40" fill="#1a2a4d" stroke="#d29922"/>
+							<text x="680" y="238" text-anchor="middle" class="agent-name" fill="#e6edf3">energy</text>
+							<text x="680" y="255" text-anchor="middle" class="agent-role" fill="#8b949e">solaire · HC</text>
+
+							<!-- comfort -->
+							<circle cx="578" cy="370" r="40" fill="#1a2a4d" stroke="#58a6ff"/>
+							<text x="578" y="368" text-anchor="middle" class="agent-name" fill="#e6edf3">comfort</text>
+							<text x="578" y="385" text-anchor="middle" class="agent-role" fill="#8b949e">climat · volets</text>
+
+							<!-- digest -->
+							<circle cx="400" cy="420" r="40" fill="#1a2a4d" stroke="#58a6ff"/>
+							<text x="400" y="418" text-anchor="middle" class="agent-name" fill="#e6edf3">digest</text>
+							<text x="400" y="435" text-anchor="middle" class="agent-role" fill="#8b949e">bulletins</text>
+
+							<!-- predictive -->
+							<circle cx="222" cy="370" r="40" fill="#1a2a4d" stroke="#a371f7"/>
+							<text x="222" y="368" text-anchor="middle" class="agent-name" fill="#e6edf3">predictive</text>
+							<text x="222" y="385" text-anchor="middle" class="agent-role" fill="#8b949e">anticipations</text>
+
+							<!-- anomaly -->
+							<circle cx="120" cy="240" r="40" fill="#1a2a4d" stroke="#a371f7"/>
+							<text x="120" y="238" text-anchor="middle" class="agent-name" fill="#e6edf3">anomaly</text>
+							<text x="120" y="255" text-anchor="middle" class="agent-role" fill="#8b949e">détection</text>
+
+							<!-- poulailler -->
+							<circle cx="222" cy="110" r="40" fill="#1a2a4d" stroke="#3fb950"/>
+							<text x="222" y="108" text-anchor="middle" class="agent-name" fill="#e6edf3">poulailler</text>
+							<text x="222" y="125" text-anchor="middle" class="agent-role" fill="#8b949e">œufs · porte</text>
+
+							<!-- meteo -->
+							<circle cx="60" cy="130" r="34" fill="#1a2a4d" stroke="#58a6ff"/>
+							<text x="60" y="128" text-anchor="middle" class="agent-name" fill="#e6edf3" font-size="10">meteo</text>
+							<text x="60" y="143" text-anchor="middle" class="agent-role" fill="#8b949e" font-size="8">alertes 12</text>
+
+							<!-- governance -->
+							<circle cx="60" cy="350" r="34" fill="#1a2a4d" stroke="#8b949e"/>
+							<text x="60" y="348" text-anchor="middle" class="agent-name" fill="#e6edf3" font-size="10">governance</text>
+							<text x="60" y="363" text-anchor="middle" class="agent-role" fill="#8b949e" font-size="8">audit</text>
+						</g>
+
+						<!-- Connecting lines hub → agents -->
+						<g stroke="#58a6ff" stroke-width="1" opacity="0.35" fill="none">
+							<line x1="400" y1="162" x2="400" y2="100"/>
+							<line x1="466" y1="195" x2="538" y2="130"/>
+							<line x1="478" y1="240" x2="640" y2="240"/>
+							<line x1="466" y1="285" x2="538" y2="350"/>
+							<line x1="400" y1="318" x2="400" y2="380"/>
+							<line x1="334" y1="285" x2="262" y2="350"/>
+							<line x1="322" y1="240" x2="160" y2="240"/>
+							<line x1="334" y1="195" x2="262" y2="130"/>
+							<line x1="322" y1="215" x2="92" y2="150"/>
+							<line x1="322" y1="265" x2="92" y2="330"/>
+						</g>
+					</svg>
+				</div>
+
+				<div class="engine-flow">
+					<span class="flow-step">requête</span>
+					<span class="flow-arrow">→</span>
+					<span class="flow-step step-fast">moteur rapide (95 %)</span>
+					<span class="flow-arrow">→</span>
+					<span class="flow-step">action HA ou réponse directe</span>
+				</div>
+				<div class="engine-flow">
+					<span class="flow-step">fallback 5 %</span>
+					<span class="flow-arrow">→</span>
+					<span class="flow-step">RAG pgvector</span>
+					<span class="flow-arrow">→</span>
+					<span class="flow-step step-llm">Gemma3 / Qwen3 local</span>
+				</div>
+			</section>
+
+			<section class="block">
+				<h2>Stack ouvert</h2>
+				<p class="section-desc">Tout est standard, open source, auto-hébergeable. Pas de SaaS verrouillé.</p>
+
+				<div class="stack-grid">
+					<div class="stack-cat">
+						<h4>Infra &amp; réseau</h4>
+						<ul>
+							<li>Ubuntu 24.04 + kernel 6.17</li>
+							<li>Docker Compose (29 stacks)</li>
+							<li>UDM Pro SE · VLANs · WiFi 6</li>
+							<li>Technitium DNS local</li>
+							<li>Reverse proxy TLS</li>
+						</ul>
+					</div>
+					<div class="stack-cat">
+						<h4>Domotique</h4>
+						<ul>
+							<li>Home Assistant + HACS</li>
+							<li>Zigbee2MQTT · Matter · Thread</li>
+							<li>Alarmo (8 portes strictes)</li>
+							<li>Frigate / UniFi Protect</li>
+							<li>Alexa Media Player + TTS</li>
+						</ul>
+					</div>
+					<div class="stack-cat">
+						<h4>IA locale</h4>
+						<ul>
+							<li>Ollama (Gemma3 · Qwen3)</li>
+							<li>Nomic embeddings</li>
+							<li>Postgres + pgvector (RAG)</li>
+							<li>ROCm iGPU 890M</li>
+							<li>ARIA Python framework maison</li>
+						</ul>
+					</div>
+					<div class="stack-cat">
+						<h4>Observabilité</h4>
+						<ul>
+							<li>Prometheus + node-exporter</li>
+							<li>Grafana (JSON provisionné)</li>
+							<li>Uptime Kuma</li>
+							<li>Textfile collectors custom</li>
+							<li>cAdvisor · PostgresExp</li>
+						</ul>
+					</div>
+					<div class="stack-cat">
+						<h4>Sorties / UX</h4>
+						<ul>
+							<li>Telegram bot (topics)</li>
+							<li>Discord (webhooks catégorisés)</li>
+							<li>Push iPhone critique</li>
+							<li>TRMNL e-ink 800×480</li>
+							<li>Notion (mémoire longue)</li>
+						</ul>
+					</div>
+					<div class="stack-cat">
+						<h4>Sauvegardes</h4>
+						<ul>
+							<li>Restic chiffré (3 cibles)</li>
+							<li>Hetzner Storage Box (EU)</li>
+							<li>NAS Synology Hyper Backup</li>
+							<li>Cron quotidien 3h30</li>
+							<li>Dead man's switch 26h</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="block terminal-block">
+				<h2>Snapshot en commande</h2>
+				<div class="terminal">
+					<div class="term-header">
+						<span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+						<span class="term-title">cma3 · ~ · zsh</span>
+					</div>
+					<div class="term-body">
+						<span class="out"><span class="prompt">$</span> <span class="cmd">docker ps --format &#123;&#123;.Names&#125;&#125; | wc -l</span></span>
+						<span class="out">29</span>
+						<span class="out"><span class="prompt">$</span> <span class="cmd">ls aria/agents/ | grep -v __</span></span>
+						<span class="out">anomaly.py  comfort.py  digest.py  energy.py  governance.py</span>
+						<span class="out">health.py   meteo.py    poulailler.py  predictive.py  security.py</span>
+						<span class="out"><span class="prompt">$</span> <span class="cmd">curl -s localhost:9091/api/v1/targets | jq '.data.activeTargets | length'</span></span>
+						<span class="out">13</span>
+						<span class="out"><span class="prompt">$</span> <span class="cmd">ollama list | awk 'NR&gt;1 &#123;print $1&#125;'</span></span>
+						<span class="out">gemma3:12b</span>
+						<span class="out">qwen3:8b</span>
+						<span class="out">nomic-embed-text:latest</span>
+					</div>
+				</div>
+			</section>
+
+			<section class="cta-block">
+				<h2>Et pour votre projet ?</h2>
+				<p>
+					Cette architecture, c'est <strong>mon terrain d'essai</strong>. Les mêmes briques peuvent servir une
+					PME, une agence d'architecture, une maison familiale — à l'échelle adaptée.
+				</p>
+				<div class="cta-row">
+					<a class="cta primary" href={base + "/services-pro/"}>Services pro · PME &amp; tech</a>
+					<a class="cta secondary" href={base + "/a-propos/"}>Mon parcours</a>
+				</div>
+				<p class="disclaimer">
+					Tous les éléments listés sont réellement en production chez moi · snapshot avril 2026. Adresses IP,
+					domaines internes et secrets volontairement omis.
+				</p>
+			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
 
 <style>
-	.lede { font-size: 1.1em; color: var(--text-muted); margin-bottom: 2em; }
-	.stats {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-		gap: 1em;
-		margin-bottom: 2.5em;
+	main {
+		width: 980px;
 	}
-	.stat {
+
+	.hero {
+		margin-bottom: 2.5em;
+		padding: 2em 0 1em;
+	}
+	.hero-badge {
+		display: inline-block;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.75em;
+		color: var(--accent);
+		border: 1px solid var(--accent);
+		padding: 4px 10px;
+		border-radius: 999px;
+		margin-bottom: 1.2em;
+		opacity: 0.9;
+	}
+	.hero h1 {
+		font-size: 2.6em;
+		line-height: 1.15;
+		margin: 0 0 0.5em;
+		background: linear-gradient(90deg, #e6edf3 20%, #58a6ff 100%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
+	.hero .lede {
+		font-size: 1.15em;
+		color: var(--text-muted);
+		max-width: 780px;
+	}
+
+	.stat-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		gap: 1em;
+		margin: 0 0 3em;
+	}
+	.stat-card {
 		text-align: center;
-		padding: 1.2em 0.5em;
-		background: var(--bg-elevated);
+		padding: 1.4em 0.5em;
+		background: linear-gradient(160deg, var(--bg-elevated) 0%, #0f1220 100%);
 		border: 1px solid var(--border);
-		border-radius: 8px;
+		border-radius: 10px;
+		transition: transform 0.2s, border-color 0.2s;
+	}
+	.stat-card:hover {
+		transform: translateY(-3px);
+		border-color: var(--accent);
 	}
 	.stat-num {
-		font-size: 2em;
+		font-size: 2.2em;
 		font-weight: 700;
 		color: var(--accent);
 		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		line-height: 1;
 	}
 	.stat-label {
-		font-size: 0.8em;
+		margin-top: 0.5em;
+		font-size: 0.78em;
 		color: var(--text-muted);
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
 		font-family: 'JetBrains Mono', ui-monospace, monospace;
 	}
-	.grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-		gap: 1em;
-		margin: 1em 0 2em;
+
+	.block {
+		margin: 3em 0;
 	}
-	.service {
-		padding: 1.2em 1.3em;
+	.section-desc {
+		color: var(--text-muted);
+		font-size: 1.02em;
+		margin-top: -0.6em;
+		margin-bottom: 1.6em;
+	}
+
+	.archi-svg, .aria-svg {
+		background: #0d111a;
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		padding: 0.6em;
+		margin: 1em 0 0.5em;
+		overflow: hidden;
+	}
+	.archi-svg svg, .aria-svg svg {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	.layer-title {
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+	.chip-text { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; }
+	.core-title { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; }
+	.core-sub { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; }
+	.out-item { font-family: 'Inter', sans-serif; font-size: 13px; }
+	.out-sub { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; }
+	.hub-text { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+	.hub-sub { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+	.agent-name { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 600; }
+	.agent-role { font-family: 'Inter', sans-serif; font-size: 9.5px; }
+
+	.pillars {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.2em;
+		margin-top: 1em;
+	}
+	.pillar {
+		background: linear-gradient(160deg, var(--bg-elevated) 0%, #0d111a 100%);
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		padding: 1.4em 1.4em 1.2em;
+		position: relative;
+		overflow: hidden;
+		transition: transform 0.2s, border-color 0.2s;
+	}
+	.pillar:hover { transform: translateY(-3px); border-color: var(--accent); }
+	.pillar::before {
+		content: '';
+		position: absolute;
+		top: 0; left: 0; right: 0;
+		height: 2px;
+		background: linear-gradient(90deg, #58a6ff, #388bfd, transparent);
+		opacity: 0.8;
+	}
+	.pillar-icon {
+		color: var(--accent);
+		margin-bottom: 0.6em;
+	}
+	.pillar h3 { margin: 0 0 0.5em; font-size: 1.2em; color: var(--text); }
+	.pillar h3::before { content: ''; }
+	.pillar p { color: var(--text-muted); font-size: 0.96em; margin-bottom: 0.9em; }
+	.tags { display: flex; flex-wrap: wrap; gap: 0.4em; }
+	.tag {
+		display: inline-block;
+		padding: 3px 9px;
+		background: rgba(88, 166, 255, 0.08);
+		border: 1px solid rgba(88, 166, 255, 0.2);
+		border-radius: 999px;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.72em;
+		color: var(--accent);
+	}
+
+	.engine-flow {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.8em;
+		align-items: center;
+		margin: 1em 0;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.92em;
+	}
+	.flow-step {
 		background: var(--bg-elevated);
 		border: 1px solid var(--border);
-		border-radius: 8px;
+		padding: 6px 12px;
+		border-radius: 6px;
+		color: var(--text);
 	}
-	.service h3 { margin-top: 0; font-size: 1.1em; color: var(--accent); }
-	.service h3::before { content: ''; }
-	.service p { font-size: 0.95em; color: var(--text-muted); margin-bottom: 0.8em; }
+	.step-fast { border-color: var(--success); color: var(--success); }
+	.step-llm { border-color: var(--accent); color: var(--accent); }
+	.flow-arrow { color: var(--accent); font-size: 1.2em; }
+
+	.stack-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.stack-cat {
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		padding: 1.2em 1.3em;
+	}
+	.stack-cat h4 {
+		margin: 0 0 0.6em;
+		color: var(--accent);
+		font-size: 1em;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+	}
+	.stack-cat ul { list-style: none; padding: 0; margin: 0; }
+	.stack-cat li {
+		padding: 4px 0;
+		color: var(--text-muted);
+		font-size: 0.95em;
+		border-bottom: 1px dashed rgba(255,255,255,0.04);
+	}
+	.stack-cat li:last-child { border-bottom: 0; }
+
+	.terminal-block { margin-top: 2em; }
+	.terminal {
+		background: #0a0d14;
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		overflow: hidden;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+	}
+	.term-header {
+		background: #141822;
+		padding: 10px 14px;
+		border-bottom: 1px solid var(--border);
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+	.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+	.dot.r { background: #ff5f56; }
+	.dot.y { background: #ffbd2e; }
+	.dot.g { background: #27c93f; }
+	.term-title {
+		margin-left: 10px;
+		color: var(--text-muted);
+		font-size: 0.82em;
+	}
+	.term-body {
+		padding: 1em 1.2em;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		font-size: 0.88em;
+	}
+	.out { color: var(--text); }
+	.prompt { color: var(--success); margin-right: 8px; }
+	.cmd { color: var(--accent); }
+
+	.cta-block {
+		margin: 4em 0 1em;
+		text-align: center;
+		padding: 2.5em 1.5em;
+		background: linear-gradient(160deg, rgba(88,166,255,0.06), rgba(14,20,36,0.4));
+		border: 1px solid rgba(88, 166, 255, 0.25);
+		border-radius: 14px;
+	}
+	.cta-block h2 { border: 0; }
+	.cta-block h2::before { content: ''; }
+	.cta-row {
+		display: flex;
+		gap: 1em;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 1.4em 0 0.6em;
+	}
+	.cta {
+		display: inline-block;
+		padding: 12px 22px;
+		border-radius: 8px;
+		font-weight: 600;
+		font-size: 0.98em;
+		transition: transform 0.15s, background 0.15s;
+		border-bottom: none !important;
+	}
+	.cta:hover { transform: translateY(-2px); }
+	.cta.primary {
+		background: var(--accent);
+		color: #0a0d14;
+	}
+	.cta.primary:hover { background: #6fb4ff; }
+	.cta.secondary {
+		background: transparent;
+		color: var(--text);
+		border: 1px solid var(--border);
+	}
+	.cta.secondary:hover { border-color: var(--accent); color: var(--accent); }
+	.disclaimer {
+		color: var(--text-dim);
+		font-size: 0.82em;
+		margin-top: 1.2em;
+		font-style: italic;
+	}
+
+	@media (max-width: 720px) {
+		.hero h1 { font-size: 1.9em; }
+		.stat-num { font-size: 1.7em; }
+		.engine-flow { font-size: 0.8em; }
+	}
 </style>
