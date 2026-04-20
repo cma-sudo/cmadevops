@@ -10,10 +10,13 @@ const today = new Date();
 			<span class="sep">·</span>
 			<span class="loc">{LOCATION}</span>
 		</div>
+		<div class="footer-disclaimer">
+			Portfolio professionnel — parcours 1999-2025 · pas d'activité commerciale en cours
+		</div>
 		<div class="footer-stack">
 			built with <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>
 			<span class="sep">·</span>
-			deployed on GitHub Pages
+			hébergé en Suisse (Infomaniak)
 			<span class="sep">·</span>
 			<a href="/rss.xml">RSS</a>
 		</div>
@@ -35,6 +38,13 @@ const today = new Date();
 	}
 	.footer-meta {
 		margin-bottom: 0.5em;
+	}
+	.footer-disclaimer {
+		font-size: 0.85em;
+		color: var(--text-dim);
+		font-style: italic;
+		margin: 0.6em 0;
+		opacity: 0.85;
 	}
 	.prompt {
 		color: var(--success);

@@ -9,22 +9,24 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <!doctype html>
 <html lang="fr">
 	<head>
-		<BaseHead title={`Architectes & bureaux d'études · ${SITE_TITLE}`} description="Relevés LiDAR, études solaires par scan 3D, audit écosystème logiciel agence d'architecture. En partenariat avec PK Architecture." />
+		<BaseHead title={`Scan 3D / BIM · ${SITE_TITLE}`} description="Relevés LiDAR, études solaires par scan 3D, partenariat PK Architecture. Portfolio et parcours technique." />
 	</head>
 	<body>
 		<Header />
 		<main>
 			<section class="intro-block">
-				<h1>Pour architectes &amp; bureaux d'études</h1>
+				<h1>Scan 3D, BIM &amp; études solaires</h1>
 				<p class="lede">
-					Double culture <strong>scan 3D</strong> + <strong>DevOps</strong> au service de vos projets et de votre agence.
-					En partenariat avec <a href="https://pk-archi.com/" target="_blank" rel="noopener">PK Architecture</a>.
+					Double culture <strong>scan 3D</strong> + <strong>DevOps</strong>.
+					Collaboration régulière depuis 2013 avec
+					<a href="https://pk-archi.com/" target="_blank" rel="noopener">PK Architecture</a>
+					pour les projets de rénovation, réhabilitation et études patrimoniales en Alsace.
 				</p>
 			</section>
 
 			<section class="svc-section">
 				<h2>Relevés LiDAR &amp; études solaires 3D</h2>
-				<p class="section-desc">Acquisition, traitement, livrables BIM — et le petit plus qui fait la différence.</p>
+				<p class="section-desc">Acquisition, traitement, livrables BIM — expérience et workflows éprouvés.</p>
 				<p class="proof">
 					<strong>Workflow ScanToBIM éprouvé avec PK Architecture depuis 2013.</strong>
 					Connaissance des contraintes chantier, des PV techniques, des dossiers ERP.
@@ -32,13 +34,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 				<div class="services">
 					<article class="svc">
-						<header>
-							<h3>Relevé d'existant 3D</h3>
-							<span class="price">sur devis</span>
-						</header>
+						<h3>Relevé d'existant 3D</h3>
 						<p>
-							Scan 3D haute densité d'un bâtiment existant, intérieur/extérieur. Nuages de points
-							denses pour projets de rénovation, réhabilitation, extensions.
+							Scan 3D haute densité de bâtiments existants, intérieur et extérieur.
+							Nuages de points denses pour projets de rénovation, réhabilitation, extension.
+							Plusieurs dizaines de projets menés avec PK Architecture sur bâti alsacien.
 						</p>
 						<div class="stack">
 							<span class="tag">scan-3d</span><span class="tag">point-cloud</span><span class="tag">relevé</span>
@@ -46,10 +46,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 					</article>
 
 					<article class="svc">
-						<header>
-							<h3>Traitement nuages de points</h3>
-							<span class="price">sur devis</span>
-						</header>
+						<h3>Traitement nuages de points</h3>
 						<p>
 							Nettoyage, segmentation, recalage, extraction d'éléments. Livrables
 							CAO (DWG, IFC), plans 2D, coupes, élévations, maquettes BIM.
@@ -60,18 +57,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 					</article>
 
 					<article class="svc svc-highlight">
-						<header>
-							<h3>⭐ Étude solaire par scan 3D</h3>
-							<span class="price">600 – 1 200 €</span>
-						</header>
+						<h3>Étude solaire par scan 3D</h3>
 						<p>
-							Avant d'investir <strong>10 000 à 25 000 €</strong> dans du photovoltaïque, faites modéliser
-							votre toit réellement. Scan 3D précis du bâtiment + modélisation d'ensoleillement heure par heure,
-							détection des ombres portées (cheminées, arbres, bâtiments voisins), calcul de production annuelle
-							réaliste par zone de toiture. Livrable PDF 10-15 pages avec visuels 3D.
-						</p>
-						<p class="target">
-							<strong>Pour qui :</strong> particuliers avant devis installateur · architectes en conception · copropriétés · bureaux d'études.
+							Avant d'investir dans du photovoltaïque : modélisation du bâti scanné
+							+ simulation d'ensoleillement heure par heure, détection des ombres portées
+							(cheminées, arbres, bâtiments voisins), calcul de production annuelle
+							réaliste par zone de toiture. Démarche développée pour objectiver les choix
+							de particuliers, architectes, copropriétés et bureaux d'études.
 						</p>
 						<div class="stack">
 							<span class="tag">scan-3d</span><span class="tag">solaire</span><span class="tag">pvsyst</span><span class="tag">ombres-portées</span>
@@ -79,17 +71,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 					</article>
 
 					<article class="svc">
-						<header>
-							<h3>Partenariat PK Architecture</h3>
-							<span class="price">workflow établi</span>
-						</header>
+						<h3>Partenariat PK Architecture</h3>
 						<p>
-							Collaboration régulière avec <a href="https://pk-archi.com/" target="_blank" rel="noopener">PK Architecture</a> :
+							Collaboration régulière avec <a href="https://pk-archi.com/" target="_blank" rel="noopener">PK Architecture</a> depuis 2013 :
 							livraison de bases CAO propres pour projets de rénovation, extensions, réhabilitations
 							patrimoniales en Alsace.
 						</p>
 						<div class="stack">
-							<span class="tag">partenariat</span><span class="tag">alsace</span>
+							<span class="tag">partenariat</span><span class="tag">alsace</span><span class="tag">depuis-2013</span>
 						</div>
 					</article>
 				</div>
@@ -97,18 +86,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 			<section class="svc-section">
 				<h2>Écosystème logiciel agence</h2>
-				<p class="section-desc">Audit, automatisation, veille techno et IA pour agences d'architecture et bureaux d'études.</p>
+				<p class="section-desc">Audit, automatisation, veille techno et IA pour agences d'architecture.</p>
 
 				<div class="services">
 					<article class="svc">
-						<header>
-							<h3>Audit écosystème logiciel</h3>
-							<span class="price">900 € (1 journée)</span>
-						</header>
+						<h3>Cartographie parc logiciel</h3>
 						<p>
-							État des lieux complet : cartographie du parc logiciel (Revit, AutoCAD, ArchiCAD, SketchUp,
-							Rhino, Lumion, Twinmotion…), flux de données entre outils, points de blocage, licences
-							sous-utilisées. Livrable : rapport écrit avec plan d'action priorisé.
+							État des lieux du parc logiciel d'agence (Revit, AutoCAD, ArchiCAD, SketchUp,
+							Rhino, Lumion, Twinmotion…), flux de données entre outils, points de blocage,
+							licences sous-utilisées.
 						</p>
 						<div class="stack">
 							<span class="tag">audit</span><span class="tag">revit</span><span class="tag">bim</span>
@@ -116,10 +102,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 					</article>
 
 					<article class="svc">
-						<header>
-							<h3>Workflow BIM / IFC</h3>
-							<span class="price">sur devis</span>
-						</header>
+						<h3>Workflows BIM / IFC</h3>
 						<p>
 							Standards de nommage, gabarits projet, exports IFC propres, archivage structuré.
 							Documentation transmissible aux équipes.
@@ -130,13 +113,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 					</article>
 
 					<article class="svc">
-						<header>
-							<h3>Automatisations Dynamo / scripts métier</h3>
-							<span class="price">TJM 700 €</span>
-						</header>
+						<h3>Automatisations Dynamo / scripts métier</h3>
 						<p>
-							Scripts Dynamo Revit, Grasshopper Rhino, macros AutoCAD. Automatiser les tâches répétitives
-							(nommage, export, contrôle qualité maquette). Gain 1-3h par semaine et par collaborateur.
+							Scripts Dynamo Revit, Grasshopper Rhino, macros AutoCAD. Automatiser les tâches
+							répétitives (nommage, export, contrôle qualité maquette).
 						</p>
 						<div class="stack">
 							<span class="tag">dynamo</span><span class="tag">grasshopper</span><span class="tag">python</span>
@@ -144,60 +124,25 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 					</article>
 
 					<article class="svc svc-highlight">
-						<header>
-							<h3>⭐ Abonnement veille techno</h3>
-							<span class="price">250 € / mois</span>
-						</header>
+						<h3>Veille IA générative (architecture)</h3>
 						<p>
-							Newsletter mensuelle ciblée architecture : nouveautés logiciels, IA générative
-							(Midjourney, Veras, Stable Diffusion, Krea, PromeAI), plugins, workflows émergents.
-							<strong>+ 1h de call mensuel</strong> pour répondre à vos questions concrètes.
+							Veille active sur les outils IA appliqués à l'architecture :
+							Midjourney, Veras, Stable Diffusion, Krea, PromeAI, plugins Revit/SketchUp,
+							workflows émergents. Publié occasionnellement sur ce blog.
 						</p>
 						<div class="stack">
-							<span class="tag">veille</span><span class="tag">ia</span><span class="tag">récurrent</span>
-						</div>
-					</article>
-
-					<article class="svc">
-						<header>
-							<h3>Formation IA générative pour archis</h3>
-							<span class="price">400 € (demi-journée)</span>
-						</header>
-						<p>
-							Prompts efficaces, outils testés et comparés (Veras, Krea, PromeAI, Midjourney),
-							droits d'auteur, intégration dans un workflow Revit/SketchUp.
-							Groupe de 3-6 personnes en présentiel à l'agence.
-						</p>
-						<div class="stack">
-							<span class="tag">formation</span><span class="tag">ia-générative</span><span class="tag">midjourney</span>
-						</div>
-					</article>
-
-					<article class="svc">
-						<header>
-							<h3>Accompagnement IA sur projet concret</h3>
-							<span class="price">TJM 700 €</span>
-						</header>
-						<p>
-							Mission ponctuelle sur un projet en cours : générer des variantes d'ambiance,
-							travailler un concours, produire des visuels clients. À deux sur l'outil, vous apprenez en faisant.
-						</p>
-						<div class="stack">
-							<span class="tag">consulting</span><span class="tag">hands-on</span>
+							<span class="tag">veille</span><span class="tag">ia</span><span class="tag">midjourney</span>
 						</div>
 					</article>
 				</div>
 			</section>
 
-			<section class="contact">
-				<h2>Prendre contact</h2>
-				<p>
-					Que vous soyez architecte indépendant, agence de 3 à 30 personnes, ou bureau d'études :
-					un call de 30 min pour cadrer votre besoin, puis proposition écrite.
+			<section class="refs-block">
+				<h2>Références</h2>
+				<p class="refs-text">
+					<strong>PK Architecture</strong> (Alsace) — partenaire scan 3D / ScanToBIM depuis 2013.
+					<br/><a href="https://pk-archi.com/" target="_blank" rel="noopener">pk-archi.com</a>
 				</p>
-				<div class="cta">
-					<a href="mailto:cmadevops.3n1sr@simplelogin.com?subject=Architecture" class="btn">cmadevops.3n1sr@simplelogin.com</a>
-				</div>
 			</section>
 		</main>
 		<Footer />
@@ -223,6 +168,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 	.lede a { color: var(--accent); font-weight: 600; }
 	.svc-section { margin-bottom: 3em; }
 	.section-desc { color: var(--text-muted); font-style: italic; margin: -0.5em 0 1.5em; }
+	.proof {
+		font-size: 0.9em;
+		color: var(--text-muted);
+		font-style: italic;
+		padding: 0.6em 1em;
+		background: var(--bg-code);
+		border-left: 2px solid var(--accent);
+		border-radius: 4px;
+		margin: 0 0 1.5em;
+	}
+	.proof strong { color: var(--accent); font-style: normal; }
 	.services {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -240,64 +196,42 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 		border-color: var(--accent);
 		background: linear-gradient(135deg, var(--bg-elevated) 0%, rgba(88, 166, 255, 0.08) 100%);
 	}
-	.svc header {
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
-		gap: 1em;
-		margin-bottom: 0.5em;
-	}
 	.svc h3 {
-		margin: 0;
+		margin: 0 0 0.5em;
 		font-size: 1.05em;
 		color: var(--accent);
 	}
 	.svc h3::before { content: ''; }
-	.price {
-		font-family: 'JetBrains Mono', ui-monospace, monospace;
-		font-size: 0.7em;
-		color: var(--success);
-		white-space: nowrap;
-		background: rgba(63, 185, 80, 0.1);
-		border: 1px solid rgba(63, 185, 80, 0.3);
-		padding: 0.2em 0.5em;
-		border-radius: 4px;
+	.svc p {
+		color: var(--text-muted);
+		font-size: 0.95em;
+		margin: 0 0 0.8em;
 	}
-	.svc p { color: var(--text-muted); font-size: 0.95em; margin: 0 0 0.8em; line-height: 1.6; }
-	.svc p.target { font-size: 0.88em; color: var(--text-dim); margin-top: 0.6em; }
-	.svc p.target strong { color: var(--text-muted); }
 	.stack { margin-top: 0.5em; }
-	.contact {
-		margin-top: 3em;
-		padding: 1.8em 2em;
+	.tag {
+		display: inline-block;
+		font-size: 0.7em;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		padding: 2px 8px;
+		background: rgba(88, 166, 255, 0.08);
+		border: 1px solid rgba(88, 166, 255, 0.2);
+		border-radius: 999px;
+		color: var(--accent);
+		margin-right: 4px;
+	}
+	.refs-block {
+		margin-top: 2em;
+		padding: 1.5em 2em;
 		background: var(--bg-elevated);
-		border: 1px solid var(--accent);
+		border: 1px solid var(--border);
 		border-radius: 10px;
 	}
-	.contact h2 { margin-top: 0; }
-	.contact p { color: var(--text-muted); margin-bottom: 1em; }
-	.cta { margin-top: 1em; }
-	.btn {
-		display: inline-block;
-		padding: 0.7em 1.4em;
-		border: 1px solid var(--accent);
-		border-radius: 6px;
-		background: var(--accent);
-		color: var(--bg);
-		font-family: 'JetBrains Mono', ui-monospace, monospace;
-		font-size: 0.9em;
-		font-weight: 600;
-	}
-	.btn:hover { background: var(--accent-dark); border-bottom: 1px solid var(--accent-dark); }
-	.proof {
-		font-size: 0.9em;
+	.refs-block h2 { margin-top: 0; }
+	.refs-text {
 		color: var(--text-muted);
-		font-style: italic;
-		padding: 0.6em 1em;
-		background: var(--bg-code);
-		border-left: 2px solid var(--accent);
-		border-radius: 4px;
-		margin: 0 0 1.5em;
+		font-size: 0.95em;
+		margin: 0;
+		line-height: 1.8;
 	}
-	.proof strong { color: var(--accent); font-style: normal; }
+	.refs-text strong { color: var(--text); }
 </style>

@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION, AUTHOR, AUTHOR_ROLE } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION, AUTHOR } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -30,40 +30,42 @@ const posts = (await getCollection('blog'))
 				<div class="hero-content">
 					<p class="greet"><span class="prompt">$</span> whoami</p>
 					<h1>{AUTHOR}</h1>
-					<p class="role">Scan 3D · Conseil DevOps · Accompagnement numérique</p>
+					<p class="role">Infrastructure télécom · Scan 3D / BIM · Homelab &amp; IA · Transition énergétique</p>
 					<p class="intro">
-						Trois casquettes, un fil rouge : <strong>rendre la technologie utile et accessible</strong>.
-						J'aide les <strong>architectes</strong> à relever l'existant en nuages de points 3D,
-						les <strong>PME</strong> à maîtriser leur infra, et les <strong>particuliers</strong>
-						à reprendre confiance avec le numérique.
+						25 ans à piloter des déploiements d'infrastructure télécom
+						(<strong>Swisscom, Free, Numericable</strong>),
+						<strong>100 000 prises FTTH</strong> construites,
+						21 000 interventions terrain dirigées.
+						Aujourd'hui je continue à explorer ce que la technologie permet de faire,
+						à l'intersection du terrain, de la 3D, de l'IA et de l'énergie.
 					</p>
 					<p class="partner">
-						Partenaire de <a href="https://pk-archi.com/" target="_blank" rel="noopener">PK Architecture</a>.
+						Ce site est un <strong>portfolio professionnel</strong> — parcours, veille, projets menés.
 					</p>
 					<div class="cta">
-						<a href={base + "/services-pro/"} class="btn">Services Pro</a>
-						<a href={base + "/architecture/"} class="btn btn-ghost">Architectes</a>
-						<a href={base + "/accompagnement/"} class="btn btn-ghost">Particuliers</a>
+						<a href={base + "/a-propos/"} class="btn">Mon parcours</a>
+						<a href={base + "/homelab/"} class="btn btn-ghost">Homelab</a>
+						<a href={base + "/collaboration/"} class="btn btn-ghost">Collaboration</a>
 					</div>
 				</div>
 			</section>
 
 			<section class="stats">
 				<div class="stat">
-					<div class="stat-num">3</div>
-					<div class="stat-label">casquettes complémentaires</div>
+					<div class="stat-num">25 ans</div>
+					<div class="stat-label">management opérationnel</div>
+				</div>
+				<div class="stat">
+					<div class="stat-num">100 000</div>
+					<div class="stat-label">prises FTTH construites</div>
+				</div>
+				<div class="stat">
+					<div class="stat-num">2 pays</div>
+					<div class="stat-label">France &amp; Suisse</div>
 				</div>
 				<div class="stat">
 					<div class="stat-num">Alsace</div>
-					<div class="stat-label">Rixheim &amp; environs</div>
-				</div>
-				<div class="stat">
-					<div class="stat-num"><a href="https://pk-archi.com/" target="_blank" rel="noopener">PK Archi</a></div>
-					<div class="stat-label">partenaire</div>
-				</div>
-				<div class="stat">
-					<div class="stat-num">25 ans</div>
-					<div class="stat-label">de management</div>
+					<div class="stat-label">Rixheim &amp; Delémont</div>
 				</div>
 			</section>
 
@@ -145,7 +147,7 @@ const posts = (await getCollection('blog'))
 		border-left: 2px solid var(--accent);
 		border-radius: 4px;
 	}
-	.partner a { color: var(--accent); font-weight: 600; }
+	.partner strong { color: var(--accent); font-weight: 600; }
 	.cta { display: flex; gap: 0.8em; flex-wrap: wrap; }
 	.btn {
 		display: inline-block;

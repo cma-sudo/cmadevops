@@ -1,0 +1,300 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<BaseHead
+			title={`Collaboration & projets · ${SITE_TITLE}`}
+			description="Christophe Mattera — 25 ans de pilotage opérationnel dans les télécoms. Développement d'activité, direction de projets, transformation digitale. France & Suisse."
+		/>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="hero">
+				<p class="lede-top">
+					<strong>Je ne viens pas exécuter. Je viens structurer, développer et faire réussir.</strong>
+				</p>
+				<p class="lede-sub">
+					En intégration durable, en mandat de développement ou en partenariat — selon ce que le projet demande.
+				</p>
+			</section>
+
+			<section class="block">
+				<h2>Ce que j'apporte</h2>
+				<p>
+					25 ans dans les infrastructures télécoms — du terrain au P&amp;L — m'ont appris une chose :
+					<strong>les entreprises qui réussissent leur diversification ne sont pas celles qui recrutent
+					des experts d'un seul nouveau métier — ce sont celles qui trouvent le pont entre leur ADN
+					et ce qui arrive</strong>. Ma valeur est là : connaître par l'intérieur le métier historique
+					(infrastructure, chantier, sous-traitance, réseaux) tout en pratiquant au quotidien les
+					technologies qui arrivent (IA appliquée, BIM, transition énergétique, smart city).
+				</p>
+			</section>
+
+			<section class="block">
+				<h2>Ce sur quoi je crée de la valeur</h2>
+
+				<div class="pillars">
+					<article class="pillar">
+						<h3>Infrastructure télécom &amp; FTTH</h3>
+						<p>
+							Chef de projet FREE Infrastructure pour <strong>100 000 prises FTTH</strong> (budget 4 M€),
+							puis 12 ans chez Cablex / Swisscom sur des déploiements de villes entières en Suisse
+							romande et alémanique : Bottmingen, Binningen, La Chaux-de-Fonds, Orpund, Studen…
+							Je connais chaque étape d'un déploiement réseau, de l'avant-projet à la mise en exploitation.
+						</p>
+						<div class="tags">
+							<span class="tag">FTTH</span><span class="tag">déploiement</span><span class="tag">P&amp;L</span><span class="tag">sous-traitance</span>
+						</div>
+					</article>
+
+					<article class="pillar">
+						<h3>Scan 3D, BIM &amp; bâtiment</h3>
+						<p>
+							Partenariat avec <a href="https://pk-archi.com/" target="_blank" rel="noopener">PK Architecture</a>
+							depuis 2013 : relevés LiDAR, traitement de nuages de points, études solaires 3D,
+							workflows ScanToBIM. Compréhension concrète des contraintes chantier, PV techniques,
+							dossiers ERP — un atout dans tout projet où télécom rencontre bâtiment ou infrastructure.
+						</p>
+						<div class="tags">
+							<span class="tag">LiDAR</span><span class="tag">BIM / IFC</span><span class="tag">Revit</span><span class="tag">ERP</span>
+						</div>
+					</article>
+
+					<article class="pillar">
+						<h3>Homelab &amp; IA appliquée</h3>
+						<p>
+							Je pratique ce que je recommande : infrastructure complète auto-hébergée
+							(29 containers, 10 agents IA 100% locaux, 220+ automatisations, monitoring
+							Prometheus/Grafana, backup 3-2-1). À l'heure où l'IA entre dans les organisations,
+							je sais distinguer l'effet de mode du vrai levier de productivité —
+							<a href={base + "/homelab/"}>détail technique ici</a>.
+						</p>
+						<div class="tags">
+							<span class="tag">IA locale</span><span class="tag">Ollama</span><span class="tag">monitoring</span><span class="tag">DevOps</span>
+						</div>
+					</article>
+
+					<article class="pillar">
+						<h3>Transition énergétique &amp; solaire</h3>
+						<p>
+							Démarche d'étude solaire par scan 3D développée avec PK Architecture :
+							modélisation du bâti, simulation d'ensoleillement heure par heure, détection
+							d'ombres portées, calcul de production réaliste. Terrain de l'infrastructure,
+							nouvelle discipline du bâtiment décarboné — même logique, outils différents.
+						</p>
+						<div class="tags">
+							<span class="tag">photovoltaïque</span><span class="tag">ombrage 3D</span><span class="tag">PVsyst</span>
+						</div>
+					</article>
+
+					<article class="pillar">
+						<h3>Développement &amp; structuration</h3>
+						<p>
+							Construire une activité, structurer une organisation, ouvrir un marché.
+							J'ai créé <strong>TSI Telecom</strong> (21 000 interventions terrain),
+							<strong>développé l'unité Swisscom de Delémont</strong> (20 personnes, P&amp;L,
+							sous-traitance, QSE). Je sais ce que "partir de rien" veut dire — et comment éviter
+							les erreurs qui coûtent.
+						</p>
+						<div class="tags">
+							<span class="tag">création</span><span class="tag">structuration</span><span class="tag">P&amp;L</span>
+						</div>
+					</article>
+
+					<article class="pillar">
+						<h3>Digitalisation &amp; pilotage par la donnée</h3>
+						<p>
+							SAP, outils de pilotage terrain, automatisation des flux, reporting KPI.
+							J'ai toujours cherché à remplacer le manuel par du fiable. J'intègre
+							les nouvelles technologies vite — parce que ça m'intéresse vraiment — et
+							je sais les déployer sans casser l'existant.
+						</p>
+						<div class="tags">
+							<span class="tag">SAP</span><span class="tag">reporting</span><span class="tag">conduite du changement</span>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section class="block">
+				<h2>En chiffres</h2>
+				<ul class="numbers">
+					<li><strong>100 000</strong> prises FTTH construites — Chef de projet FREE Infrastructure, France</li>
+					<li><strong>Déploiements villes entières</strong> en Suisse romande et alémanique — Bottmingen, Binningen, La Chaux-de-Fonds, Orpund, Studen… (Cablex / Swisscom)</li>
+					<li><strong>21 000</strong> interventions terrain — TSI Telecom</li>
+					<li><strong>35 prestataires</strong> gérés simultanément — pilotage, contractualisation, qualité</li>
+					<li><strong>25 ans</strong> de management opérationnel</li>
+					<li><strong>2 pays</strong> — France &amp; Suisse, contexte frontalier maîtrisé</li>
+					<li><strong>Allemand professionnel</strong> — 12 ans Swisscom Delémont, Suisse alémanique</li>
+				</ul>
+			</section>
+
+			<section class="block">
+				<h2>Ce qui m'intéresse aujourd'hui</h2>
+				<p>
+					Les environnements où il reste quelque chose à construire — un département à structurer,
+					un nouveau métier à développer, un marché à ouvrir, un projet complexe à piloter,
+					une transformation à accompagner.
+				</p>
+				<p>
+					La forme compte moins que le projet :
+					<strong>direction opérationnelle, intégration en CODIR, mandat de transition,
+					développement d'une business unit</strong> — ce qui sert le mieux l'enjeu.
+					Secteurs de prédilection : infrastructure télécoms et FTTH, déploiement réseau,
+					transition énergétique, smart city.
+				</p>
+			</section>
+
+			<section class="cta-block">
+				<h2>Parlons-en</h2>
+				<p>
+					Les meilleures collaborations commencent souvent par une conversation sans agenda.
+					Si un projet que je suis actuellement trouve un écho chez vous — ou si vous voulez
+					simplement échanger — j'ouvre volontiers la discussion.
+				</p>
+				<p class="contact">
+					<strong>mattera.ch@proton.me</strong><br/>
+					Rixheim (F) · Delémont (CH)
+				</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main { width: 900px; }
+
+	.hero {
+		margin: 1em 0 2.5em;
+		padding: 2em 0;
+		border-bottom: 1px solid var(--border);
+	}
+	.lede-top {
+		font-size: 1.5em;
+		color: var(--text);
+		margin: 0 0 0.6em;
+		line-height: 1.35;
+	}
+	.lede-top strong {
+		background: linear-gradient(120deg, var(--text) 30%, var(--accent) 100%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.lede-sub {
+		font-size: 1em;
+		color: var(--text-muted);
+		margin: 0;
+	}
+
+	.block {
+		margin: 2.5em 0;
+	}
+	.block p {
+		color: var(--text);
+		line-height: 1.75;
+	}
+	.block p strong { color: var(--accent); }
+	.block a { color: var(--accent); font-weight: 600; }
+
+	.pillars {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.pillar {
+		padding: 1.3em 1.4em 1.2em;
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		position: relative;
+		overflow: hidden;
+		transition: transform 0.2s, border-color 0.2s;
+	}
+	.pillar:hover { transform: translateY(-2px); border-color: var(--accent); }
+	.pillar::before {
+		content: '';
+		position: absolute;
+		top: 0; left: 0; right: 0;
+		height: 2px;
+		background: linear-gradient(90deg, var(--accent), transparent);
+		opacity: 0.7;
+	}
+	.pillar h3 {
+		margin: 0 0 0.5em;
+		font-size: 1.1em;
+		color: var(--text);
+	}
+	.pillar h3::before { content: ''; }
+	.pillar p {
+		color: var(--text-muted);
+		font-size: 0.95em;
+		margin: 0 0 0.9em;
+		line-height: 1.65;
+	}
+	.pillar p strong { color: var(--text); }
+	.tags { display: flex; flex-wrap: wrap; gap: 0.4em; }
+	.tag {
+		display: inline-block;
+		font-size: 0.7em;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		padding: 2px 8px;
+		background: rgba(88, 166, 255, 0.08);
+		border: 1px solid rgba(88, 166, 255, 0.2);
+		border-radius: 999px;
+		color: var(--accent);
+	}
+
+	.numbers {
+		list-style: none;
+		padding: 0;
+		margin: 1em 0 0;
+		display: grid;
+		gap: 0.5em;
+	}
+	.numbers li {
+		padding: 0.7em 1em;
+		background: var(--bg-elevated);
+		border-left: 2px solid var(--accent);
+		border-radius: 4px;
+		color: var(--text-muted);
+		line-height: 1.5;
+	}
+	.numbers li strong { color: var(--accent); margin-right: 0.3em; }
+
+	.cta-block {
+		margin: 3em 0 1em;
+		padding: 2em 2em 1.8em;
+		background: linear-gradient(160deg, rgba(88, 166, 255, 0.08), rgba(14, 20, 36, 0.4));
+		border: 1px solid rgba(88, 166, 255, 0.3);
+		border-radius: 12px;
+	}
+	.cta-block h2 { margin-top: 0; border: 0; }
+	.cta-block h2::before { content: ''; }
+	.cta-block p { color: var(--text); }
+	.contact {
+		margin-top: 1.2em;
+		padding: 1em 1.2em;
+		background: var(--bg-code);
+		border-radius: 6px;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.95em;
+		line-height: 1.8;
+	}
+	.contact strong { color: var(--accent); }
+
+	@media (max-width: 720px) {
+		main { width: 100%; }
+		.lede-top { font-size: 1.2em; }
+	}
+</style>

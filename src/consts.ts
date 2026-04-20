@@ -1,12 +1,12 @@
 // Metadonnees globales du site.
 
 export const SITE_TITLE = 'CMA Conseil';
-export const SITE_TAGLINE = 'Scan 3D · Conseil · Accompagnement · Alsace';
-export const SITE_DESCRIPTION = 'CMA Conseil — Scan 3D, coordination ERP, conseil DevOps, accompagnement numérique. Architectes, PME, restaurateurs, particuliers, frontaliers. Alsace.';
+export const SITE_TAGLINE = 'Portfolio professionnel · Christophe Mattera';
+export const SITE_DESCRIPTION = 'Christophe Mattera — 25 ans de pilotage opérationnel dans les télécoms (Swisscom, Free, Numericable). Portfolio : scan 3D, homelab, IA appliquée, transition énergétique.';
 export const SITE_URL = 'https://cmadevops.de';
 export const AUTHOR = 'Christophe Mattera';
-export const AUTHOR_ROLE = 'Scan 3D · Conseil DevOps · Accompagnement numérique';
-export const LOCATION = 'Rixheim, Alsace';
+export const AUTHOR_ROLE = 'Infrastructure télécom · Scan 3D / BIM · Homelab &amp; IA · Transition énergétique';
+export const LOCATION = 'Rixheim (F) · Delémont (CH)';
 
 // Tawk.to widget (chat live) — utilisé sur les pages clients confidentielles.
 // À remplir après inscription sur https://tawk.to

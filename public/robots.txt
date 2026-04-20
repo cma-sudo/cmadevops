@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /services-pro/
+Disallow: /accompagnement/
+
+Sitemap: https://cmadevops.de/sitemap-index.xml
