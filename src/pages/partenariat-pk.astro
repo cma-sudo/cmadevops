@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import ChatWidget from '../components/ChatWidget.astro';
 import { SITE_TITLE } from '../consts';
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <!doctype html>

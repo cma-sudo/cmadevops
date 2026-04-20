@@ -1,8 +1,9 @@
-name: Deploy Astro site to Pages
+name: Deploy Astro site to GitHub Pages (DISABLED - use Infomaniak workflow)
+
+# Désactivé le 20/04/2026 — déploiement principal migré sur Infomaniak via deploy-infomaniak.yml.
+# Conservé en mode manuel uniquement pour fallback. Supprimer après validation Infomaniak.
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
