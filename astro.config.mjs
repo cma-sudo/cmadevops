@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://cmadevops.de',
+	site: 'https://christophe-mattera.ch',
 	integrations: [
 		mdx(),
 		sitemap({ filter: (page) => !page.includes('/partenariat-pk') }),

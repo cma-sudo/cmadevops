@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /services-pro/
 Disallow: /accompagnement/
 
-Sitemap: https://cmadevops.de/sitemap-index.xml
+Sitemap: https://christophe-mattera.ch/sitemap-index.xml

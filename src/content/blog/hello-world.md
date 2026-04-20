@@ -1,5 +1,5 @@
 ---
-title: 'Bienvenue sur cmadevops.de'
+title: 'Bienvenue'
 description: "Pourquoi je lance ce site et à quoi s'attendre"
 pubDate: 'Apr 05 2026'
 ---

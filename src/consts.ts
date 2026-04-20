@@ -3,7 +3,7 @@
 export const SITE_TITLE = 'CMA Conseil';
 export const SITE_TAGLINE = 'Portfolio professionnel · Christophe Mattera';
 export const SITE_DESCRIPTION = 'Christophe Mattera — 25 ans de pilotage opérationnel dans les télécoms (Swisscom, Free, Numericable). Portfolio : scan 3D, homelab, IA appliquée, transition énergétique.';
-export const SITE_URL = 'https://cmadevops.de';
+export const SITE_URL = 'https://christophe-mattera.ch';
 export const AUTHOR = 'Christophe Mattera';
 export const AUTHOR_ROLE = 'Infrastructure télécom · Scan 3D / BIM · Homelab &amp; IA · Transition énergétique';
 export const LOCATION = 'Rixheim (F) · Delémont (CH)';
