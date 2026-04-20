@@ -26,13 +26,13 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
-      - name: Deploy to Infomaniak via FTPS
+      - name: Deploy to Infomaniak via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftp
           port: 21
           local-dir: ./dist/
           server-dir: /web/
