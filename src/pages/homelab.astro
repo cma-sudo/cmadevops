@@ -11,47 +11,109 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 	<head>
 		<BaseHead
 			title={`Homelab · ${SITE_TITLE}`}
-			description="Architecture d'une maison qui pense : 1 serveur, 29 containers, 10 agents IA 100% locaux, 220+ automatisations, monitoring Grafana, backup 3-2-1. Snapshot avril 2026."
+			description="Architecture d'une maison qui pense : 1 serveur, 33 containers, 11 agents IA 100% locaux, 248 automatisations, pipeline mail Proton autonome, calendrier iCloud synchronisé, agent IA privé qui lit Meilisearch hybride (8 685 docs kDrive + 172 notes vault), vitrine Notion auto-générée 6 phases, monitoring Grafana, backup 4-tier double juridiction (USB+NAS+Hetzner DE+kDrive CH) + DR runbook testé en 2h30. Snapshot mai 2026."
 		/>
 	</head>
 	<body>
 		<Header />
 		<main>
 			<section class="hero">
-				<div class="hero-badge">snapshot avril 2026 · évolue en continu</div>
+				<div class="hero-badge">snapshot mai 2026 · projet personnel · évolue en continu</div>
 				<h1>Une maison qui pense,<br/>un labo qui apprend</h1>
 				<p class="lede">
-					Tout ce que j'installe chez un client, je le teste d'abord chez moi.
-					<strong>1 serveur, 29 containers, 10 agents IA 100% locaux</strong>, 220+ automatisations, monitoring
-					complet, backup 3-2-1. Un laboratoire vivant — et le terrain de preuves de mon expertise.
+					<strong>1 serveur, 33 containers Docker, 11 agents IA 100 % locaux</strong>, 248 automatisations
+					Home Assistant, backup 4-tier double juridiction (USB + NAS + Hetzner DE + kDrive CH) avec runbook
+					de reconstruction testé en 2h30, pipeline mail Proton autonome 24/7, calendrier iCloud synchronisé,
+					agent IA privé qui lit toute la mémoire en recherche hybride keyword + sémantique
+					(8 685 docs + 172 notes vault), vitrine Notion auto-générée à la demande.
+					<br/><span class="lede-punch">Un labo permanent — la technique au service du quotidien, zéro octet hors de la maison.</span>
 				</p>
 			</section>
 
 			<section class="stat-grid">
 				<div class="stat-card">
-					<div class="stat-num">29</div>
+					<div class="stat-num">33</div>
 					<div class="stat-label">containers Docker</div>
 				</div>
 				<div class="stat-card">
-					<div class="stat-num">10</div>
+					<div class="stat-num">11</div>
 					<div class="stat-label">agents IA autonomes</div>
 				</div>
 				<div class="stat-card">
-					<div class="stat-num">220+</div>
+					<div class="stat-num">248</div>
 					<div class="stat-label">automatisations HA</div>
 				</div>
 				<div class="stat-card">
-					<div class="stat-num">17</div>
+					<div class="stat-num">8 685</div>
+					<div class="stat-label">docs kDrive indexés</div>
+				</div>
+				<div class="stat-card">
+					<div class="stat-num">14</div>
 					<div class="stat-label">dashboards Grafana</div>
 				</div>
 				<div class="stat-card">
-					<div class="stat-num">100%</div>
-					<div class="stat-label">IA locale (0 cloud)</div>
+					<div class="stat-num">100 %</div>
+					<div class="stat-label">IA locale · 0 cloud</div>
 				</div>
 				<div class="stat-card">
-					<div class="stat-num">3-2-1</div>
-					<div class="stat-label">règle backup appliquée</div>
+					<div class="stat-num">4-tier</div>
+					<div class="stat-label">backup · 2 juridictions DE+CH</div>
 				</div>
+				<div class="stat-card">
+					<div class="stat-num">2h30</div>
+					<div class="stat-label">reconstruction DR testée</div>
+				</div>
+			</section>
+
+			<section class="block vulg-block">
+				<h2>Concrètement, ça change quoi ?</h2>
+				<p class="section-desc">
+					Derrière la stack, des problèmes très réels — quatre dimensions du quotidien.
+				</p>
+				<div class="domain-grid">
+					<article class="domain-card">
+						<div class="domain-icon" aria-hidden="true">🛡️</div>
+						<h3>Sécurité de la maison</h3>
+						<p>
+							Détecter une intrusion par la posture des silhouettes — la chatte ne déclenche plus l'alarme.
+							Vision IA locale, classification humain/animal/poule, 3 snapshots en séquence,
+							push iPhone critique avec cooldown anti-spam. Mode <em>absence</em> qui s'adapte
+							aux périodes d'hospitalisation.
+						</p>
+					</article>
+					<article class="domain-card">
+						<div class="domain-icon" aria-hidden="true">📄</div>
+						<h3>Archives & souveraineté</h3>
+						<p>
+							Archiver factures, contrats, courriers médicaux, documents administratifs avec une IA qui
+							extrait dates, montants et correspondants — <strong>sans qu'aucune donnée ne sorte
+							du réseau</strong>. Reconstruction complète de l'infra en 2h30 si le serveur lâche,
+							grâce à un runbook documenté.
+						</p>
+					</article>
+					<article class="domain-card">
+						<div class="domain-icon" aria-hidden="true">⚡</div>
+						<h3>Énergie & confort</h3>
+						<p>
+							Suivi conso temps réel pour arbitrer solaire vs heures creuses. Volets, chauffage, scènes
+							qui s'ajustent au climat intérieur (CO₂, VOC, température). Briefing matinal automatique :
+							météo, agenda, alertes mail urgentes — d'un coup d'œil, pas un écran de plus.
+						</p>
+					</article>
+					<article class="domain-card">
+						<div class="domain-icon" aria-hidden="true">🐔</div>
+						<h3>Vivant · poulailler · proches</h3>
+						<p>
+							Porte automatique du poulailler avec règles solaires et météo, comptage des poules
+							rentrées le soir, alertes en cas d'absence. Capteurs discrets pour les seniors :
+							chute, sortie nocturne, absence prolongée — alertes simples vers les aidants,
+							sans app compliquée. L'humain reste central, le numérique reste invisible.
+						</p>
+					</article>
+				</div>
+				<p class="domain-disclaimer">
+					Tout est en production chez moi. Aucun cas d'usage n'est théorique.
+				</p>
 			</section>
 
 			<section class="block">
@@ -105,14 +167,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 						<g class="core-services">
 							<rect x="50" y="210" width="160" height="100" rx="8" fill="#1a2a4d" stroke="#388bfd"/>
 							<text x="130" y="235" text-anchor="middle" class="core-title" fill="#e6edf3">Home Assistant</text>
-							<text x="130" y="258" text-anchor="middle" class="core-sub" fill="#8b949e">220+ automatisations</text>
-							<text x="130" y="278" text-anchor="middle" class="core-sub" fill="#8b949e">5 000+ entités</text>
+							<text x="130" y="258" text-anchor="middle" class="core-sub" fill="#8b949e">248 automatisations</text>
+							<text x="130" y="278" text-anchor="middle" class="core-sub" fill="#8b949e">8 685 docs Meili</text>
 							<text x="130" y="298" text-anchor="middle" class="core-sub" fill="#8b949e">Alarmo · Sentinel</text>
 
 							<rect x="220" y="210" width="160" height="100" rx="8" fill="#1a2a4d" stroke="#388bfd"/>
-							<text x="300" y="235" text-anchor="middle" class="core-title" fill="#e6edf3">ARIA · 10 agents</text>
+							<text x="300" y="235" text-anchor="middle" class="core-title" fill="#e6edf3">ARIA · 11 agents</text>
 							<text x="300" y="258" text-anchor="middle" class="core-sub" fill="#8b949e">security · health</text>
-							<text x="300" y="278" text-anchor="middle" class="core-sub" fill="#8b949e">energy · digest</text>
+							<text x="300" y="278" text-anchor="middle" class="core-sub" fill="#8b949e">energy · comfort</text>
 							<text x="300" y="298" text-anchor="middle" class="core-sub" fill="#8b949e">poulailler · meteo …</text>
 
 							<rect x="390" y="210" width="160" height="100" rx="8" fill="#1a2a4d" stroke="#388bfd"/>
@@ -139,7 +201,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 							<text x="140" y="398" text-anchor="middle" class="layer-title" fill="#58a6ff">OBSERVABILITÉ</text>
 							<text x="140" y="428" text-anchor="middle" class="out-item" fill="#e6edf3">Prometheus + Grafana</text>
 							<text x="140" y="453" text-anchor="middle" class="out-item" fill="#e6edf3">Uptime Kuma</text>
-							<text x="140" y="478" text-anchor="middle" class="out-item" fill="#e6edf3">17 dashboards</text>
+							<text x="140" y="478" text-anchor="middle" class="out-item" fill="#e6edf3">14 dashboards</text>
 							<text x="140" y="508" text-anchor="middle" class="out-sub" fill="#8b949e">5 ans de rétention</text>
 
 							<rect x="280" y="370" width="240" height="170" rx="12" fill="url(#gEdge)" stroke="#232836" stroke-width="1.5"/>
@@ -150,10 +212,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 							<text x="400" y="508" text-anchor="middle" class="out-sub" fill="#8b949e">routage par sévérité</text>
 
 							<rect x="540" y="370" width="240" height="170" rx="12" fill="url(#gEdge)" stroke="#232836" stroke-width="1.5"/>
-							<text x="660" y="398" text-anchor="middle" class="layer-title" fill="#58a6ff">BACKUP 3-2-1</text>
-							<text x="660" y="428" text-anchor="middle" class="out-item" fill="#e6edf3">Restic chiffré</text>
-							<text x="660" y="453" text-anchor="middle" class="out-item" fill="#e6edf3">NAS local · Mac</text>
-							<text x="660" y="478" text-anchor="middle" class="out-item" fill="#e6edf3">Hetzner Box (EU)</text>
+							<text x="660" y="398" text-anchor="middle" class="layer-title" fill="#58a6ff">BACKUP 4-tier</text>
+							<text x="660" y="428" text-anchor="middle" class="out-item" fill="#e6edf3">USB · NAS · Hetzner DE</text>
+							<text x="660" y="453" text-anchor="middle" class="out-item" fill="#e6edf3">kDrive CH (rclone)</text>
+							<text x="660" y="478" text-anchor="middle" class="out-item" fill="#e6edf3">2 juridictions cloud</text>
 							<text x="660" y="508" text-anchor="middle" class="out-sub" fill="#8b949e">dead man's switch 26h</text>
 						</g>
 
@@ -180,13 +242,16 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 						<h3>Sécurité proactive</h3>
 						<p>
 							<strong>Sentinel v2</strong> — zones PERIMETER/INTERIOR/POULTRY × Alarmo × fenêtre horaire.
-							Vision IA locale classe humain/animal/poule, 3 snapshots en séquence, push iPhone critique,
-							Alarmo strict 8 portes extérieures sans bypass automatique.
+							Vision IA locale classe humain/animal/poule, 3 snapshots en séquence, push iPhone critique
+							avec cooldown 30 min anti-spam, Alarmo strict 8 portes extérieures sans bypass automatique.
+							Mode <em>absence</em> dédié aux périodes d'hospitalisation : skip Marilyn sur les fausses
+							alertes, alertes critiques préservées.
 						</p>
 						<div class="tags">
 							<span class="tag">vision IA</span>
 							<span class="tag">zones</span>
 							<span class="tag">learning auto</span>
+							<span class="tag">cooldown iOS</span>
 						</div>
 					</article>
 
@@ -201,12 +266,19 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 						<p>
 							<strong>0 appel cloud.</strong> Gemma3:12b pour la vision et les conversations, Qwen3:8b pour
 							le tool calling Home Assistant, Nomic pour les embeddings RAG. Tout sur l'iGPU AMD via ROCm.
+							<strong>Luciole</strong> — agent IA privé qui lit toute la mémoire en
+							<strong>recherche hybride keyword + sémantique</strong> via Meilisearch (8 685 docs kDrive + 172 notes
+							vault Obsidian + Notion <em>Gethsemane</em>). Vitrine Notion auto-générée en 6 phases
+							(expansion sémantique LLM, tri par actionnabilité, pré-décision, delta vs précédent, re-rank LLM).
 							Anthropic, OpenAI, Gemini et Groq ont été purgés — plus de clés, plus de packages.
 						</p>
 						<div class="tags">
 							<span class="tag">Ollama</span>
 							<span class="tag">ROCm</span>
+							<span class="tag">Meili hybrid</span>
 							<span class="tag">pgvector</span>
+							<span class="tag">Luciole RAG</span>
+							<span class="tag">vitrine Notion auto</span>
 						</div>
 					</article>
 
@@ -219,8 +291,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 						</div>
 						<h3>Monitoring 360°</h3>
 						<p>
-							<strong>17 dashboards Grafana</strong> provisionnés par fichier JSON — énergie, climat intérieur,
-							backups 3-2-1, qualité air, solaire, NPU/GPU, tondeuse, alertes prédictives.
+							<strong>14 dashboards Grafana</strong> provisionnés par fichier JSON — énergie, climat intérieur,
+							backups 4-tier (USB · NAS · Hetzner · kDrive), qualité air, solaire, NPU/GPU, tondeuse, alertes prédictives.
 							Uptime Kuma en doublon pour ping/HTTP. Textfile collector pour les métriques métier.
 						</p>
 						<div class="tags">
@@ -238,16 +310,46 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 								<path d="M7 8h.01M7 18h.01"/>
 							</svg>
 						</div>
-						<h3>Backup 3-2-1 réel</h3>
+						<h3>Backup 4-tier · double juridiction</h3>
 						<p>
-							<strong>3 copies, 2 supports, 1 hors-site.</strong> Restic chiffré vers NAS local, Mac familial,
-							Hetzner Storage Box en Europe. Cron 3h30 quotidien, dead man's switch 26h, dashboard dédié,
-							alerte Discord si un flux rate.
+							<strong>4 copies, 4 supports, 2 juridictions cloud (Allemagne + Suisse).</strong>
+							USB local, NAS Synology, Hetzner Storage Box (DE) via Hyper Backup WebDAV,
+							kDrive Infomaniak (CH) via rclone — chaque tier sur son propre cron, dead man's switch 26h,
+							dashboard Grafana 4-tier dédié, alerte Discord si un flux rate. Audit exhaustif des 33 containers
+							en mai 2026 : <strong>~98 % de couverture vérifiée</strong> (HA recorder via SQLite atomic,
+							CrowdSec, Mosquitto, Grafana SQLite, Uptime Kuma, Technitium volume complet, etc.).
+							<strong>Runbook de reconstruction complet</strong> : reconstruire le serveur from scratch
+							en 2h30 — 8 phases, inventaire de 18 catégories d'artefacts, secrets tracés, pièges connus.
+							Page admin <code>/dr</code> interactive pour suivre l'état.
 						</p>
 						<div class="tags">
-							<span class="tag">Restic</span>
-							<span class="tag">Hetzner</span>
+							<span class="tag">USB+NAS+Hetzner+kDrive</span>
+							<span class="tag">DE+CH</span>
 							<span class="tag">chiffré</span>
+							<span class="tag">DR runbook 2h30</span>
+							<span class="tag">98 % couverture</span>
+						</div>
+					</article>
+
+					<article class="pillar">
+						<div class="pillar-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M12 3C7 3 3 7 3 12v5a4 4 0 0 0 4 4h1v-7H5v-2a7 7 0 0 1 14 0v2h-3v7h1a4 4 0 0 0 4-4v-5c0-5-4-9-9-9z"/>
+							</svg>
+						</div>
+						<h3>Mémoire vivante</h3>
+						<p>
+							<strong>3 couches + une boîte noire.</strong> Vault Obsidian local (édition + graph +
+							backlinks via auto-linker hebdomadaire), Postgres pgvector pour le RAG sémantique,
+							Notion 🌿 <em>Gethsemane</em> (DB unifiée mémoire + PKM, scorer canonicité gemma3:12b
+							nocturne). Chaque session d'IA auto-archivée en Markdown avant compaction — rien ne se perd.
+							Sync Mac↔cma3 via Syncthing temps réel.
+						</p>
+						<div class="tags">
+							<span class="tag">Obsidian</span>
+							<span class="tag">pgvector</span>
+							<span class="tag">Syncthing</span>
+							<span class="tag">canonicity</span>
 						</div>
 					</article>
 				</div>
@@ -256,8 +358,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 			<section class="block">
 				<h2>ARIA · le cerveau en étoile</h2>
 				<p class="section-desc">
-					10 agents Python autonomes, un moteur de règles rapide (95 % des requêtes sous 1 s), routage
-					intelligent vers les LLMs locaux uniquement quand nécessaire.
+					11 agents Python autonomes (security, security_vision, health, energy, comfort, digest, predictive,
+					anomaly, poulailler, meteo, governance), un moteur de règles rapide (95 % des requêtes sous 1 s),
+					routage intelligent vers les LLM locaux uniquement quand nécessaire.
 				</p>
 
 				<div class="aria-svg">
@@ -373,7 +476,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 						<h4>Infra &amp; réseau</h4>
 						<ul>
 							<li>Ubuntu 24.04 + kernel 6.17</li>
-							<li>Docker Compose (29 stacks)</li>
+							<li>Docker Compose (33 containers)</li>
 							<li>UDM Pro SE · VLANs · WiFi 6</li>
 							<li>Technitium DNS local</li>
 							<li>Reverse proxy TLS</li>
@@ -393,10 +496,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 						<h4>IA locale</h4>
 						<ul>
 							<li>Ollama (Gemma3 · Qwen3)</li>
-							<li>Nomic embeddings</li>
+							<li>Nomic embeddings (768d)</li>
 							<li>Postgres + pgvector (RAG)</li>
+							<li>Meilisearch hybrid (keyword + sémantique)</li>
 							<li>ROCm iGPU 890M</li>
 							<li>ARIA Python framework maison</li>
+							<li>Vitrine Notion auto 6 phases</li>
+							<li>Lemonade + FastFlowLM (NPU <em>en veille</em>)</li>
 						</ul>
 					</div>
 					<div class="stack-cat">
@@ -404,31 +510,103 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 						<ul>
 							<li>Prometheus + node-exporter</li>
 							<li>Grafana (JSON provisionné)</li>
-							<li>Uptime Kuma</li>
+							<li>Uptime Kuma + watchdog SQLite</li>
+							<li>Cron silent check (détection scripts muets)</li>
 							<li>Textfile collectors custom</li>
 							<li>cAdvisor · PostgresExp</li>
+							<li>Admin dashboard unifié (9 vues)</li>
 						</ul>
 					</div>
 					<div class="stack-cat">
 						<h4>Sorties / UX</h4>
 						<ul>
-							<li>Telegram bot (topics)</li>
-							<li>Discord (webhooks catégorisés)</li>
-							<li>Push iPhone critique</li>
+							<li><strong>Optimus</strong> Discord bot (49 slash cmds)</li>
+							<li>Discord webhooks (15 channels)</li>
+							<li>Push iPhone critical / time-sensitive</li>
 							<li>TRMNL e-ink 800×480</li>
-							<li>Notion (mémoire longue)</li>
+							<li>Alexa TTS · Sonos ambiance</li>
 						</ul>
 					</div>
 					<div class="stack-cat">
-						<h4>Sauvegardes</h4>
+						<h4>Sauvegardes &amp; DR</h4>
 						<ul>
-							<li>Restic chiffré (3 cibles)</li>
-							<li>Hetzner Storage Box (EU)</li>
-							<li>NAS Synology Hyper Backup</li>
-							<li>Cron quotidien 3h30</li>
+							<li>Backup 4-tier (USB + NAS + Hetzner DE + kDrive CH)</li>
+							<li>Hyper Backup WebDAV + rclone</li>
+							<li>Cron quotidien 3h-3h30 + horaire</li>
 							<li>Dead man's switch 26h</li>
+							<li>HA recorder via SQLite atomic backup</li>
+							<li>Runbook DR 8 phases (2h30)</li>
 						</ul>
 					</div>
+					<div class="stack-cat">
+						<h4>Pipeline mail Proton</h4>
+						<ul>
+							<li>Bridge Proton container 24/7</li>
+							<li>Classification gemma3:12b (2 étages)</li>
+							<li>Push Notion (3 DBs auto-alimentées)</li>
+							<li>Discord #mails + iOS critical</li>
+							<li>Anti-dup PG, cooldown 30min</li>
+						</ul>
+					</div>
+					<div class="stack-cat">
+						<h4>Documents &amp; calendrier</h4>
+						<ul>
+							<li>kDrive Infomaniak 3 To (rclone WebDAV)</li>
+							<li>Luciole : drop + classify gemma3:12b + route</li>
+							<li>Meilisearch indexation 8 685 docs + cron delta 15 min</li>
+							<li>iCloud CalDAV (briefing + créer)</li>
+							<li>Sync calendrier → Notion 90j (filtres MMA / scolaire)</li>
+							<li>Jardin Gethsemane (vault Obsidian, 172 notes)</li>
+							<li>Exports Notion + Discord nocturnes (4 DBs + 2 guildes)</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="block rd-block">
+				<h2>En exploration · R&amp;D permanente</h2>
+				<p class="section-desc">
+					Ce qui n'est <em>pas encore</em> production — et que je documente honnêtement. Une vitrine parfaite
+					serait un mensonge : un labo vivant a toujours 2-3 chantiers ouverts.
+				</p>
+
+				<div class="rd-grid">
+					<article class="rd-card">
+						<div class="rd-status rd-wait">⏸ En veille</div>
+						<h3>NPU XDNA2 · AMD Ryzen AI 9 HX 370</h3>
+						<p>
+							Stack FastFlowLM + Lemonade Server installée, driver <code>amdxdna</code> chargé, firmware OK,
+							<code>/dev/accel/accel0</code> présent. Blocker : <code>SVA bind failed -95</code> — l'IOMMU ne
+							déclare pas la capacité PASID. 4 pistes identifiées (BIOS caché, driver out-of-tree AMD,
+							régression kernel, microcode). Reprise dès qu'un trigger fort se présente.
+						</p>
+					</article>
+
+					<article class="rd-card">
+						<div class="rd-status rd-live">✓ Déployé</div>
+						<h3>kDrive + Meilisearch hybrid · recherche 100% locale</h3>
+						<p>
+							Pipeline <strong>Luciole</strong> : drop dans kDrive Infomaniak 3 To → classification
+							gemma3:12b multimodale (vision + texte) → routage automatique en 14 zones thématiques.
+							<strong>Meilisearch indexe 8 685 docs</strong> (PDFs, Office, mails) avec recherche hybride
+							keyword + sémantique via embedder Ollama nomic-embed-text. Vitrine Notion auto-générée à la
+							demande agrège 7 sources (kDrive + vault + Notion + mémoires Claude + mails + calendrier +
+							décisions classer) en 6 phases : expansion sémantique LLM → multi-search → partition par
+							actionnabilité → pré-décision LLM → delta vs précédent → re-rank LLM. <em>Paperless décommissionné
+							en mai 2026 au profit de cette stack.</em>
+						</p>
+					</article>
+
+					<article class="rd-card">
+						<div class="rd-status rd-live">✓ Déployé</div>
+						<h3>Second cerveau Obsidian + transcripts</h3>
+						<p>
+							Vault Obsidian sur le dossier mémoire Claude Code (120+ notes), plugin Dataview pour queries
+							sur frontmatter, 16 clusters thématiques via backlinks « Voir aussi ». Plugin
+							<code>transcript-saver</code> auto-archive chaque session d'IA en Markdown. Boîte noire =
+							sessions, manuel = mémoires curées, pilote = Claude qui lit les deux.
+						</p>
+					</article>
 				</div>
 			</section>
 
@@ -441,33 +619,37 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 					</div>
 					<div class="term-body">
 						<span class="out"><span class="prompt">$</span> <span class="cmd">docker ps --format &#123;&#123;.Names&#125;&#125; | wc -l</span></span>
-						<span class="out">29</span>
-						<span class="out"><span class="prompt">$</span> <span class="cmd">ls aria/agents/ | grep -v __</span></span>
-						<span class="out">anomaly.py  comfort.py  digest.py  energy.py  governance.py</span>
-						<span class="out">health.py   meteo.py    poulailler.py  predictive.py  security.py</span>
-						<span class="out"><span class="prompt">$</span> <span class="cmd">curl -s localhost:9091/api/v1/targets | jq '.data.activeTargets | length'</span></span>
-						<span class="out">13</span>
+						<span class="out">31</span>
+						<span class="out"><span class="prompt">$</span> <span class="cmd">ls aria/agents/*.py | grep -v __ | wc -l</span></span>
+						<span class="out">11</span>
+						<span class="out"><span class="prompt">$</span> <span class="cmd">curl -s $HA/api/states | jq 'length'</span></span>
+						<span class="out">3826</span>
+						<span class="out"><span class="prompt">$</span> <span class="cmd">curl -s $HA/api/states | jq '[.[] | select(.entity_id|startswith("automation."))] | length'</span></span>
+						<span class="out">248</span>
 						<span class="out"><span class="prompt">$</span> <span class="cmd">ollama list | awk 'NR&gt;1 &#123;print $1&#125;'</span></span>
 						<span class="out">gemma3:12b</span>
 						<span class="out">qwen3:8b</span>
+						<span class="out">qwen3:4b</span>
 						<span class="out">nomic-embed-text:latest</span>
 					</div>
 				</div>
 			</section>
 
 			<section class="cta-block">
-				<h2>Et pour votre projet ?</h2>
+				<h2>Pourquoi ce homelab ?</h2>
 				<p>
-					Cette architecture, c'est <strong>mon terrain d'essai permanent</strong>. J'y teste ce que je recommanderais,
-					j'y casse ce que je ne recommanderais pas. L'expertise vient d'avoir mis les mains dedans — pas de la théorie.
+					<strong>Curiosité radicale.</strong> J'apprends en cassant, en remontant, en documentant.
+					Chaque container, chaque agent, chaque dashboard est né d'un problème concret du quotidien — pas
+					d'une démo abstraite. La maison me sert de terrain ; le code me sert de carnet.
 				</p>
-				<div class="cta-row">
-					<a class="cta primary" href={base + "/collaboration/"}>Collaboration &amp; projets</a>
-					<a class="cta secondary" href={base + "/a-propos/"}>Mon parcours</a>
-				</div>
+				<p>
+					<strong>Souveraineté numérique.</strong> Les modèles tournent en local, les sauvegardes sont
+					chiffrées, les secrets ne quittent jamais le périmètre. Quand un service externe tombe (cloud,
+					API, fournisseur), rien ne s'arrête ici.
+				</p>
 				<p class="disclaimer">
-					Tous les éléments listés sont réellement en production chez moi · snapshot avril 2026. Adresses IP,
-					domaines internes et secrets volontairement omis.
+					Tous les éléments listés sont en production chez moi · snapshot mai 2026.
+					Adresses IP, domaines internes et secrets volontairement omis.
 				</p>
 			</section>
 		</main>
@@ -507,7 +689,20 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 	.hero .lede {
 		font-size: 1.15em;
 		color: var(--text-muted);
-		max-width: 780px;
+		max-width: 820px;
+		line-height: 1.6;
+	}
+	.hero .lede strong {
+		color: var(--text);
+	}
+	.lede-punch {
+		display: inline-block;
+		margin-top: 0.6em;
+		padding: 0.35em 0;
+		font-style: italic;
+		color: #58a6ff;
+		border-left: 3px solid #58a6ff;
+		padding-left: 0.9em;
 	}
 
 	.stat-grid {
@@ -517,16 +712,31 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 		margin: 0 0 3em;
 	}
 	.stat-card {
+		position: relative;
 		text-align: center;
 		padding: 1.4em 0.5em;
 		background: linear-gradient(160deg, var(--bg-elevated) 0%, #0f1220 100%);
 		border: 1px solid var(--border);
 		border-radius: 10px;
-		transition: transform 0.2s, border-color 0.2s;
+		transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+		overflow: hidden;
+	}
+	.stat-card::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: radial-gradient(circle at 50% 0%, rgba(88,166,255,0.18), transparent 70%);
+		opacity: 0;
+		transition: opacity 0.25s;
+		pointer-events: none;
 	}
 	.stat-card:hover {
 		transform: translateY(-3px);
 		border-color: var(--accent);
+		box-shadow: 0 6px 24px -10px rgba(88,166,255,0.4);
+	}
+	.stat-card:hover::after {
+		opacity: 1;
 	}
 	.stat-num {
 		font-size: 2.2em;
@@ -667,6 +877,48 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 		letter-spacing: 0.04em;
 		font-family: 'JetBrains Mono', ui-monospace, monospace;
 	}
+	.rd-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.2em;
+		margin-top: 1.5em;
+	}
+	.rd-card {
+		background: linear-gradient(180deg, var(--bg-elevated) 0%, #0f1220 100%);
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		padding: 1.4em;
+	}
+	.rd-status {
+		display: inline-block;
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.72em;
+		padding: 3px 9px;
+		border-radius: 999px;
+		margin-bottom: 0.8em;
+		letter-spacing: 0.03em;
+	}
+	.rd-wait { background: rgba(210, 153, 34, 0.15); color: #d29922; border: 1px solid #d29922; }
+	.rd-pilot { background: rgba(88, 166, 255, 0.15); color: #58a6ff; border: 1px solid #58a6ff; }
+	.rd-live { background: rgba(63, 185, 80, 0.15); color: #3fb950; border: 1px solid #3fb950; }
+	.rd-card h3 {
+		margin: 0 0 0.6em;
+		font-size: 1.05em;
+	}
+	.rd-card p {
+		color: var(--text-muted);
+		font-size: 0.95em;
+		line-height: 1.55;
+		margin: 0;
+	}
+	.rd-card code {
+		background: rgba(88, 166, 255, 0.1);
+		padding: 1px 5px;
+		border-radius: 4px;
+		font-size: 0.88em;
+		color: #58a6ff;
+	}
+
 	.stack-cat ul { list-style: none; padding: 0; margin: 0; }
 	.stack-cat li {
 		padding: 4px 0;
@@ -755,6 +1007,51 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 		font-size: 0.82em;
 		margin-top: 1.2em;
 		font-style: italic;
+	}
+
+	.vulg-block {
+		margin: 1.5em 0 3.2em;
+	}
+	.domain-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.domain-card {
+		background: linear-gradient(165deg, var(--bg-elevated) 0%, #0d111a 100%);
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		padding: 1.4em 1.4em 1.2em;
+		transition: transform 0.2s, border-color 0.2s;
+	}
+	.domain-card:hover {
+		transform: translateY(-3px);
+		border-color: var(--accent);
+	}
+	.domain-icon {
+		font-size: 1.8em;
+		line-height: 1;
+		margin-bottom: 0.4em;
+	}
+	.domain-card h3 {
+		margin: 0 0 0.5em;
+		font-size: 1.08em;
+		color: var(--text);
+	}
+	.domain-card h3::before { content: ''; }
+	.domain-card p {
+		color: var(--text-muted);
+		font-size: 0.94em;
+		line-height: 1.55;
+		margin: 0;
+	}
+	.domain-disclaimer {
+		margin-top: 1.4em;
+		font-size: 0.85em;
+		color: var(--text-dim);
+		font-style: italic;
+		text-align: center;
 	}
 
 	@media (max-width: 720px) {
