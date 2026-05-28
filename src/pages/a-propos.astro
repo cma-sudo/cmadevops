@@ -9,7 +9,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <!doctype html>
 <html lang="fr">
 	<head>
-		<BaseHead title={`À propos · ${SITE_TITLE}`} description="Christophe Mattera, 51 ans, Rixheim. 25 ans de pilotage opérationnel télécom, Swisscom, Free, Numericable. Nationalité suisse." />
+		<BaseHead title={`À propos · ${SITE_TITLE}`} description="Christophe Mattera, 25 ans de pilotage opérationnel télécom (Cablex/Swisscom, Free, Numericable). Nationalité suisse, parcours frontalier France & Suisse." />
 	</head>
 	<body>
 		<Header />
@@ -26,10 +26,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 				J'ai commencé chez <strong>Numericable en 1999</strong> comme technicien à Mulhouse. Quinze ans plus tard,
 				j'y dirigeais l'agence — 30 collaborateurs, 35 prestataires, le réseau fibre de l'agglo.
 				J'ai ensuite piloté <strong>100 000 prises FTTH</strong> pour Free Infrastructure à Strasbourg,
-				créé ma propre boîte télécom (<strong>21 000 interventions terrain</strong>), puis dirigé pendant
-				12 ans l'unité <strong>Swisscom de Delémont</strong> — 20 personnes, P&amp;L, sous-traitance, QSE.
-				Aujourd'hui, à 51 ans, je mets tout ça au service des gens d'ici — architectes, PME,
-				restaurateurs, particuliers, frontaliers.
+				créé ma propre boîte télécom (<strong>21 000 interventions terrain</strong>), puis rejoint pendant
+				12 ans l'unité <strong>Cablex de Delémont</strong> (filiale du groupe Swisscom) — 20 personnes,
+				P&amp;L, sous-traitance, QSE, avec une dernière fonction de <strong>Leader Infrastructure II
+				sur l'unité Wireline Rollout (2021-2025)</strong>. Aujourd'hui, à 51 ans, je mets tout ça au
+				service des gens d'ici — architectes, PME, restaurateurs, particuliers, frontaliers.
 			</p>
 
 			<section class="signature-stats">
@@ -39,7 +40,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 				</div>
 				<div class="sig-stat">
 					<div class="sig-num">100 000</div>
-					<div class="sig-label">prises FTTH déployées</div>
+					<div class="sig-label">prises FTTH · FREE Infra</div>
 				</div>
 				<div class="sig-stat">
 					<div class="sig-num">25 ans</div>
@@ -61,7 +62,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 			<h2>🇨🇭 Suisse par nationalité</h2>
 			<p>
-				12 ans salarié à <strong>Cablex / Swisscom</strong> à Delémont. Je parle le système des deux
+				12 ans salarié chez <strong>Cablex</strong> (filiale du groupe Swisscom) à Delémont. Je parle le système des deux
 				côtés de la frontière : <strong>LAMal, LPP, impôt à la source, AVS, quasi-résident</strong>.
 				Allemand professionnel. Connaissance des standards QSE suisses, exigeants.
 				C'est un atout concret quand vous êtes frontalier — ou quand votre PME travaille avec la Suisse.
@@ -81,11 +82,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 			<div class="timeline">
 				<div class="tl-entry">
 					<div class="tl-date">2025 →</div>
-					<div class="tl-text"><strong>Consultant indépendant</strong> · Mandat bénévole PK Architecture (ScanToBIM, dossiers ERP)</div>
+					<div class="tl-text"><strong>Activité indépendante</strong> · Mandat bénévole PK Architecture (ScanToBIM, dossiers ERP)</div>
 				</div>
 				<div class="tl-entry">
-					<div class="tl-date">2013–2025</div>
-					<div class="tl-text"><strong>Teamleader Cablex / Swisscom</strong> · Delémont · 20 collaborateurs · P&amp;L · SAP</div>
+					<div class="tl-date">2021–2025</div>
+					<div class="tl-text"><strong>Leader Infrastructure II — Cablex</strong> (groupe Swisscom) · Unité Wireline Rollout Delémont · Déploiement FTTH · P&amp;L · Change Management</div>
+				</div>
+				<div class="tl-entry">
+					<div class="tl-date">2013–2021</div>
+					<div class="tl-text"><strong>Teamleader Cablex</strong> (Network Construction puis Network Operations) · Delémont · 16-20 collaborateurs · P&amp;L · piquet national Suisse</div>
 				</div>
 				<div class="tl-entry">
 					<div class="tl-date">2011–2013</div>
@@ -107,7 +112,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 			<h2>Outils &amp; langues</h2>
 			<ul class="tools">
-				<li><strong>SAP</strong> Power User / Expert (production, facturation, planning, reporting)</li>
+				<li><strong>SAP</strong> Power User / Expert certifié par Cablex (production, facturation, planning, reporting, suivi sous-traitance)</li>
 				<li><strong>Scan 3D / ScanToBIM</strong> · nuages de points · BIM · AutoCAD / Revit / CloudCompare</li>
 				<li><strong>Excel avancé</strong> (TCD, modèles financiers CAPEX/OPEX) · Access · Microsoft 365</li>
 				<li><strong>Homelab</strong> : Home Assistant, Python (ARIA), Prometheus/Grafana, Docker, UniFi — <a href={base + "/homelab/"}>voir la stack détaillée</a></li>
@@ -118,9 +123,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 			<p>
 				Ouvert à échanger sur des projets d'infrastructure, de transformation digitale,
 				de scan 3D / BIM ou de transition énergétique.
-				Me joindre via
-				<a href="mailto:mattera.ch@proton.me">mattera.ch@proton.me</a>
-				ou les pages thématiques :
+			</p>
+			<p>
+				<a href="mailto:christophe-matt.e3ypb@simplelogin.com">christophe-matt.e3ypb@simplelogin.com</a>
+				· <a href="https://www.linkedin.com/in/christophe-mattera-a0724160/" target="_blank" rel="noopener">LinkedIn</a>
+				· pages thématiques :
 				<a href={base + "/collaboration/"}>Collaboration</a> ·
 				<a href={base + "/architecture/"}>Scan 3D / BIM</a> ·
 				<a href={base + "/homelab/"}>Homelab</a> ·

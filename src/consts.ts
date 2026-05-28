@@ -2,11 +2,11 @@
 
 export const SITE_TITLE = 'CMA Conseil';
 export const SITE_TAGLINE = 'Portfolio professionnel · Christophe Mattera';
-export const SITE_DESCRIPTION = 'Christophe Mattera — 25 ans de pilotage opérationnel dans les télécoms (Swisscom, Free, Numericable). Portfolio : scan 3D, homelab, IA appliquée, transition énergétique.';
+export const SITE_DESCRIPTION = 'Christophe Mattera — 25 ans de pilotage opérationnel dans les télécoms (Cablex/Swisscom, Free, Numericable). Portfolio : infrastructure télécom, IA privée & DevOps, BIM/scan 3D.';
 export const SITE_URL = 'https://christophe-mattera.ch';
 export const AUTHOR = 'Christophe Mattera';
-export const AUTHOR_ROLE = 'Infrastructure télécom · Scan 3D / BIM · Homelab &amp; IA · Transition énergétique';
-export const LOCATION = 'Rixheim (F) · Delémont (CH)';
+export const AUTHOR_ROLE = 'Infrastructure télécom · IA privée &amp; DevOps · BIM / scan 3D';
+export const LOCATION = 'France & Suisse';
 
 // Tawk.to widget (chat live) — utilisé sur les pages clients confidentielles.
 // À remplir après inscription sur https://tawk.to
