@@ -22,7 +22,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 					<strong>25 ans de pilotage d'activités terrain, de sous-traitance et de P&amp;L.</strong>
 				</p>
 				<p class="lede-sub">
-					Cette page retrace mon parcours et les domaines où j'ai créé de la valeur — du terrain au P&amp;L, de l'ingénierie au déploiement.
+					Cette page retrace mon parcours, les domaines où j'ai créé de la valeur — du terrain au P&amp;L, de l'ingénierie au déploiement — et le pont qui se construit entre la fibre et les nouveaux métiers de l'énergie.
 				</p>
 			</section>
 
@@ -91,7 +91,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 							Prometheus/Grafana, backup 3-2-1 (<a href={base + "/homelab/"}>détail technique</a>).
 						</p>
 						<p>
-							<strong>Deux angles pour un opérateur télécom</strong> :
+							<strong>Trois angles d'application</strong> :
 						</p>
 						<ul class="ia-angles">
 							<li><strong>Nouveau business</strong> — concevoir et piloter une offre IA/Ops à
@@ -100,9 +100,36 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 							<li><strong>Productivité interne</strong> — déployer ces mêmes outils en NOC
 								/ centre d'ops pour réduire la charge de supervision, fiabiliser la donnée,
 								industrialiser la conduite du changement.</li>
+							<li><strong>Supervision énergie &amp; pilotage</strong> — même grammaire de
+								supervision appliquée au pilotage de la demande, à l'effacement, au suivi
+								temps réel d'un parc d'IRVE ou d'un voisinage en autoconsommation collective.</li>
 						</ul>
 						<div class="tags">
 							<span class="tag">création d'activité</span><span class="tag">Change Management</span><span class="tag">IA appliquée</span><span class="tag">Ollama</span><span class="tag">acquisition commerciale</span><span class="tag">P&amp;L</span>
+						</div>
+					</article>
+
+					<article class="pillar pillar-lg">
+						<h3>Énergie : du photovoltaïque résidentiel au pilotage de la demande</h3>
+						<p>
+							Pratique terrain du <strong>photovoltaïque autoconsommation</strong>
+							(1 600 W AC, micro-onduleurs maison + cabane), <strong>pilotage de charge
+							sur surplus solaire</strong> (trottinette, chargeur d'outils, déshu HC, extracteur HC) —
+							agent Python dédié avec hystérésis sur les seuils et mémoire d'état pour ne pas yo-yo.
+							Intégration domotique des dispositifs de mesure et de pilotage, simulation de
+							production par <strong>scan 3D LiDAR</strong>.
+						</p>
+						<p>
+							Lecture du marché : la valeur se déplace des watts produits vers les watts pilotés.
+							<strong>Bornes de recharge (IRVE)</strong>, <strong>dispositifs d'économie
+							énergétique</strong> (compteurs connectés, supervision conso), <strong>smart
+							grids</strong> (compteurs intelligents, basse tension, branchements),
+							<strong>photovoltaïque</strong> : <strong>mêmes logiques industrielles que les
+							télécoms</strong> — déployer, exploiter, maintenir, superviser. Récit pratique :
+							<a href={base + "/blog/protection-thermique-anticipative/"}>Ma maison apprend à anticiper</a>.
+						</p>
+						<div class="tags">
+							<span class="tag">photovoltaïque</span><span class="tag">IRVE</span><span class="tag">smart grid</span><span class="tag">autoconsommation</span><span class="tag">surplus</span><span class="tag">supervision conso</span><span class="tag">pilotage demande</span><span class="tag">agent IA</span><span class="tag">scan 3D</span>
 						</div>
 					</article>
 				</div>
@@ -127,13 +154,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 						</p>
 					</article>
 
-					<article class="pillar pillar-sm">
-						<h4>Transition énergétique &amp; autoconsommation</h4>
-						<p>
-							Pratique terrain du photovoltaïque résidentiel (installations maison et cabane,
-							pilotage de charge, intégration domotique), simulation de production par scan 3D.
-						</p>
-					</article>
 				</div>
 			</section>
 
@@ -163,8 +183,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 					La forme compte moins que le projet :
 					<strong>structurer, développer, transformer,
 					accompagner les transformations</strong> — ce qui sert le mieux l'enjeu.
-					Secteurs de prédilection : déploiement fibre et infrastructure opérateur multi-sites,
-					transition énergétique et autoconsommation solaire, IoT industriel et pilotage par la donnée.
+					Secteurs de prédilection : <strong>infrastructure opérateur multi-sites</strong> (fibre, mobile, IRVE) ;
+					<strong>énergie distribuée</strong> (photovoltaïque, smart grid, autoconsommation collective, effacement) ;
+					<strong>pilotage par la donnée</strong> (NOC, supervision conso, IA appliquée).
 				</p>
 			</section>
 

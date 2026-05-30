@@ -25,30 +25,36 @@ const posts = (await getCollection('blog'))
 					<span class="dot red"></span>
 					<span class="dot yellow"></span>
 					<span class="dot green"></span>
-					<span class="title">~/cmadevops</span>
+					<span class="title">~/christophe-mattera</span>
 				</div>
 				<div class="hero-content">
 					<p class="greet"><span class="prompt">$</span> whoami</p>
 					<h1>{AUTHOR}</h1>
-					<p class="role">Infrastructure télécom · Scan 3D / BIM · Homelab &amp; IA · Transition énergétique</p>
+					<p class="role">Infrastructure télécom · Énergie distribuée · IA privée &amp; DevOps · BIM / scan 3D</p>
+					<p class="greet greet-second"><span class="prompt">$</span> uptime <span class="comment">// 25 ans dans les télécoms — DevOps autodidacte en immersion permanente</span></p>
 					<p class="intro">
-						25 ans à piloter des déploiements d'infrastructure télécom
-						(<strong>Swisscom, Free, Numericable</strong>),
-						<strong>100 000 prises FTTH</strong> construites,
-						21 000 interventions terrain dirigées.
-						Aujourd'hui je continue à explorer ce que la technologie permet de faire,
-						à l'intersection du terrain, de la 3D, de l'IA et de l'énergie.
+						25 ans à piloter des déploiements d'infrastructure télécom chez
+						<strong>Cablex/Swisscom, Free et Numericable</strong>. Dernière fonction :
+						Leader Infrastructure II, unité Wireline Rollout (2021-2025).
+						Mes observations actuelles portent sur les <strong>nouveaux métiers de l'énergie distribuée</strong> —
+						IRVE, smart grid, autoconsommation, pilotage de la demande — vus depuis ma sandbox personnelle.
 					</p>
 					<p class="partner">
-						Ce site est un <strong>portfolio professionnel</strong> — parcours, veille, projets menés.
+						Ce site est un <strong>portfolio professionnel</strong> — parcours, veille technique, projets menés entre France &amp; Suisse.
 					</p>
+					<p class="now"><span class="now-tag">snapshot mai 2026</span> homelab actif (33 containers, IA 100% locale), pilotage énergie &amp; solaire, blog hebdo.</p>
 					<div class="cta">
 						<a href={base + "/a-propos/"} class="btn">Mon parcours</a>
-						<a href={base + "/homelab/"} class="btn btn-ghost">Homelab</a>
 						<a href={base + "/collaboration/"} class="btn btn-ghost">Collaboration</a>
+						<a href={base + "/homelab/"} class="btn btn-ghost">Homelab</a>
 					</div>
 				</div>
 			</section>
+
+			<figure class="hero-scene">
+				<img src={base + "/images/hero-scene.svg"}
+				     alt="Les trois mondes de Christophe Mattera : infrastructure télécom FTTH, IA privée et DevOps, scan 3D et BIM — connectés." />
+			</figure>
 
 			<section class="stats">
 				<div class="stat">
@@ -57,15 +63,15 @@ const posts = (await getCollection('blog'))
 				</div>
 				<div class="stat">
 					<div class="stat-num">100 000</div>
-					<div class="stat-label">prises FTTH construites</div>
+					<div class="stat-label">prises FTTH · FREE Infra</div>
 				</div>
 				<div class="stat">
-					<div class="stat-num">2 pays</div>
-					<div class="stat-label">France &amp; Suisse</div>
+					<div class="stat-num">12 ans</div>
+					<div class="stat-label">SAP Power User</div>
 				</div>
 				<div class="stat">
-					<div class="stat-num">Alsace</div>
-					<div class="stat-label">Rixheim &amp; Delémont</div>
+					<div class="stat-num">FR · CH</div>
+					<div class="stat-label">Cablex · Free · Numericable</div>
 				</div>
 			</section>
 
@@ -120,7 +126,34 @@ const posts = (await getCollection('blog'))
 		margin-bottom: 0.5em;
 		font-size: 0.9em;
 	}
+	.greet-second {
+		margin-top: 0.4em;
+		margin-bottom: 1.3em;
+	}
+	.comment { color: var(--text-dim); font-style: italic; opacity: 0.85; }
 	.prompt { color: var(--success); }
+	.now {
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		font-size: 0.85em;
+		color: var(--text-muted);
+		margin: 1em 0 1.5em;
+		padding: 0.7em 1em;
+		background: var(--bg-code);
+		border: 1px dashed var(--border);
+		border-radius: 6px;
+	}
+	.now-tag {
+		display: inline-block;
+		padding: 0.15em 0.6em;
+		margin-right: 0.6em;
+		background: var(--accent-glow);
+		color: var(--accent);
+		border-radius: 4px;
+		font-size: 0.85em;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-weight: 600;
+	}
 	.hero h1 {
 		font-size: 2.8em;
 		margin: 0.1em 0 0.1em;
@@ -163,6 +196,18 @@ const posts = (await getCollection('blog'))
 	.btn:hover { background: var(--accent-dark); border-bottom: 1px solid var(--accent-dark); }
 	.btn-ghost { background: transparent; color: var(--accent); }
 	.btn-ghost:hover { background: var(--accent-glow); }
+
+	.hero-scene {
+		margin: 1.5em 0 2.5em;
+		padding: 0;
+	}
+	.hero-scene img {
+		width: 100%;
+		height: auto;
+		display: block;
+		border-radius: 12px;
+		border: 1px solid var(--border);
+	}
 
 	.stats {
 		display: grid;

@@ -1,0 +1,87 @@
+<svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="psol-title psol-desc">
+  <title id="psol-title">Une grammaire, plusieurs échelles</title>
+  <desc id="psol-desc">Quatre niveaux d'échelle — maison, borne EV, PAC voisinage, parc de bâtiments — qui partagent la même mécanique : lire, anticiper, piloter.</desc>
+
+  <defs>
+    <linearGradient id="psolCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a4d"/>
+      <stop offset="100%" stop-color="#0f1628"/>
+    </linearGradient>
+    <linearGradient id="psolBand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#58a6ff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
+    </linearGradient>
+    <marker id="psolArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#58a6ff" opacity="0.9"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="420" fill="#0a0d14" rx="14"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#e6edf3" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700">Une grammaire, plusieurs échelles</text>
+  <text x="450" y="64" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono, ui-monospace, monospace" font-size="11" letter-spacing="0.14em">LIRE — ANTICIPER — PILOTER</text>
+
+  <!-- Card 1 · MAISON -->
+  <g>
+    <rect x="40" y="100" width="170" height="160" rx="10" fill="url(#psolCard)" stroke="#388bfd" stroke-width="1.5"/>
+    <text x="125" y="128" text-anchor="middle" fill="#58a6ff" font-family="JetBrains Mono, ui-monospace, monospace" font-size="10" letter-spacing="0.14em">ÉCHELLE 1</text>
+    <text x="125" y="160" text-anchor="middle" fill="#e6edf3" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700">MAISON</text>
+    <text x="125" y="192" text-anchor="middle" fill="#8b949e" font-family="Inter, system-ui, sans-serif" font-size="12">volets · déshu</text>
+    <text x="125" y="212" text-anchor="middle" fill="#8b949e" font-family="Inter, system-ui, sans-serif" font-size="12">talon de conso</text>
+    <text x="125" y="244" text-anchor="middle" fill="#6e7681" font-family="Inter, system-ui, sans-serif" font-size="11" font-style="italic">1 600 W de PV</text>
+  </g>
+
+  <line x1="215" y1="180" x2="244" y2="180" stroke="#58a6ff" stroke-width="2" marker-end="url(#psolArrow)" opacity="0.9"/>
+
+  <!-- Card 2 · BORNE EV -->
+  <g>
+    <rect x="250" y="100" width="170" height="160" rx="10" fill="url(#psolCard)" stroke="#388bfd" stroke-width="1.5"/>
+    <text x="335" y="128" text-anchor="middle" fill="#58a6ff" font-family="JetBrains Mono, ui-monospace, monospace" font-size="10" letter-spacing="0.14em">ÉCHELLE 2</text>
+    <text x="335" y="160" text-anchor="middle" fill="#e6edf3" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700">BORNE EV</text>
+    <text x="335" y="192" text-anchor="middle" fill="#8b949e" font-family="Inter, system-ui, sans-serif" font-size="12">choisir l'heure</text>
+    <text x="335" y="212" text-anchor="middle" fill="#8b949e" font-family="Inter, system-ui, sans-serif" font-size="12">de charge</text>
+    <text x="335" y="244" text-anchor="middle" fill="#6e7681" font-family="Inter, system-ui, sans-serif" font-size="11" font-style="italic">1 véhicule</text>
+  </g>
+
+  <line x1="425" y1="180" x2="454" y2="180" stroke="#58a6ff" stroke-width="2" marker-end="url(#psolArrow)" opacity="0.9"/>
+
+  <!-- Card 3 · PAC + VOISINAGE -->
+  <g>
+    <rect x="460" y="100" width="170" height="160" rx="10" fill="url(#psolCard)" stroke="#388bfd" stroke-width="1.5"/>
+    <text x="545" y="128" text-anchor="middle" fill="#58a6ff" font-family="JetBrains Mono, ui-monospace, monospace" font-size="10" letter-spacing="0.14em">ÉCHELLE 3</text>
+    <text x="545" y="156" text-anchor="middle" fill="#e6edf3" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="700">PAC · VOISINAGE</text>
+    <text x="545" y="190" text-anchor="middle" fill="#8b949e" font-family="Inter, system-ui, sans-serif" font-size="12">suivre le solaire</text>
+    <text x="545" y="210" text-anchor="middle" fill="#8b949e" font-family="Inter, system-ui, sans-serif" font-size="12">d'un quartier</text>
+    <text x="545" y="244" text-anchor="middle" fill="#6e7681" font-family="Inter, system-ui, sans-serif" font-size="11" font-style="italic">un quartier</text>
+  </g>
+
+  <line x1="635" y1="180" x2="664" y2="180" stroke="#58a6ff" stroke-width="2" marker-end="url(#psolArrow)" opacity="0.9"/>
+
+  <!-- Card 4 · PARC DE BÂTIMENTS -->
+  <g>
+    <rect x="670" y="100" width="190" height="160" rx="10" fill="url(#psolCard)" stroke="#388bfd" stroke-width="1.5"/>
+    <text x="765" y="128" text-anchor="middle" fill="#58a6ff" font-family="JetBrains Mono, ui-monospace, monospace" font-size="10" letter-spacing="0.14em">ÉCHELLE 4</text>
+    <text x="765" y="156" text-anchor="middle" fill="#e6edf3" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="700">PARC · BÂTIMENTS</text>
+    <text x="765" y="190" text-anchor="middle" fill="#8b949e" font-family="Inter, system-ui, sans-serif" font-size="12">rebalancer la demande</text>
+    <text x="765" y="210" text-anchor="middle" fill="#8b949e" font-family="Inter, system-ui, sans-serif" font-size="12">d'un distributeur</text>
+    <text x="765" y="244" text-anchor="middle" fill="#6e7681" font-family="Inter, system-ui, sans-serif" font-size="11" font-style="italic">une région</text>
+  </g>
+
+  <!-- Grammar band -->
+  <rect x="40" y="295" width="820" height="60" rx="10" fill="url(#psolBand)" stroke="#58a6ff" stroke-width="1" stroke-dasharray="5 4" opacity="0.7"/>
+
+  <g font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700">
+    <text x="200" y="333" text-anchor="middle" fill="#e6edf3">Lire</text>
+    <text x="265" y="333" text-anchor="middle" fill="#58a6ff" font-size="22" font-weight="400">→</text>
+    <text x="360" y="333" text-anchor="middle" fill="#e6edf3">Anticiper</text>
+    <text x="455" y="333" text-anchor="middle" fill="#58a6ff" font-size="22" font-weight="400">→</text>
+    <text x="555" y="333" text-anchor="middle" fill="#e6edf3">Piloter</text>
+    <text x="720" y="333" text-anchor="middle" fill="#8b949e" font-family="Inter, system-ui, sans-serif" font-size="13" font-style="italic" font-weight="400">la demande par l'offre</text>
+  </g>
+
+  <!-- Footer caption -->
+  <text x="450" y="395" text-anchor="middle" fill="#8b949e" font-family="Inter, system-ui, sans-serif" font-size="13" font-style="italic">même grammaire, échelle qui grandit</text>
+</svg>
