@@ -132,6 +132,34 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 							<span class="tag">photovoltaïque</span><span class="tag">IRVE</span><span class="tag">smart grid</span><span class="tag">autoconsommation</span><span class="tag">surplus</span><span class="tag">supervision conso</span><span class="tag">pilotage demande</span><span class="tag">agent IA</span><span class="tag">scan 3D</span>
 						</div>
 					</article>
+
+					<article class="pillar pillar-lg">
+						<h3>Modèle de partenariat énergie — 4 phases</h3>
+						<p>
+							Cadre transposant les <strong>logiques industrielles télécoms</strong>
+							— acquisition / engineering / déploiement / maintenance — au marché de
+							<strong>l'énergie distribuée</strong>. Une couche digitale qui industrialise
+							les nouveaux métiers énergie en s'appuyant sur les actifs terrain existants
+							des opérateurs d'infrastructure.
+						</p>
+						<ol class="phases-list">
+							<li><strong>Acquisition / Relevé / BIM</strong> — scan LiDAR, ScanToBIM, modèle 3D + lat/long, masques végétaux et bâtiments voisins scannés (plus précis et plus rapide qu'un relevé drone).</li>
+							<li><strong>Engineering / Études</strong> — faisabilité solaire 3D (Insight Revit + Dynamo + Honeybee/Ladybug), choix stack hardware/software par cas d'usage, sandbox de validation à domicile.</li>
+							<li><strong>Construction / Installation</strong> — workflow numérique, BIM as-built, paramétrique chantier, en appui des équipes terrain industrialisées de l'opérateur.</li>
+							<li><strong>Maintenance / Support</strong> — supervision IA, NOC énergie, dashboards Grafana, maintenance prédictive, alerting routé.</li>
+						</ol>
+						<p>
+							Cas d'usage successifs : <strong>étude de faisabilité solaire 3D</strong> (prototype à domicile)
+							→ <strong>IRVE</strong> → <strong>smart grid local</strong> →
+							<strong>EMS / dispositifs d'économie énergétique</strong>.
+						</p>
+						<div class="tags">
+							<span class="tag">scan 3D</span><span class="tag">BIM</span><span class="tag">faisabilité solaire</span><span class="tag">IRVE</span><span class="tag">smart grid</span><span class="tag">supervision IA</span><span class="tag">4 phases</span><span class="tag">co-développement</span>
+						</div>
+						<p class="model-copyright">
+							&copy; 2026 Christophe Mattera — Modèle propriétaire. Tous droits réservés.
+						</p>
+					</article>
 				</div>
 
 				<h3 class="pillars-aside-title">Et aussi</h3>
@@ -352,6 +380,26 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 	}
 	.ia-angles li { margin-bottom: 0.5em; }
 	.ia-angles strong { color: var(--accent); }
+	.phases-list {
+		margin: 0.4em 0 1em 0;
+		padding-left: 1.4em;
+		color: var(--text-muted);
+		font-size: 0.93em;
+		line-height: 1.65;
+	}
+	.phases-list li {
+		margin-bottom: 0.55em;
+	}
+	.phases-list strong { color: var(--accent); }
+	.model-copyright {
+		margin: 1em 0 0;
+		font-size: 0.78em;
+		color: var(--text-dim);
+		font-style: italic;
+		letter-spacing: 0.02em;
+		padding-top: 0.7em;
+		border-top: 1px dashed var(--border);
+	}
 	.tags { display: flex; flex-wrap: wrap; gap: 0.4em; }
 	.tag {
 		display: inline-block;
